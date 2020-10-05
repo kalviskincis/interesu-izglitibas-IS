@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>IIIIS - pulciņa info</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/main.css'>
+    <script src='../js/main.js'></script>
+</head>
+
+<body>
+    <h1>IIIIS pulciņu info</h1>
+    <form>
+        <section style="float: left;">
+            <label for="joma">Interešu izglītības joma</label>
+            <select id="joma" name="joma">
+                <option value="none">-</option>
+                <option value="dejas">Dejas</option>
+                <option value="folklora">Folklora</option>
+                <option value="muzika">Mūzika</option>
+                <option value="teatris">Teātra māksla</option>
+                <option value="sports">Sports</option>
+                <option value="vizuala">Vizuālā māksla</option>
+                <option value="tehnika">Tehniskā jaunrade</option>
+                <option value="vide">Vides izglītība</option>
+                <option value="it">Informācijas tehnoloģijas</option>
+                <option value="citas">Citas programmas</option>
+            </select><br>
+            <label for="nosaukums">Pulciņa nosaukums</label>
+            <input type="text" id="nosaukums" name="nosaukums"><br>
+            <label for="stunduSkaits">Stundu skaits nedēļā</label>
+            <input type="number" id="stunduSkaits" name="stunduSkaits" size="2"><br>
+            <label for="vecums">Audzēkņa vecums</label>
+            <label for="vecumsNo">no</label>
+            <input type="number" min="4" max="18" id="vecumsNo" name="vecumsNo" size="2">
+            <label for="vecumsLidz">līdz</label>
+            <input type="number" min="4" max="18" id="vecumsLidz" name="vecumsLidz" size="2"><br>
+            <label for="skolotajs">Skolotāja vārds, uzvārds</label>
+            <input type="text" id="skolotajs" name="skolotajs"><br>
+            <label for="epasts">E-pasts</label>
+            <input type="email" id="epasts" name="epasts"><br>
+            <label for="talrunis">Tālrunis</label>
+            <input type="tel" for="talrunis" name="talrunis" id="talrunis"><br>
+            <label for="adrese">Nodarbīību vietas adrese // Interešu izglītības centrs</label>
+            <input type="text" id="adrese" name="adrese"><br>
+            <label for="maxAudzekni">Maksimālais audzēkņu skaits grupā</label>
+            <input type="number" id="maxAudzekni" name="maxAudzekni" max="100"><br>
+            <a href="#">Pulciņa programma lejupielādei</a>
+        </section>
+
+        <section>
+            <label for="nodarbibuLaiki">Nodarbību laiki</label>
+            <table>
+                <tr>
+                    <th>Diena</th>
+                    <th>No</th>
+                    <th>Līdz</th>
+                </tr>
+                <tr>
+                    <td>Pirmdiena</td>
+                    <td>
+                        <select id="piektdienaNo" name="piektdienaNo">
+                            <option value="none">-</option>
+                            <option value="8.00">8.00</option>
+                            <option value="9.00">9.00</option>
+                            <option value="10.00">10.00</option>
+                            <option value="11.00">11.00</option>
+                            <option value="12.00">12.00</option>
+                            <option value="13.00">13.00</option>
+                            <option value="14.00">14.00</option>
+                            <option value="15.00">15.00</option>
+                            <option value="16.00">16.00</option>
+                            <option value="17.00">17.00</option>
+                            <option value="18.00">18.00</option>
+                            <option value="19.00">19.00</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="piektdienaLidz" name="piektdienaLidz">
+                            <option value="none">-</option>                            
+                            <option value="9.00">9.00</option>
+                            <option value="10.00">10.00</option>
+                            <option value="11.00">11.00</option>
+                            <option value="12.00">12.00</option>
+                            <option value="13.00">13.00</option>
+                            <option value="14.00">14.00</option>
+                            <option value="15.00">15.00</option>
+                            <option value="16.00">16.00</option>
+                            <option value="17.00">17.00</option>
+                            <option value="18.00">18.00</option>
+                            <option value="19.00">19.00</option>
+                            <option value="20.00">20.00</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Otrdiena</td>
+                    <td>
+                        <select id="otrdienaNo" name="otrdienaNo">
+                            <option value="none">-</option>
+                            <option value="8.00">8.00</option>
+                            <option value="9.00">9.00</option>
+                            <option value="10.00">10.00</option>
+                            <option value="11.00">11.00</option>
+                            <option value="12.00">12.00</option>
+                            <option value="13.00">13.00</option>
+                            <option value="14.00">14.00</option>
+                            <option value="15.00">15.00</option>
+                            <option value="16.00">16.00</option>
+                            <option value="17.00">17.00</option>
+                            <option value="18.00">18.00</option>
+                            <option value="19.00">19.00</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="otrdienaLidz" name="otrdienaLidz">
+                            <option value="none">-</option>                            
+                            <option value="9.00">9.00</option>
+                            <option value="10.00">10.00</option>
+                            <option value="11.00">11.00</option>
+                            <option value="12.00">12.00</option>
+                            <option value="13.00">13.00</option>
+                            <option value="14.00">14.00</option>
+                            <option value="15.00">15.00</option>
+                            <option value="16.00">16.00</option>
+                            <option value="17.00">17.00</option>
+                            <option value="18.00">18.00</option>
+                            <option value="19.00">19.00</option>
+                            <option value="20.00">20.00</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Trešdiena</td>
+                    <td>
+                        <select id="tresdienaNo" name="tresdienaNo">
+                            <option value="none">-</option>
+                            <option value="8.00">8.00</option>
+                            <option value="9.00">9.00</option>
+                            <option value="10.00">10.00</option>
+                            <option value="11.00">11.00</option>
+                            <option value="12.00">12.00</option>
+                            <option value="13.00">13.00</option>
+                            <option value="14.00">14.00</option>
+                            <option value="15.00">15.00</option>
+                            <option value="16.00">16.00</option>
+                            <option value="17.00">17.00</option>
+                            <option value="18.00">18.00</option>
+                            <option value="19.00">19.00</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="tresdienaLidz" name="tresdienaLidz">
+                            <option value="none">-</option>                            
+                            <option value="9.00">9.00</option>
+                            <option value="10.00">10.00</option>
+                            <option value="11.00">11.00</option>
+                            <option value="12.00">12.00</option>
+                            <option value="13.00">13.00</option>
+                            <option value="14.00">14.00</option>
+                            <option value="15.00">15.00</option>
+                            <option value="16.00">16.00</option>
+                            <option value="17.00">17.00</option>
+                            <option value="18.00">18.00</option>
+                            <option value="19.00">19.00</option>
+                            <option value="20.00">20.00</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ceturtdiena</td>
+                    <td>
+                        <select id="ceturtdienaNo" name="ceturtdienaNo">
+                            <option value="none">-</option>
+                            <option value="8.00">8.00</option>
+                            <option value="9.00">9.00</option>
+                            <option value="10.00">10.00</option>
+                            <option value="11.00">11.00</option>
+                            <option value="12.00">12.00</option>
+                            <option value="13.00">13.00</option>
+                            <option value="14.00">14.00</option>
+                            <option value="15.00">15.00</option>
+                            <option value="16.00">16.00</option>
+                            <option value="17.00">17.00</option>
+                            <option value="18.00">18.00</option>
+                            <option value="19.00">19.00</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="ceturtdienaLidz" name="ceturtdienaLidz">
+                            <option value="none">-</option>                            
+                            <option value="9.00">9.00</option>
+                            <option value="10.00">10.00</option>
+                            <option value="11.00">11.00</option>
+                            <option value="12.00">12.00</option>
+                            <option value="13.00">13.00</option>
+                            <option value="14.00">14.00</option>
+                            <option value="15.00">15.00</option>
+                            <option value="16.00">16.00</option>
+                            <option value="17.00">17.00</option>
+                            <option value="18.00">18.00</option>
+                            <option value="19.00">19.00</option>
+                            <option value="20.00">20.00</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Piektdiena</td>
+                    <td>
+                        <select id="piektdienaNo" name="piektdienaNo">
+                            <option value="none">-</option>
+                            <option value="8.00">8.00</option>
+                            <option value="9.00">9.00</option>
+                            <option value="10.00">10.00</option>
+                            <option value="11.00">11.00</option>
+                            <option value="12.00">12.00</option>
+                            <option value="13.00">13.00</option>
+                            <option value="14.00">14.00</option>
+                            <option value="15.00">15.00</option>
+                            <option value="16.00">16.00</option>
+                            <option value="17.00">17.00</option>
+                            <option value="18.00">18.00</option>
+                            <option value="19.00">19.00</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="piektdienaLidz" name="piektdienaLidz">
+                            <option value="none">-</option>                            
+                            <option value="9.00">9.00</option>
+                            <option value="10.00">10.00</option>
+                            <option value="11.00">11.00</option>
+                            <option value="12.00">12.00</option>
+                            <option value="13.00">13.00</option>
+                            <option value="14.00">14.00</option>
+                            <option value="15.00">15.00</option>
+                            <option value="16.00">16.00</option>
+                            <option value="17.00">17.00</option>
+                            <option value="18.00">18.00</option>
+                            <option value="19.00">19.00</option>
+                            <option value="20.00">20.00</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sestdiena</td>
+                    <td>
+                        <select id="sestdienaNo" name="sestdienaNo">
+                            <option value="none">-</option>
+                            <option value="8.00">8.00</option>
+                            <option value="9.00">9.00</option>
+                            <option value="10.00">10.00</option>
+                            <option value="11.00">11.00</option>
+                            <option value="12.00">12.00</option>
+                            <option value="13.00">13.00</option>
+                            <option value="14.00">14.00</option>
+                            <option value="15.00">15.00</option>
+                            <option value="16.00">16.00</option>
+                            <option value="17.00">17.00</option>
+                            <option value="18.00">18.00</option>
+                            <option value="19.00">19.00</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="sestdienaLidz" name="sestdienaLidz">
+                            <option value="none">-</option>                            
+                            <option value="9.00">9.00</option>
+                            <option value="10.00">10.00</option>
+                            <option value="11.00">11.00</option>
+                            <option value="12.00">12.00</option>
+                            <option value="13.00">13.00</option>
+                            <option value="14.00">14.00</option>
+                            <option value="15.00">15.00</option>
+                            <option value="16.00">16.00</option>
+                            <option value="17.00">17.00</option>
+                            <option value="18.00">18.00</option>
+                            <option value="19.00">19.00</option>
+                            <option value="20.00">20.00</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Svētdiena</td>
+                    <td>
+                        <select id="svetdienaNo" name="svetdienaNo">
+                            <option value="none">-</option>
+                            <option value="8.00">8.00</option>
+                            <option value="9.00">9.00</option>
+                            <option value="10.00">10.00</option>
+                            <option value="11.00">11.00</option>
+                            <option value="12.00">12.00</option>
+                            <option value="13.00">13.00</option>
+                            <option value="14.00">14.00</option>
+                            <option value="15.00">15.00</option>
+                            <option value="16.00">16.00</option>
+                            <option value="17.00">17.00</option>
+                            <option value="18.00">18.00</option>
+                            <option value="19.00">19.00</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="svetdienaLidz" name="svetdienaLidz">
+                            <option value="none">-</option>                            
+                            <option value="9.00">9.00</option>
+                            <option value="10.00">10.00</option>
+                            <option value="11.00">11.00</option>
+                            <option value="12.00">12.00</option>
+                            <option value="13.00">13.00</option>
+                            <option value="14.00">14.00</option>
+                            <option value="15.00">15.00</option>
+                            <option value="16.00">16.00</option>
+                            <option value="17.00">17.00</option>
+                            <option value="18.00">18.00</option>
+                            <option value="19.00">19.00</option>
+                            <option value="20.00">20.00</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Saglabāt">
+
+        
+        </section>
+
+
+
+
+
+    </form>
+
+</body>
+
+</html>
