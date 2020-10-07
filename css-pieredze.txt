@@ -1,1 +1,2 @@
 # te varam likt kodu vai pseidokodu atrastajiem stiliem
+formām varbūt vērts špikot no https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_form_horizontal_all&stacked=h 
