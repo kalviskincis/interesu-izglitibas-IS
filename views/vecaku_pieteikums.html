@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Vecāku pieteikums</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/main.css'>
+    <script src='../js/main.js'></script>
+</head>
+
+<body>
+
+	<img src="../images/logo.png">
+    <h1>Pieteikuma forma</h1>
+	<form>
+		<label for="vec_vards">Skolēna vecāka/aizbildņa vārds<span style="color: red;"> *</span></label>
+		<input type="text" id="vec_vards" name="vec_vards" />		
+		<label for="vec_uzvards">Skolēna vecāka/aizbildņa uzvārds<span style="color: red;"> *</span></label>
+		<input type="text"  id="vec_uzvards" name="vec_uzvards"/ ><br><br>	
+		<label for="vec_epasts">Vecāka/aizbildņa e-pasts<span style="color: red;"> *</span></label>
+		<input type="text" id="vec_epasts" name="vec_epasts" />		
+		<label for="vec_telefons">Vecāka/aizbildņa telefona numurs<span style="color: red;"> *</span></label>
+		<input type="text"  id="vec_telefons" name="vec_telefons"/ ><br><br>	
+		<p> <i>???????Te būtu jābūt nolasītajam IIC nosaukumam????????? </i>direktoram <br> 
+		<i>????????Te būtu jābūt direktora vārdam uzvārdam??????????</i> <br>
+		<i>????????Iestādes telefons un e-pasts??????????</i> </p><br>
+		
+	
+	
+		<h1 align="center">Iesniegums</h1>
+		<p> Lūdzu uzņemt manu  
+            <select id="berns" name="berns">
+                <option value="meita">meitu</option>
+                <option value="dels">dēlu</option>                
+            </select>
+		</p>
+		<label for="sk_vards">Skolēna vārds<span style="color: red;"> *</span></label>
+		<input type="text" id="sk_vards" name="sk_vards" />		
+		<label for="sk_uzvards">Skolēna uzvārds<span style="color: red;"> *</span></label>
+		<input type="text"  id="sk_uzvards" name="sk_uzvards"/ ><br><br>
+		<label for="sk_skola"> Skola<span style="color: red;"> *</span></label>
+		<input type="text" id="sk_skola" name="sk_skola"/>
+		<label for="sk_klase">Klase<span style="color: red;"> *</span></label>
+		<input type="text"  name="sk_klase" name="sk_klase"/><br><br>
+		<label for="sk_perskods">Skolēna personas kods<span style="color: red;"> *</span></label>
+		<input type="text"  name="sk_perskods" name="sk_perskods"/><br><br>
+		<label for="sk_adrese">Skolēna mājas adrese<span style="color: red;"> *</span></label>
+		<input type="text"  name="sk_adrese" name="sk_adrese"/><br><br>
+		<label for="sk_epasts">Skolēna e-pasts<span style="color: red;"> *</span></label>
+		<input type="text" id="sk_epasts" name="sk_epasts" />		
+		<label for="sk_telefons">Skolēna telefona numurs<span style="color: red;"> *</span></label>
+		<input type="text"  id="sk_telefons" name="sk_telefons"/ ><br><br>	
+		<p> <i>???????Te būtu jābūt nolasītajam pulciņam no bērna izvēles????????? </i>interešu izglītības programmā <br> pie pedagoga 
+		<i>????????Te būtu jābūt nolasītajam no bērna izvēles??????????</i> 
+		uz nodarbībām <i>????????Te būtu jābūt nolasītajam no bērna izvēles??????????</i> </p><br>
+		<p>Dati, saskaņā ar 17.08.2010. MK noteikumiem Nr.788 un Personas datu aizsardzības regulas 6. panta 1. punkta c apakšpunktu, tiks izmantoti 
+		IIC datu bāzes vajadzībām un reģistrēti apstrādei Valsts izglītības informācijas sistēmā (VIIS), lai nodrošinātu valsts, pašvaldību un 
+		izglītības iestāžu funkciju īstenošanu izglītības jomā. Šī informācija netiks izpausta trešajām personām.
+		Informējam, ka Jūsu bērns, IIC reklāmas nolūkos, var tikt fotografēts un filmēts nodarbībās un pasākumos.
+		Ar IIC iekšējās kārtības noteikumiem (publicēti IIC mājaslapā) esam iepazinušies.</p><br>
+		
+		<label for="noteikumi">Ar noteikumiem iepazinos<span style="color: red;"> *</span></label><br>
+			<input type="radio" id="not_ja" name="not_ne" value="Ja"/> Jā<br>
+			<input type="radio" id="not_ne" name="not_ne" value="Nē"/> Nē<br><br>
+			
+		
+		<input type="submit" value="Iesniegt">
+		<input type="submit" value="Izveidot pdf datni">
+		<input type="submit" value="Drukāt">
+	
+	
+	</form>
+</body>
