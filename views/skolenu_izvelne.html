@@ -7,10 +7,14 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    
     <title>Skolēnu izvēlne</title>
   </head>
   <body>
+    <div class="container">
+      <img src="../images/logo.png" alt="logo">
+    </div>
+    <br>
     <div class="container">
         <h1>Atrodi sev piemērotāko pulciņu!</h1>
         <div class="form-group">
@@ -84,9 +88,22 @@
                 <option value="17">17</option>
                 <option value="18">18</option>
                 <option value="19">19</option>
-                
             </select>
     </div>
+    <div class="container">
+      <label for="sel4">Izvēlies vēlamo dienu:</label>
+      <select class="form-control" id="sel4">
+          <option>---</option>
+          <option value="pirmdiena">Pirmdiena</option>
+          <option value="otrdiena">Otrdiena</option>
+          <option value="tresdiena">Trešdiena</option>
+          <option value="ceturtdiena">Ceturtdiena</option>
+          <option value="piektdiena">Piektdiena</option>
+          <option value="sestdiena">Sestdiena</option>
+          <option value="svētdiena">Svētdiena</option>
+          
+      </select>
+</div>
     <div class="container">
         <br>
         <button type="button" class="btn btn-primary">Meklēt pulciņu!</button>
