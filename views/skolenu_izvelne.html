@@ -1,118 +1,153 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
-    <title>Skolēnu izvēlne</title>
-  </head>
-  <body>
-    <div class="container">
-      <img src="../images/logo.png" alt="logo">
-    </div>
-    <br>
-    <div class="container">
-        <h1>Atrodi sev piemērotāko pulciņu!</h1>
-        <div class="form-group">
-            <label for="sel1">Izvēlies pulciņa veidu:</label>
-            <select class="form-control" id="sel1">
-                <option>---</option>
-              <option>Sports</option>
-              <option>Akadēmiskais</option>
-              <option>Māksla, zīmēšana</option>
-              <option>Dejošana</option>
-              <option>Mūzika, dziedāšana</option>
-              
-            </select>
-          </div>
-    </div>
-    <div class="container">
-        <div class="form-group">
-            <label for="sel2">Izvēlies, kurā pilsētā vai tās tuvumā atrodies:</label>
-            <select class="form-control" id="sel2">
-                <option>---</option>
-              <option>Alūksne</option>
-              <option>Balvi</option>
-              <option>Bauska</option>
-              <option>Brocēni</option>
-              <option>Cēsis</option>
-              <option>Dagda</option>
-              <option>Daugavpils</option>
-              <option>Gulbene</option>
-              <option>Iecava</option>
-              <option>Jelgava</option>
-              <option>Jēkabpils</option>
-              <option>Jūrmala</option>
-              <option>Krāslava</option>
-              <option>Kuldīga</option>
-              <option>Liepāja</option>
-              <option>Ludza</option>
-              <option>Ogre</option>
-              <option>Rēzekne</option>
-              <option>Rīga</option>
-              <option>Salacgrīva</option>
-              <option>Saldus</option>
-              <option>Skrunda</option>
-              <option>Smiltene</option>
-              <option>Strenči</option>
-              <option>Talsi</option>
-              <option>Valka</option>
-              <option>Valmiera</option>
-              <option>Ventspils</option>
-            </select>
-          </div>
-    </div>
-    <div class="container">
-            <label for="sel3">Izvēlies vecumu:</label>
-            <select class="form-control" id="sel3">
-                <option>---</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-            </select>
-    </div>
-    <div class="container">
-      <label for="sel4">Izvēlies vēlamo dienu:</label>
-      <select class="form-control" id="sel4">
-          <option>---</option>
-          <option value="pirmdiena">Pirmdiena</option>
-          <option value="otrdiena">Otrdiena</option>
-          <option value="tresdiena">Trešdiena</option>
-          <option value="ceturtdiena">Ceturtdiena</option>
-          <option value="piektdiena">Piektdiena</option>
-          <option value="sestdiena">Sestdiena</option>
-          <option value="svētdiena">Svētdiena</option>
-          
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>Skolēnu izvēlne</title>
+</head>
+
+<body>
+  <div class="container">
+    <img src="../images/logo.png" alt="logo">
+  </div>
+  <br>
+  <div class="container">
+    <h1>Atrodi sev piemērotāko pulciņu!</h1>
+    <div class="form-group">
+      <label for="sel1">Izvēlies pulciņa veidu:</label>
+      <select class="form-control" id="sel1">
+        <option value="none">---</option>
+        <option value="dejas">Dejas 💃</option>
+        <option value="muzika">Mūzika 🎼</option>
+        <option value="teatris">Teātra māksla 🎬</option>
+        <option value="sports">Sports ⚽️</option>
+        <option value="vizuala">Vizuālā māksla 🎨</option>
+        <option value="tehnika">Tehniskā jaunrade 🔧</option>
+        <option value="vide">Vides izglītība 🌿</option>
+        <option value="it">Informācijas tehnoloģijas 💻</option>
+        <option value="akademiska">Akadēmiskā izglītība 📚</option>
+        <option value="citas">Citas programmas ❗</option>
       </select>
-</div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="form-group">
+      <label for="sel2">Izvēlies, kurā pilsētā vai tās tuvumā atrodies:</label>
+      <select class="form-control" id="sel2">
+        <option>---</option>
+        <option>Alūksne</option>
+        <option>Balvi</option>
+        <option>Bauska</option>
+        <option>Brocēni</option>
+        <option>Cēsis</option>
+        <option>Dagda</option>
+        <option>Daugavpils</option>
+        <option>Gulbene</option>
+        <option>Iecava</option>
+        <option>Jelgava</option>
+        <option>Jēkabpils</option>
+        <option>Jūrmala</option>
+        <option>Krāslava</option>
+        <option>Kuldīga</option>
+        <option>Liepāja</option>
+        <option>Ludza</option>
+        <option>Ogre</option>
+        <option>Rēzekne</option>
+        <option>Rīga</option>
+        <option>Salacgrīva</option>
+        <option>Saldus</option>
+        <option>Skrunda</option>
+        <option>Smiltene</option>
+        <option>Strenči</option>
+        <option>Talsi</option>
+        <option>Valka</option>
+        <option>Valmiera</option>
+        <option>Ventspils</option>
+      </select>
+    </div>
+  </div>
+  <div class="container">
+    <label for="sel3">Izvēlies vecumu:</label>
+    <select class="form-control" id="sel3">
+      <option>---</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+      <option value="13">13</option>
+      <option value="14">14</option>
+      <option value="15">15</option>
+      <option value="16">16</option>
+      <option value="17">17</option>
+      <option value="18">18</option>
+      <option value="19">19</option>
+    </select>
+  </div>
+  <div class="container">
+    <label for="sel4">Izvēlies vēlamo dienu:</label>
+    <select class="form-control" id="sel4">
+      <option>---</option>
+      <option value="pirmdiena">Pirmdiena</option>
+      <option value="otrdiena">Otrdiena</option>
+      <option value="tresdiena">Trešdiena</option>
+      <option value="ceturtdiena">Ceturtdiena</option>
+      <option value="piektdiena">Piektdiena</option>
+      <option value="sestdiena">Sestdiena</option>
+      <option value="svētdiena">Svētdiena</option>
+
+    </select>
+  </div>
     <div class="container">
-        <br>
-        <button type="button" class="btn btn-primary">Meklēt pulciņu!</button>
+      <label for="sel5">Izvēlies vēlamo laiku:</label>
+      <select class="form-control" id="sel5">
+        <option value="none">---</option>
+        <option value="7.00">7.00</option>
+        <option value="8.00">8.00</option>
+        <option value="9.00">9.00</option>
+        <option value="10.00">10.00</option>
+        <option value="11.00">11.00</option>
+        <option value="12.00">12.00</option>
+        <option value="13.00">13.00</option>
+        <option value="14.00">14.00</option>
+        <option value="15.00">15.00</option>
+        <option value="16.00">16.00</option>
+        <option value="17.00">17.00</option>
+        <option value="18.00">18.00</option>
+        <option value="19.00">19.00</option>
+        <option value="19.00">20.00</option>
+        
+      </select>
+    </div>
+    <div class="container">
+      <br>
+      <button type="button" class="btn btn-primary">Meklēt pulciņu!</button>
     </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+</body>
+
 </html>
