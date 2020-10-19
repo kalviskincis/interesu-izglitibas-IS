@@ -24,18 +24,9 @@
                 <form class="form-horizontal">
                     <label for="joma" class="control-label">Interešu izglītības joma</label>
                     <select id="joma" name="joma" class="form-control">
-                        <option value="none">-</option>
-                        <option value="dejas">Dejas</option>
-                        <option value="folklora">Folklora</option>
-                        <option value="muzika">Mūzika</option>
-                        <option value="teatris">Teātra māksla</option>
-                        <option value="sports">Sports</option>
-                        <option value="vizuala">Vizuālā māksla</option>
-                        <option value="tehnika">Tehniskā jaunrade</option>
-                        <option value="vide">Vides izglītība</option>
-                        <option value="it">Informācijas tehnoloģijas</option>
-                        <option value="citas">Citas programmas</option>
+
                     </select><br>
+                    
                     <label for="nosaukums">Pulciņa nosaukums</label>
                     <input type="text" id="nosaukums" name="nosaukums" class="form-control"><br>
                     <label for="stunduSkaits">Stundu skaits nedēļā</label>
@@ -336,12 +327,22 @@
             </div>
 
 
-
-
-
-
         </div>
     </div>
+
+    
+    <script>
+        window.onload=function(){
+              joma=["---", "💃 Dejas", "🎼 Mūzika", "🎬 Teātra māksla", "⚽️ Sports", "🎨 Vizuālā māksla", "🔧 Tehniskā jaunrade", "🌿 Vides izglītība","💻 Informācijas tehnoloģijas", "📚 Akadēmiskā izglītība","❗ Citas programmas"]
+              for(var i=0;i<joma.length;i++){
+                  var option = document.createElement("option"); 
+                  option.value=joma[i];
+                  option.textContent=joma[i];
+                  document.getElementById("joma").appendChild(option);
+                  
+              }
+        }    
+          </script>
 
 </body>
 
