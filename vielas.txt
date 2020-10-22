@@ -1,7 +1,7 @@
 [
   {
     "apakstips": "s\u0101ls",
-    "daudzums": 100.0,
+    "daudzums": 150.0,
     "id": 2,
     "komentari": "",
     "mervienibas": "g",
