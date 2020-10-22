@@ -6,7 +6,7 @@
     "komentari": "",
     "mervienibas": "g",
     "nosaukums": "Kalcija karbon\u0101ts CaCO3",
-    "skaits": 25,
+    "skaits": 20,
     "tips": "rea\u0123ents"
   },
   {
