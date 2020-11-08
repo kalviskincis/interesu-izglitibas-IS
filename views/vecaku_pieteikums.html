@@ -6,7 +6,8 @@
     <title>Vecāku pieteikums</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/main.css'>
-	<script src='../js/main.js'></script>
+	<script src='../js/vecPietLasa.js'></script>
+
 	<!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -27,9 +28,9 @@
 					<input type="text" id="vec_epasts" name="vec_epasts" class="form-control">		
 					<label for="vec_telefons">Vecāka/aizbildņa telefona numurs<span style="color: red;"> *</span></label>
 					<input type="text"  id="vec_telefons" name="vec_telefons"class="form-control"><br>	
-					<p> <i>???????Te būtu jābūt nolasītajam IIC nosaukumam????????? </i>direktoram <br> 
-					<i>????????Te būtu jābūt direktora vārdam uzvārdam??????????</i> <br>
-					<i>????????Iestādes telefons un e-pasts??????????</i> </p>
+					<p id="nosaukumsIIC"> </p> 
+					<p id="direktors"> </p> 
+					<p id="telIIC"> </p>
 				</form>
 			</div>
 		</div>
@@ -75,7 +76,7 @@
 			
 					<input type="submit" value="Iesniegt">
 					<input type="submit" value="Izveidot pdf datni">
-					<input type="submit" value="Drukāt">
+					<input type="submit" value="Nolasīt datus" onclick="ieliktTekstu();">
 				
 				</form>
 			</div>

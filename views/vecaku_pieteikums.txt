@@ -1,0 +1,101 @@
+[
+  {
+    "nosaukumsIIC": "Bērnu un jauniešu centrs "IK Auseklis"",
+    "direktorsIIC": "Vladimirs Šibajevs",
+    "IICTel": "67181083",
+    "IICEpasts": "bjcauseklis@riga.lv",
+    "pulcinaID":"TM15",
+    "pulcinaNosaukums": "Teātra sports",
+    "jomasNos": "Teātra māksla",
+    "skolotajaVards": "Ilze",
+    "skolotajaUzvards": "Kalniņa"
+  },
+  {
+    "nosaukumsIIC": "Tehniskās jaunrades nams "Annas 2"",
+    "direktorsIIC": "Irēna Maskaļonoka",
+    "IICTel": "67374093",
+    "IICEpasts": "tjn@riga.lv",
+    "pulcinaID":"IT86",
+    "pulcinaNosaukums": "Scratch",
+    "jomasNos": "Informācijas tehnoloģijas",
+    "skolotajaVards": "Juris",
+    "skolotajaUzvards": "Briedis"
+  },
+  {
+    "nosaukumsIIC": "Valkas novada Bērnu un jauniešu centrs "Mice"",
+    "direktorsIIC": "Kristīne Ganiņa",
+    "IICTel": "64723036",
+    "IICEpasts": "bjc@valka.lv",
+    "pulcinaID":"MU123",
+    "pulcinaNosaukums": "Ģitārspēles pamati",
+    "jomasNos": "Mūzika",
+    "skolotajaVards": "Keitija",
+    "skolotajaUzvards": "Ozola"
+  },
+ {
+    "nosaukumsIIC": "Ventspils Jaunrades nams",
+    "direktorsIIC": "Vita Hermansone",
+    "IICTel": "63622805",
+    "IICEpasts": "jaunrades.nams@ventspils.lv",
+    "pulcinaID":"DE147",
+    "pulcinaNosaukums": "Balles dejas",
+    "jomasNos": "Dejas",
+    "skolotajaVards": "Vitauts",
+    "skolotajaUzvards": "Zarins"
+  },
+ {
+    "nosaukumsIIC": "Jelgavas pilsētas pašvaldības interešu izglītības iestāde "Jaunrades nams "Junda""",
+    "direktorsIIC": "Ilze Jaunzeme",
+    "IICTel": "63022160",
+    "IICEpasts": "junda@izglitiba.jelgava.lv",
+    "pulcinaID":"TJ90",
+    "pulcinaNosaukums": "Automodelēšana",
+    "jomasNos": "Tehniskā jaunrade",
+    "skolotajaVards": "Andris",
+    "skolotajaUzvards": "Osis"
+  },
+{
+    "nosaukumsIIC": "Valmieras Jaunatnes centrs "Vinda"",
+    "direktorsIIC": "Sanita Loze",
+    "IICTel": "64232302",
+    "IICEpasts": "vinda@valmiera.edu.lv",
+    "pulcinaID":"VI15",
+    "pulcinaNosaukums": "Mazpulcēni",
+    "jomasNos": "Vides izglītība",
+    "skolotajaVards": "Olga",
+    "skolotajaUzvards": "Zara"
+  },
+{
+    "nosaukumsIIC": "Interešu izglītības iestāde "Tehniskās izglītības un jaunrades skola"",
+    "direktorsIIC": "Anete Benta",
+    "IICTel": "28779480",
+    "IICEpasts": "info@inovacijuskola.lv",
+    "pulcinaID":"TJ56",
+    "pulcinaNosaukums": "Lidmodeļi",
+    "jomasNos": "Tehniskā jaunrade",
+    "skolotajaVards": "Gatis",
+    "skolotajaUzvards": "Vilks"
+  },
+{
+    "nosaukumsIIC": "Interešu izglītības iestāde "Pirmā programmēšanas skola"",
+    "direktorsIIC": "Raivis Ieviņš",
+    "IICTel": "22169090",
+    "IICEpasts": "info@pps.lv",
+    "pulcinaID":"IT28",
+    "pulcinaNosaukums": "Sporta programmēšana ar C++",
+    "jomasNos": "Informācijas tehnoloģijas",
+    "skolotajaVards": "Raitis",
+    "skolotajaUzvards": "Zeltiņš"
+  },
+{
+    "nosaukumsIIC": "Bērnu un jauniešu interešu izglītības iestāde "Eiropas programmēšanas skola"",
+    "direktorsIIC": "Anžela Džafarova",
+    "IICTel": "29802323",
+    "IICEpasts": "info@ritc.lv",
+    "pulcinaID":"IT48",
+    "pulcinaNosaukums": "Programmēšanas pamati ar Pyton",
+    "jomasNos": "Informācijas tehnoloģijas",
+    "skolotajaVards": "Maija",
+    "skolotajaUzvards": "Liepa"
+  }
+]
