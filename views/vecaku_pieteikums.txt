@@ -1,6 +1,6 @@
 [
   {
-    "nosaukumsIIC": "Bērnu un jauniešu centrs "IK Auseklis"",
+    "nosaukumsIIC": "Bērnu un jauniešu centrs -IK Auseklis-",
     "direktorsIIC": "Vladimirs Šibajevs",
     "IICTel": "67181083",
     "IICEpasts": "bjcauseklis@riga.lv",
@@ -44,7 +44,7 @@
     "skolotajaUzvards": "Zarins"
   },
  {
-    "nosaukumsIIC": "Jelgavas pilsētas pašvaldības interešu izglītības iestāde "Jaunrades nams "Junda""",
+    "nosaukumsIIC": "Jelgavas pilsētas pašvaldības interešu izglītības iestāde -Jaunrades nams -Junda-",
     "direktorsIIC": "Ilze Jaunzeme",
     "IICTel": "63022160",
     "IICEpasts": "junda@izglitiba.jelgava.lv",
@@ -98,4 +98,4 @@
     "skolotajaVards": "Maija",
     "skolotajaUzvards": "Liepa"
   }
-]
+  ]
