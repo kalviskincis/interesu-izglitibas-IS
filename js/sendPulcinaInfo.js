@@ -65,7 +65,13 @@ function nosutitPulcinaInfo() {
 
     download(jsonData, 'json.txt', 'text/plain');
 
-
+    fetch('https://kalviskincis.github.io/interesu-izglitibas-IS/views/', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body:JSON.stringify(dict)
+    })
+      .then(res => res.json())
+      .then(data => document.getElementById("saglabats").innerHTML = "Dati saglabāti")
 
 }
 
