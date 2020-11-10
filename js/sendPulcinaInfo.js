@@ -59,7 +59,11 @@ function nosutitPulcinaInfo() {
         dict["svetdienaNo"] = svetdienaNo;
         dict["svetdienaLidz"] = svetdienaLidz;
     }
-    console.log(JSON.stringify(dict));
+
+    jsonData = JSON.stringify(dict)
+    console.log(jsonData);
+
+    download(jsonData, 'json.txt', 'text/plain');
 
     fetch('https://kalviskincis.github.io/interesu-izglitibas-IS/views/', {
         method: 'POST',
@@ -69,4 +73,12 @@ function nosutitPulcinaInfo() {
       .then(res => res.json())
       .then(data => document.getElementById("saglabats").innerHTML = "Dati saglabāti")
 
+}
+
+function download(content, fileName, contentType) {
+    var a = document.createElement("a");
+    var file = new Blob([content], {type: contentType});
+    a.href = URL.createObjectURL(file);
+    a.download = fileName;
+    a.click();
 }
