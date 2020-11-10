@@ -25,40 +25,41 @@ function nosutitPulcinaInfo() {
     var svetdienaNo = document.forma.svetdienaNo.value;
     var svetdienaLidz = document.forma.svetdienaLidz.value;
 
-    var dict = {
-        joma: joma, nosaukums: nosaukums, stunduSkaits: stunduSkaits,
-        vecumsNo: vecumsNo, vecumsLidz: vecumsLidz,
-        skolotajs: skolotajs, epasts: epasts, talrunis: talrunis, adrese: adrese, maxAudzekni: maxAudzekni
+    var laiks = [];
 
-    };
     if (pirmdienaNo != "none") {
-        dict["pirmdienaNo"] = pirmdienaNo;
-        dict["pirmdienaLidz"] = pirmdienaLidz;
+        laiks.push({ diena: 1, no: pirmdienaNo, lidz: pirmdienaLidz })
     }
     if (otrdienaNo != "none") {
-        dict["otrdienaNo"] = otrdienaNo;
-        dict["otrdienaLidz"] = otrdienaLidz;
+        laiks.push({ diena: 2, no: otrdienaNo, lidz: otrdienaLidz })
     }
+
     if (tresdienaNo != "none") {
-        dict["tresdienaNo"] = tresdienaNo;
-        dict["tresdienaLidz"] = tresdienaLidz;
+        laiks.push({ diena: 3, no: tresdienaNo, lidz: tresdienaLidz })
     }
     if (ceturtdienaNo != "none") {
-        dict["ceturtdienaNo"] = ceturtdienaNo;
-        dict["ceturtdienaLidz"] = ceturtdienaLidz;
+        laiks.push({ diena: 4, no: ceturtdienaNo, lidz: ceturtdienaLidz })
     }
     if (piektdienaNo != "none") {
-        dict["piektdienaNo"] = piektdienaNo;
-        dict["piektdienaLidz"] = piektdienaLidz;
+        laiks.push({ diena: 5, no: piektdienaNo, lidz: piektdienaLidz })
     }
     if (sestdienaNo != "none") {
-        dict["sestdienaNo"] = sestdienaNo;
-        dict["sestdienaLidz"] = sestdienaLidz;
+        laiks.push({ diena: 6, no: sestdienaNo, lidz: sestdienaLidz })
     }
     if (svetdienaNo != "none") {
-        dict["svetdienaNo"] = svetdienaNo;
-        dict["svetdienaLidz"] = svetdienaLidz;
+        laiks.push({ diena: 7, no: svetdienaNo, lidz: svetdienaLidz })
     }
+
+    var dict = {
+        joma: joma, nosaukums: nosaukums, stunduSkaits: stunduSkaits,
+        vecums: { no: vecumsNo, lidz: vecumsLidz },
+        skolotajs: skolotajs, epasts: epasts, talrunis: talrunis, adrese: adrese, maxAudzekni: maxAudzekni
+    };
+
+    dict["laiks"] = laiks;
+
+
+
 
     jsonData = JSON.stringify(dict)
     console.log(jsonData);
@@ -67,17 +68,17 @@ function nosutitPulcinaInfo() {
 
     fetch('https://kalviskincis.github.io/interesu-izglitibas-IS/views/', {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body:JSON.stringify(dict)
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(dict)
     })
-      .then(res => res.json())
-      .then(data => document.getElementById("saglabats").innerHTML = "Dati saglabāti")
+        .then(res => res.json())
+        .then(data => document.getElementById("saglabats").innerHTML = "Dati saglabāti")
 
 }
 
 function download(content, fileName, contentType) {
     var a = document.createElement("a");
-    var file = new Blob([content], {type: contentType});
+    var file = new Blob([content], { type: contentType });
     a.href = URL.createObjectURL(file);
     a.download = fileName;
     a.click();
