@@ -11,8 +11,8 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src='./main.js'></script>
-    
 </head>
+        
 <body>
       <div class="container-fluid h-100">
         <div class="row h-100">
@@ -22,31 +22,90 @@
                     <text class="Centrs">Logo</text>
                                     
                   <img src="Logo.svg" class="Logo">
-                  <hr class="line"/>
-            </div>
-            <div class="col-sm-17 lb-kolonna h-100">
-               <div class="group3">
-                <text class ="Nosaukums">Interešu IC nosaukums</text>
-                <hr class="line"/>
-                 <text class ="Adrese">Adrese</text>
-                <hr class="line"/>
-                <text class="Epasts"> E-pasts </text>
-                <hr class="line"/>
-                <text class="Talrunis"> Tālrunis </text>
+                <!--  <hr class="line"/>-->
+                </div>
+           
+           
+                <div class="col-sm-17 lb-kolonna h-100">
+                
+            </p>
 
-                <hr class="line"/>
-                <text class="Specialista vards"> IIC Izglītības speciālista vārds, uzvārds </text>
-                <hr class="line"/>
+            <label for="adrese">Interešu IC nosaukums<span style="color: red;"> *</span></label>
+
+            <title> comboBox </title>
+            <form>
+              
+                <select id="klubs" name="klubs">
+    
+              </select>
+             </form>
+            
+          <script>
+          window.onload=function(){
+            klubs=["💃 Dejas","🎼 Mūzika","🎬 Teātra māksla","⚽️ Sports","🎨 Vizuālā māksla","🔧 Tehniskā jaunrade","🌿 Vides izglītība","💻 Informācijas tehnoloģijas",
+            "📚 Akadēmiskā izglītība","❗ Citas programmas"]
+            for(var i=0;i<klubs.length;i++){
+                    var option = document.createElement("option"); 
+                    option.value=klubs[i];
+                    option.textContent=klubs[i];
+                    document.getElementById("klubs").appendChild(option);
+                    
+                }
+          }    
+            </script>   
+                
+            <div class="conteiner">
+                <form class="form-horizontal">
+                  <div class="form-group">
+                   <label class="col-sm-2 control-label">Adrese<span style="color: red;"> *</span></label>
+                   <!--<label for="adrese">Adrese<span style="color: red;"> *</span></label>-->
+                    <div class="col-sm-4">
+                      <input class="form-control" id="Adrese" type="text" name="adrese">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">E-pasts<span style="color: red;"> *</span></label>
+                     <div class="col-sm-4">
+                       <input class="form-control" id="Epasts" type="text" name="epasts">
+                     </div>
+                   </div>
+                   <div class="form-group">
+                    <label class="col-sm-2 control-label">Tālrunis<span style="color: red;"> *</span></label>
+                     <div class="col-sm-4">
+                       <input class="form-control" id="Talrunis" type="text" name="talrunis">
+                     </div>
+                   </div>
+                   <div class="form-group">
+                    <label class="col-sm-2 control-label">IIC Izglītības speciālista vārds, uzvārds<span style="color: red;"> *</span></label>
+                     <div class="col-sm-4">
+                       <input class="form-control" id="Specialists" type="text" name="specialists">
+                     </div>
+                   </div>
+
+                </form>
+
+            <!--  <br><br>
+            <label for="adrese">Adrese<span style="color: red;"> *</span></label>
+            <input type="text" id="adrese" name="adrese" /><br><br>
+            <label for="epasts">E-pasts<span style="color: red;"> *</span></label>
+            <input type="text"  id="epasts" name="epasts"/ ><br><br>
+            <label for="Talrunis"> Tālrunis<span style="color: red;"> *</span></label>
+            <input type="text" id="Talrunis" name="Talrunis"/><br><br>
+            <label for="specialists">IIC Izglītības speciālista vārds, uzvārds<span style="color: red;"> *</span></label>
+            <input type=<"text"  name="specialists" name="specialists"/></div></p><br>-->
+              
+               <!-- <hr >class="line"/>-->
                  <text class="Iesutit logo"> Iesūtīt ICC logo </text>
-                 <hr class="line"/>
+                 <br><br>
+               <!--  <hr class="line"/>-->
                 <text class="Datne"> Tukša datne lejupielādei </text>
-                <hr class="line"/>
-                 <button class="poga1"> Iesūtīt datni</button>
+                <br><br>
+               <!--  <hr class="line"/>-->
+               <button class="poga1"> Iesūtīt datni</button>
                 <button class="poga2"> Reģistrēt jaunu pulciņu</button>
                 <button class="poga3"> Visi IIC reģistrētie pulciņi</button>
-                                  
-               </div>
-               
+                              
+                           
             </div> 
                       
         </div>
