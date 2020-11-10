@@ -7,7 +7,8 @@
     <title>IIIIS - pulciņa info</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/main.css'>
-    <script src='../js/main.js'></script>
+    <!-- <script src='../js/main.js'></script> -->
+    <script src='../js/sendPulcinaInfo.js'></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -21,7 +22,7 @@
         <div class="form-row">
 
             <div class="col-sm-5 mr-auto">
-                <form class="form-horizontal">
+                <form name="forma" class="form-horizontal">
                     <label for="joma" class="control-label">Interešu izglītības joma</label>
                     <select id="joma" name="joma" class="form-control">
 
@@ -322,7 +323,9 @@
                     </tr>
                 </table>
                 <a href="#">Pulciņa programma lejupielādei</a><br><br>
-                <input type="submit" value="Saglabāt" class="btn btn-primary">
+                <!-- <input type="submit" value="Saglabāt" class="btn btn-primary" onclick="nosutitPulcinaInfo()"> -->
+                <button type="button" value="Saglabāt" class="btn btn-primary" onclick="nosutitPulcinaInfo()">Saglabāt</button>
+                <p id="saglabats"></p>
                 </form>
             </div>
 
@@ -343,6 +346,7 @@
               }
         }    
           </script>
+
 
 </body>
 
