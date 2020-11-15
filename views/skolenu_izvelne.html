@@ -27,9 +27,9 @@
   </div>
   <div class="container">
     <div class="form-group">
-      <label for="sel2">Izvēlies, kurā pilsētā vai tās tuvumā atrodies:</label>
-      <select class="form-control" id="sel2">
-        <option>---</option>
+      <label for="pilsetas" class="control-label">Izvēlies, kurā pilsētā vai tās tuvumā atrodies:</label>
+        <select id="pilsetas" name="pilsetas" class="form-control">
+        <!-- <option>---</option>
         <option>Alūksne</option>
         <option>Balvi</option>
         <option>Bauska</option>
@@ -57,7 +57,7 @@
         <option>Talsi</option>
         <option>Valka</option>
         <option>Valmiera</option>
-        <option>Ventspils</option>
+        <option>Ventspils</option> -->
       </select>
       </div>
   </div>
@@ -144,6 +144,18 @@
                 option2.textContent=i;
                 document.getElementById("vecums").appendChild(option2);
               }
+              fetch(' https://kalviskincis.github.io/interesu-izglitibas-IS/pilsetas.json')
+                  .then(res => res.json()) // res ir teksta plūsma - atbilde no servera
+                  .then(data => { // data ir masīvs ar JSON objektiem, iegūts no res
+                      for(var i =0; i<1;i++){ // cikls caur visu masīvu
+                        for (var x in data[i]) {        // cikls caur viena JSON objekta visiem laukiem
+                          var option3 = document.createElement("option");
+                          option3.value=data[i][x];
+                          option3.textContent=data[i][x];
+                          document.getElementById("pilsetas").appendChild(option3);
+               }
+           }
+      })
       }    
         </script>
     

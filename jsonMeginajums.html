@@ -8,10 +8,10 @@
 
 <script>
 //failam jābūt serverī, lokāli strādā tikai FireFox
-fetch(' https://kalviskincis.github.io/interesu-izglitibas-IS/pulcini.json')
+fetch(' https://kalviskincis.github.io/interesu-izglitibas-IS/pilsetas.json')
       .then(res => res.json()) // res ir teksta plūsma - atbilde no servera
       .then(data => { // data ir masīvs ar JSON objektiem, iegūts no res
-           for(var i =0; i<data.length;i++){ // cikls caur visu masīvu
+           for(var i =0; i<1;i++){ // cikls caur visu masīvu
                for (var x in data[i]) {        // cikls caur viena JSON objekta visiem laukiem
  
                     document.getElementById("demo").innerHTML += x + ": " + data[i][x] + "<br>";
