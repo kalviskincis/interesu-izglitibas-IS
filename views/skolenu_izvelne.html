@@ -147,13 +147,12 @@
               fetch(' https://kalviskincis.github.io/interesu-izglitibas-IS/pilsetas.json')
                   .then(res => res.json()) // res ir teksta plūsma - atbilde no servera
                   .then(data => { // data ir masīvs ar JSON objektiem, iegūts no res
-                      for(var i =0; i<1;i++){ // cikls caur visu masīvu
-                        for (var x in data[i]) {        // cikls caur viena JSON objekta visiem laukiem
+                      //for(var i =0; i<3;i++){ // cikls caur visu masīvu
+                        for (var x in data[0]) {        // cikls caur viena JSON objekta visiem laukiem
                           var option3 = document.createElement("option");
-                          option3.value=data[i][x];
-                          option3.textContent=data[i][x];
+                          option3.textContent= data[0][x];
                           document.getElementById("pilsetas").appendChild(option3);
-               }
+              // }
            }
       })
       }    
