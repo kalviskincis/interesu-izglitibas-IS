@@ -1,4 +1,4 @@
-function vecPietRegistree(){
+function vecPietRegistree1(){
     var vecVards=document.getElementById("vec_vards").value;
     var vecUzvards=document.getElementById("vec_uzvards").value;
     var vecEpasts=document.getElementById("vec_epasts").value;
