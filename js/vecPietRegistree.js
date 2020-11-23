@@ -12,8 +12,11 @@ function vecPietRegistree1(){
     var skAdrese=document.getElementById("sk_adrese").value;
     var skEpasts=document.getElementById("sk_epasts").value;
     var skTelefons=document.getElementById("sk_telefons").value;
-    var noteikumi=document.getElementById("not_ja").value;
-    if(vecVards==""||vecUzvards==""||vecTelefons==""||vecEpasts==""||skVards==""||skUzvards==""||skSkola==""||skKlase==""||skPerskods==""||skAdrese==""||skEpasts==""||skTelefons=="") alert("Visiem laukiem jābūt aizpildītājiem");
+ 
+    if(vecVards==""||vecUzvards==""||vecTelefons==""||vecEpasts==""||skVards==""||skUzvards==""||skSkola==""||skKlase==""||skPerskods==""||skAdrese==""||skEpasts==""||skTelefons=="") 
+        alert("Visiem laukiem jābūt aizpildītājiem")
+    else 
+        if(document.getElementById('r1').checked==false) alert("Izlasi noteikumus!")
     else{
     var dict={vecVards:vecVards, vecUzvards:vecUzvards, vecEpasts:vecEpasts, vecTelefons:vecTelefons,
         dzimums:dzimums, skVards:skVards, skUzvards:skUzvards, skSkola:skSkola, skKlase:skKlase,
@@ -21,8 +24,10 @@ function vecPietRegistree1(){
         
         jsonData = JSON.stringify(dict);
         console.log(jsonData);
+        if (document.getElementById('r1').checked)
         download(jsonData, 'vecakuPieteikumsSuutiit.txt', 'text/plain');
-
+        alert("Visi dati veiksmīgi saglabāti")
+    }
     fetch('https://kalviskincis.github.io/interesu-izglitibas-IS/views/vecakuPieteikumsSuutiit.txt', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
@@ -30,8 +35,9 @@ function vecPietRegistree1(){
     })    
     .then(res => res.json())
     .then(data => document.getElementById("zinojumi").innerHTML = "Dati saglabāti")
-   }
+        
 }
+
 
 function download(content, fileName, contentType) {
     var a = document.createElement("a");
