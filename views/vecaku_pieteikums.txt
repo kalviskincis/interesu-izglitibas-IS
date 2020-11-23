@@ -11,7 +11,7 @@
     "skolotajaUzvards": "Kalniņa"
   },
   {
-    "nosaukumsIIC": "Tehniskās jaunrades nams \"Annas 2\"",
+    "nosaukumsIIC": "Tehniskās jaunrades nams \"Annas \"",
     "direktorsIIC": "Irēna Maskaļonoka",
     "IICTel": "67374093",
     "IICEpasts": "tjn@riga.lv",
