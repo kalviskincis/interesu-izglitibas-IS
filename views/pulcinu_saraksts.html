@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>IIIIS - pulciņu saraksts</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/main.css'>
+    
+    <!--<script src='../js/lasaPulcinuSarakstu.js'></script>
+    <script src='../js/main.js'></script>  -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="../images/logo.png">
+        <h1>Pulciņu saraksts</h1>
+        <table class="table" id="pulcinuSaraksts">
+            <thead>
+            <tr>
+                <th>Izvēlēties</th>
+                <th>Joma</th>
+                <th>Pulciņa nosaukums</th>
+                <th>Stundu skaits nedēļā</th>
+                <th>Audzēkņa vecums</th>
+                <th>Skolotājs</th>
+                <th>Skolotāja e-pasts</th>
+                <th>Skolotāja telefons</th>
+                <th>Nodarbību vieta</th>
+                <th>Audzēkņu skaits</th>
+                <th>Nodarbību laiki</th>
+                
+                
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+
+        </table>
+        <script src='../js/lasaPulcinuSarakstu.js'></script>
+        <button type="button" value="Labot" class="btn btn-primary" onclick="labotPulcinaInfo()">Labot</button>
+        <button type="button" value="Dzest" class="btn btn-primary" onclick="dzestPulcinaInfo()">Dzēst</button>
+        <button type="button" value="Jauns" class="btn btn-primary" onclick="location.href='pulcina_info.html'">Reģistrēt jaunu</button>
+
+    </div>
+
+    
+
+
+
+</body>
+
+</html>

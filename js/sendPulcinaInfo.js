@@ -59,8 +59,6 @@ function nosutitPulcinaInfo() {
     dict["laiks"] = laiks;
 
 
-
-
     jsonData = JSON.stringify(dict)
     console.log(jsonData);
 
@@ -83,3 +81,4 @@ function download(content, fileName, contentType) {
     a.download = fileName;
     a.click();
 }
+
