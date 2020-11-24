@@ -14,14 +14,15 @@
 </head>
 
 <body onload="ieliktTekstu();">
-	<div class="container p-1 my-1 bg-dark text-white">
+	<div class="container p-1 my-1 bg-success text-white">
         <img src="../images/logo.png" alt="logo">
         
-        <div class="container p-3 my-3 bg-primary text-white">
+        <div class="container p-3 my-3 bg-warning text-white">
     	<h1>Pieteikuma forma</h1>	
 		<div class="form-row">
 			<div class="col-sm-7 mr-auto">
                 <form class="form-horizontal">
+					<div class="col-sm-7 mr-auto"></div>
 					<label for="vec_vards">Skolēna vecāka/aizbildņa vārds<span style="color: red;"> *</span></label>
 					<input type="text" id="vec_vards" name="vec_vards" class="form-control">		
 					<label for="vec_uzvards">Skolēna vecāka/aizbildņa uzvārds<span style="color: red;"> *</span></label>
@@ -42,7 +43,7 @@
 			</div>
 		</div>
 			<div class="form-row">
-				<h1 align="center">Iesniegums</h1>
+				<h1>Iesniegums</h1>
 				<form class="form-horizontal">			
 					<p> Lūdzu uzņemt manu  
             			<select id="berns" name="berns">
@@ -58,11 +59,11 @@
 					<label for="sk_skola"> Skola<span style="color: red;"> *</span></label>
 					<input type="text" id="sk_skola" name="sk_skola" class="form-control">
 					<label for="sk_klase">Klase<span style="color: red;"> *</span></label>
-					<input type="text"  name="sk_klase" name="sk_klase" class="form-control">
+					<input type="text"  id="sk_klase" name="sk_klase" class="form-control">
 					<label for="sk_perskods">Skolēna personas kods<span style="color: red;"> *</span></label>
-					<input type="text"  name="sk_perskods" name="sk_perskods" class="form-control">
+					<input type="text"  id="sk_perskods" name="sk_perskods" class="form-control">
 					<label for="sk_adrese">Skolēna mājas adrese<span style="color: red;"> *</span></label>
-					<input type="text"  name="sk_adrese" name="sk_adrese" class="form-control">
+					<input type="text"  id="sk_adrese" name="sk_adrese" class="form-control">
 					<label for="sk_epasts">Skolēna e-pasts<span style="color: red;"> *</span></label>
 					<input type="text" id="sk_epasts" name="sk_epasts" class="form-control">		
 					<label for="sk_telefons">Skolēna telefona numurs<span style="color: red;"> *</span></label>
@@ -82,11 +83,13 @@
 					Ar IIC iekšējās kārtības noteikumiem (publicēti IIC mājaslapā) esam iepazinušies.</p><br>
 		
 					<label for="noteikumi">Ar noteikumiem iepazinos<span style="color: red;"> *</span></label><br>
-					<input type="radio" id="not_ja" name="not_ne" value="Ja"/> Jā<br>
-					<input type="radio" id="not_ne" name="not_ne" value="Nē"/> Nē<br><br>
-			
-					<input type="submit" value="Iesniegt" onclick="vecPietRegistree1();">
-					<input type="submit" value="Izveidot pdf datni">					
+					<div id="noteik">
+						<input type="radio" id="r1" name="rate" value="1"> Jā<br>
+						<input type="radio" id="r2" name="rate" value="2"> Nē<br>					 
+					  </div>
+					  <br>
+					<button type="button" value="Iesniegt" class="btn btn-primary" onclick="vecPietRegistree1();">Iesniegt </button>
+					<button type="button" value="Izveidot pdf datni" class="btn btn-primary">Izveidot </button>					
 					<p id="zinojumi">  </p>	
 				</form>
 			</div>
