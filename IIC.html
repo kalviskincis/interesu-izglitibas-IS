@@ -21,11 +21,13 @@
         <div class="button-back-container">
             <a href="./index.html" class="button-back">
                 <span class="button-back__icon"></span>
-                <span class="button-back__text">Uz sākumlapu</span>
+                <span class="button-back__text" onclick="location.href='index.html'">Uz sākumlapu</span>
+
             </a>
         </div> 
         <div class="container p-3 my-3 bg-warning text-white">
-            <h1>Izdari savu izvēli</h1>
+            <h2>Izdari savu izvēli</h2>
+
             <title> comboBox </title>
             <form>
               
@@ -36,7 +38,7 @@
             
           <script>
           window.onload=function(){
-            klubs=["💃 Dejas","🎼 Mūzika","🎬 Teātra māksla","⚽️ Sports","🎨 Vizuālā māksla","🔧 Tehniskā jaunrade","🌿 Vides izglītība","💻 Informācijas tehnoloģijas",
+            klubs=["---","💃 Dejas","🎼 Mūzika","🎬 Teātra māksla","⚽️ Sports","🎨 Vizuālā māksla","🔧 Tehniskā jaunrade","🌿 Vides izglītība","💻 Informācijas tehnoloģijas",
             "📚 Akadēmiskā izglītība","❗ Citas programmas"]
             for(var i=0;i<klubs.length;i++){
                     var option = document.createElement("option"); 
@@ -75,15 +77,33 @@
                        <input class="form-control" id="Specialists" type="text" name="specialists">
                      </div>
                    </div>
-                </form>                       
-                 <text class="Iesutit logo"> Iesūtīt ICC logo </text>
+                </form>   
+                
+                <body>
+                  <button onclick="pievienotRindu()">Tukša datne lejupielādei</button>
+                  <form id="forma"></form>
+                  <script> 
+                  function pievienotRindu(){
+                      let i=document.getElementsByClassName("rinda").length;
+                      let divs = document.createElement("DIV"); divs.setAttribute("class","rinda");
+                      divs.innerHTML=(i+1)+") ";
+                      let ievads1 = document.createElement("INPUT"); ievads1.style="text-align: center";
+                      let ievads2 = document.createElement("INPUT"); ievads2.style="text-align: center";
+                      let poga = document.createElement("INPUT"); poga.value="novākt"; poga.type="button";
+                      poga.onclick=()=>{
+                          poga.parentNode.remove();
+                      }
+                      divs.appendChild(ievads1); divs.appendChild(ievads2); divs.appendChild(poga);
+                      document.getElementById("forma").appendChild(divs);
+                  }
+                 </script>
+             </body>
+                
                  <br><br>
-                <text class="Datne"> Tukša datne lejupielādei </text>
-                <br><br>
-               <button class="poga1"> Iesūtīt datni</button>
-                <button class="poga2"> Reģistrēt jaunu pulciņu</button>
-                <button class="poga3"> Visi IIC reģistrētie pulciņi</button>                        
-                         
+                
+                <button class="poga1" onclick="location.href='pulcinu_saraksts.html'"> Iesūtīt datni</button>
+                <button class="poga2" onclick="registracija()"> Reģistrēt jaunu pulciņu</button>
+
             </div>                       
         </div>       
     </div>
