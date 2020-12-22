@@ -64,6 +64,14 @@ function nosutitPulcinaInfo() {
 
     download(jsonData, 'json.txt', 'text/plain');
 
+    // nākamās divas rindas šajā vietā ir tikai pagaidām, jo vispār tās dzīvo tur zemāk ar .then utt., 
+    // be tā kā dati uz serveri nesūtas, tad nākamie .then nekad laikam neizpildās, tātad f-jas nestrādā.
+    // Tāpēc iemānīts šeit.
+    window.alert("Dati saglabāti");
+    location.href="pulcinu_saraksts.html"
+    // Mānīšanās beigas
+
+    
     fetch('https://kalviskincis.github.io/interesu-izglitibas-IS/views/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -71,6 +79,7 @@ function nosutitPulcinaInfo() {
     })
         .then(res => res.json())
         .then(data => document.getElementById("saglabats").innerHTML = "Dati saglabāti")
+        .then(data => location.href="pulcinu_saraksts.html")
 
 }
 
