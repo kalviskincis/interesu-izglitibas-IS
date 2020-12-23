@@ -19,7 +19,7 @@
         <h1><center>Interešu izglītības centra nosaukums</center></h1>
         <div class="top-section">
         <div class="button-back-container">
-            <a href="./index.html" class="button-back">
+                <a href="https://kalviskincis.github.io/interesu-izglitibas-IS/index.html" class="button-back">
                 <span class="button-back__icon"></span>
                 <span class="button-back__text" onclick="location.href='index.html'">Uz sākumlapu</span>
 
@@ -31,20 +31,20 @@
             <title> comboBox </title>
             <form>
               
-                <select id="klubs" name="klubs">
+                <select id="iicnosauk" name="iicnosauk">
     
               </select>
              </form>
             
           <script>
           window.onload=function(){
-            klubs=["---","💃 Dejas","🎼 Mūzika","🎬 Teātra māksla","⚽️ Sports","🎨 Vizuālā māksla","🔧 Tehniskā jaunrade","🌿 Vides izglītība","💻 Informācijas tehnoloģijas",
-            "📚 Akadēmiskā izglītība","❗ Citas programmas"]
-            for(var i=0;i<klubs.length;i++){
+             iicnosauk=["---","Bērnu un jauniešu centrs IK Auseklis","Tehniskās jaunrades nams Annas","Valkas novada Bērnu un jauniešu centrs Mice","Ventspils Jaunrades nams","Jelgavas pilsētas pašvaldības Jaunrades nams Junda","Valmieras Jaunatnes centrs Vinda","Tehniskās izglītības un jaunrades skola",
+            "Pirmā programmēšanas skola","Bērnu un jauniešu Eiropas programmēšanas skola"] 
+            for(var i=0;i<iicnosauk.length;i++){
                     var option = document.createElement("option"); 
-                    option.value=klubs[i];
-                    option.textContent=klubs[i];
-                    document.getElementById("klubs").appendChild(option);
+                    option.value=iicnosauk[i];
+                    option.textContent=iicnosauk[i];
+                    document.getElementById("iicnosauk").appendChild(option);
                     
                 }
           }    
@@ -72,7 +72,7 @@
                      </div>
                    </div>
                    <div class="form-group">
-                    <label class="col-sm-2 control-label">IIC Izglītības speciālista vārds, uzvārds<span style="color: red;"> *</span></label>
+                    <label class="col-sm-0 control-label">IIC Izglītības speciālista vārds, uzvārds<span style="color: red;"> *</span></label>
                      <div class="col-sm-4">
                        <input class="form-control" id="Specialists" type="text" name="specialists">
                      </div>
@@ -80,15 +80,15 @@
                 </form>   
                 
                 <body>
-                  <button onclick="pievienotRindu()">Tukša datne lejupielādei</button>
+                  <button onclick="pievienotRindu()">Papilddatnes lejupielādei</button>
                   <form id="forma"></form>
                   <script> 
                   function pievienotRindu(){
                       let i=document.getElementsByClassName("rinda").length;
                       let divs = document.createElement("DIV"); divs.setAttribute("class","rinda");
                       divs.innerHTML=(i+1)+") ";
-                      let ievads1 = document.createElement("INPUT"); ievads1.style="text-align: center";
-                      let ievads2 = document.createElement("INPUT"); ievads2.style="text-align: center";
+                      let ievads1 = document.createElement("INPUT"); ievads1.style="text-align: left";
+                      let ievads2 = document.createElement("INPUT"); ievads2.style="text-align: left";
                       let poga = document.createElement("INPUT"); poga.value="novākt"; poga.type="button";
                       poga.onclick=()=>{
                           poga.parentNode.remove();
@@ -101,8 +101,8 @@
                 
                  <br><br>
                 
-                <button class="poga1" onclick="location.href='pulcinu_saraksts.html'"> Iesūtīt datni</button>
-                <button class="poga2" onclick="registracija()"> Reģistrēt jaunu pulciņu</button>
+                <button class="poga1" onclick="registracija()">Iesūtīt datni</button>
+                <button class="poga2" onclick="location.href='https://kalviskincis.github.io/interesu-izglitibas-IS/views/pulcina_info.html'"> Reģistrēt jaunu pulciņu</button>
 
             </div>                       
         </div>       
