@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src='./main.js'></script>
-    <script src='./registracija.js'></script>
+    <!--<script src='./main.js'></script>-->
+    <script src='../registracija.js'></script>
 </head>
         
 <body>
@@ -86,7 +86,7 @@
                   function pievienotRindu(){
                       let i=document.getElementsByClassName("rinda").length;
                       let divs = document.createElement("DIV"); divs.setAttribute("class","rinda");
-                      divs.innerHTML=(i+1)+"... ";
+                      divs.innerHTML=(i+1)+". ";
                       let ievads1 = document.createElement("INPUT"); ievads1.style="text-align: left";
                       let ievads2 = document.createElement("INPUT"); ievads2.style="text-align: left";
                       let poga = document.createElement("INPUT"); poga.value="novākt"; poga.type="button";
