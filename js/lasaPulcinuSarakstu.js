@@ -16,8 +16,8 @@ function labotPulcinu(element) {
         this.adrese.value = pulcDati[rinda].adrese;
         this.maxAudzekni.value = pulcDati[rinda].maxAudzekni;
         for (let j = 0; j < pulcDati[rinda].laiks.length; j++) {
-            console.log(pulcDati[rinda].laiks[j].diena);
-            var diena = nedela.pulcDati[rinda].laiks[j].diena;
+            var dienasNr = pulcDati[rinda].laiks[j].diena;
+            var diena = nedela.dienasNr;
             console.log(diena);
             var no = pulcDati[rinda].laiks[j].no;
             var lidz = pulcDati[rinda].laiks[j].lidz;             
