@@ -1,7 +1,3 @@
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-  })
-
 // strādā
 function myFunction(x) {
     rinda = x.rowIndex - 1;

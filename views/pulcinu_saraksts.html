@@ -7,11 +7,17 @@
     <title>IIIIS - pulciņu saraksts</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/main.css'>
-    
+
     <!-- <script src='../js/main.js'></script>  -->
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </head>
 
 <body>
@@ -20,30 +26,31 @@
         <h1>Pulciņu saraksts</h1>
         <table class="table" id="pulcinuSaraksts">
             <thead>
-            <tr>
-                <th>ID</th>
-                <th>Izvēlēties</th>
-                <th>Joma</th>
-                <th>Pulciņa nosaukums</th>
-                <th>Stundu skaits nedēļā</th>
-                <th>Audzēkņa vecums</th>
-                <th>Skolotājs</th>
-                <th>Skolotāja e-pasts</th>
-                <th>Skolotāja telefons</th>
-                <th>Nodarbību vieta</th>
-                <th>Audzēkņu skaits</th>
-                <th>Nodarbību laiki</th>
-                
-                
-            </tr>
-        </thead>
-        <tbody id="tbody">
+                <tr>
+                    <th>ID</th>
+                    <th>Izvēlēties</th>
+                    <th>Joma</th>
+                    <th>Pulciņa nosaukums</th>
+                    <th>Stundu skaits nedēļā</th>
+                    <th>Audzēkņa vecums</th>
+                    <th>Skolotājs</th>
+                    <th>Skolotāja e-pasts</th>
+                    <th>Skolotāja telefons</th>
+                    <th>Nodarbību vieta</th>
+                    <th>Audzēkņu skaits</th>
+                    <th>Nodarbību laiki</th>
 
-        </tbody>
+
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
 
         </table>
         <script src='../js/lasaPulcinuSarakstu.js'></script>
-        <button type="button" value="Jauns" class="btn btn-primary" onclick="location.href='pulcina_info.html'">Reģistrēt jaunu</button>
+        <button type="button" value="Jauns" class="btn btn-primary"
+            onclick="location.href='pulcina_info.html'">Reģistrēt jaunu</button>
 
     </div>
 
