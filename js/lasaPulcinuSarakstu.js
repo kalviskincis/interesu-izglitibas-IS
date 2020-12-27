@@ -15,7 +15,9 @@ function atvertPulcinu(pulcins) {
         
         pulcinaInfoLapa.forma.joma.value=pulcins.joma;
         pulcinaInfoLapa.forma.nosaukums.value=pulcins.nosaukums;
-        pulcinaInfoLapa.forma.skolotajs.value="Aaaa";
+        pulcinaInfoLapa.skolotajs.value="Aaaa";
+        this.forma.skolotajs.value="Bbbb";
+        this.skolotajs.value="Cc";
     };
 // funkcija nolasīs padotā pulciņa laukus un atvērs pulcina_info.html skatu ar datiem
 }
