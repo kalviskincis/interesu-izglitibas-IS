@@ -1,7 +1,7 @@
 function labotPulcinu(pulcins) {
     var editPulcinaInfo = window.open("pulcina_info.html");
     editPulcinaInfo.onload = function() {
-        editPulcinaInfo.joma.value=document.getElementById("joma").value;
+        editPulcinaInfo.joma.value=pulcins.joma;
     };
 // funkcija nolasīs padotā pulciņa laukus un atvērs pulcina_info.html skatu ar datiem
 }
