@@ -1,17 +1,19 @@
-function labotPulcinu(x) {
-    window.alert("Row index is: " + x.rowIndex);
-    var i = document.getElementById(0).id;
-    console.log(i);
-    console.log(pulcDati[i]);
+function myFunction(x) {
+    rinda = x.rowIndex-1;
+  }
+
+function labotPulcinu() {    
+    var i = document.getElementById(rinda).id;
+    console.log(rinda);
+    atvertPulcinu(pulcDati[rinda]);
 }
 
-function atvertPulcinu() {
+function atvertPulcinu(pulcins) {
 
     var pulcinaInfoLapa = window.open("pulcina_info.html");
     pulcinaInfoLapa.onload = function() {
-        pulcinaInfoLapa.joma.value=document.getElementsByName("joma").value;
-        pulcinaInfoLapa.nosaukums.value=document.getElementsByName("nosaukums").value;
-        window.alert(document.getElementById("joma").value);
+        pulcinaInfoLapa.joma.value=pulcins.joma;
+        pulcinaInfoLapa.nosaukums.value=pulcins.nosaukums;
     };
 // funkcija nolasīs padotā pulciņa laukus un atvērs pulcina_info.html skatu ar datiem
 }
@@ -28,8 +30,8 @@ function ieliktTabula(visiPulcini) {
     let laiks="";
     for (let i = 0; i < visiPulcini.length; i++) {  
         iDati = i;      
-        rinda = "<tr><td id=\""+i+"\">" + (i+1);        
-        rinda += "</td><td><input type=\"button\" class=\"btn btn-primary\" value=\"✎\" onclick=\"labotPulcinu(this)\" data-toggle=\"tooltip\" title=\"Labot\">&nbsp; <input type=\"button\" class=\"btn btn-primary\" value=\"✘\" onclick=\"dzestPulcinu(visiPulcini[i])\" data-toggle=\"tooltip\" title=\"Dzēst\"></td><td name=\"joma\" id=\"joma\">";        
+        rinda = "<tr onclick=\"myFunction(this)\"><td id=\""+i+"\">" + (i+1);        
+        rinda += "</td><td><input type=\"button\" class=\"btn btn-primary\" onclick=\"labotPulcinu()\" value=\"✎\" data-toggle=\"tooltip\" title=\"Labot\">&nbsp; <input type=\"button\" class=\"btn btn-primary\" value=\"✘\" onclick=\"dzestPulcinu(visiPulcini[i])\" data-toggle=\"tooltip\" title=\"Dzēst\"></td><td name=\"joma\" id=\"joma\">";        
         console.log(rinda);
         // rinda = "<tr><td><big><a href=\"javascript:\" onclick=\"labotPulcinu(visiPulcini[i])\" data-toggle=\"tooltip\" title=\"Labot\" >✎</a> &nbsp; <a href=\"javascript:\" onclick=\"dzestPulcinu(visiPulcini[i])\" data-toggle=\"tooltip\" title=\"Dzēst\">✘</a> </big></td><td name=\"joma\" id=\"joma\">";
         rinda += visiPulcini[i].joma + "</td><td name=\"nosaukums\" id=\"nosaukums\">" +
