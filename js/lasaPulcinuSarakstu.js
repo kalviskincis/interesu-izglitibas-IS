@@ -9,10 +9,10 @@ function labotPulcinu() {
 }
 
 function atvertPulcinu(pulcins) {
-    console.log(pulcins.joma, pulcins.nosaukums);
-    var pulcinaInfoLapa = window.open("pulcina_info.html");
-    pulcinaInfoLapa.onload = function() {
-        
+    console.log(pulcins.joma, pulcins.nosaukums); // parāda
+    var pulcinaInfoLapa = window.open("pulcina_info.html"); // atver
+    pulcinaInfoLapa.onload = function() { // vairs nekas nenotiek
+        window.alert(pulcins.nosaukums);
         pulcinaInfoLapa.forma.joma.value=pulcins.joma;
         pulcinaInfoLapa.forma.nosaukums.value=pulcins.nosaukums;
         pulcinaInfoLapa.skolotajs.value="Aaaa";
