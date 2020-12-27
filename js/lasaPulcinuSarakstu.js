@@ -9,15 +9,15 @@ function labotPulcinu(element) {
         this.joma.text = pulcDati[rinda].joma;
         this.nosaukums.value = pulcDati[rinda].nosaukums;        
         this.stunduSkaits.value = pulcDati[rinda].stunduSkaits;
-        this.vecumsNo.value = pulcDati[rinda].no;
-        this.vecumsLidz.value = pulcDati[rinda].lidz;
+        this.vecumsNo.value = pulcDati[rinda].vecums.no;
+        this.vecumsLidz.value = pulcDati[rinda].vecums.lidz;
         this.skolotajs.value = pulcDati[rinda].skolotajs;
         this.epasts.value = pulcDati[rinda].epasts;
         this.talrunis.value = pulcDati[rinda].talrunis;
         this.adrese.value = pulcDati[rinda].adrese;
         this.maxAudzekni.value = pulcDati[rinda].maxAudzekni;
         for (let j = 0; j < pulcDati[rinda].laiks.length; j++) {
-            console.log(pulcDati[rinda].laiks);
+            console.log(pulcDati[rinda].laiks[j]);
             var dienasNr = pulcDati[rinda].laiks[j].diena;
             var diena = nedela.dienasNr;
             // console.log(diena);
