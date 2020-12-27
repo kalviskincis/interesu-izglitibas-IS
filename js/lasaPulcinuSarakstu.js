@@ -1,3 +1,7 @@
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
 // strādā
 function myFunction(x) {
     rinda = x.rowIndex - 1;
@@ -13,10 +17,12 @@ function labotPulcinu() {
 function atvertPulcinu(pulcins) {
     console.log(pulcins.joma, pulcins.nosaukums); // parāda
     var pulcinaInfoLapa = window.open("pulcina_info.html"); // atver
+    var pNosaukums = pulcins.nosaukums;
     pulcinaInfoLapa.onload = function () { // vairs nekas nenotiek
-        window.alert("boo");
+        window.alert("boo"); // pat šis nenotiek
         pulcinaInfoLapa.forma.joma.value = pulcins.joma;
-        pulcinaInfoLapa.forma.nosaukums.value = pulcins.nosaukums;
+        window.alert(pNosaukums);
+        pulcinaInfoLapa.forma.nosaukums.value = pNosaukums;
         pulcinaInfoLapa.skolotajs.value = "Aaaa";
         this.forma.skolotajs.value = "Bbbb";
         this.skolotajs.value = "Cc";
@@ -62,8 +68,3 @@ function ieliktTabula(visiPulcini) {
 fetch(' https://kalviskincis.github.io/interesu-izglitibas-IS/pulcini.json')
     .then(res => res.json())
     .then(data => { ieliktTabula(data); })
-
-
-document.ready(function () {
-    ('[data-toggle="tooltip"]').tooltip();
-});
