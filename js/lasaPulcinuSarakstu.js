@@ -9,12 +9,12 @@ function labotPulcinu() {
 }
 
 function atvertPulcinu(pulcins) {
-
+    console.log(pulcins.joma, pulcins.nosaukums);
     var pulcinaInfoLapa = window.open("pulcina_info.html");
     pulcinaInfoLapa.onload = function() {
-        console.log(pulcins.joma, pulcins.nosaukums);
-        pulcinaInfoLapa.joma.value=pulcins.joma;
-        pulcinaInfoLapa.nosaukums.value=pulcins.nosaukums;
+        
+        pulcinaInfoLapa.forma.joma.value=pulcins.joma;
+        pulcinaInfoLapa.forma.nosaukums.value=pulcins.nosaukums;
     };
 // funkcija nolasīs padotā pulciņa laukus un atvērs pulcina_info.html skatu ar datiem
 }
