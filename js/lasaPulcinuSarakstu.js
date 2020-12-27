@@ -6,12 +6,10 @@ function labotPulcinu(element) {
     console.log(pulcDati[rinda]);
     var pulcinaInfoLapa = window.open("fake_pulcina_info.html"); // lapu atver, bet neko neielasa
     pulcinaInfoLapa.onload = function () { // vairs nekas nenotiek
-        window.alert("boo"); // pat šis nenotiek
         pulcinaInfoLapa.forma.joma.value = pulcDati[rinda].joma;        
         pulcinaInfoLapa.forma.nosaukums.value = pulcDati[rinda].nosaukums;
-        pulcinaInfoLapa.skolotajs.value = "Aaaa";
-        this.forma.skolotajs.value = "Bbbb";
-        this.skolotajs.value = "Cc";
+        pulcinaInfoLapa.skolotajs.value = pulcDati[rinda].skolotajs;
+        this.skolotajs.value = pulcDati[rinda].skolotajs;
     };
 }
 
