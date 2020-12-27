@@ -12,6 +12,7 @@ function atvertPulcinu(pulcins) {
 
     var pulcinaInfoLapa = window.open("pulcina_info.html");
     pulcinaInfoLapa.onload = function() {
+        console.log(pulcins.joma, pulcins.nosaukums);
         pulcinaInfoLapa.joma.value=pulcins.joma;
         pulcinaInfoLapa.nosaukums.value=pulcins.nosaukums;
     };
