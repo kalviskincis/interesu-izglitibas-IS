@@ -1,15 +1,27 @@
 // funkcija pulciņa lauku nolasīšanai un atvēršanai labošanas skatā.
 // lauku nolasīšana strādā, atvēršana strādā, bet dati tur nenonāk.
 function labotPulcinu(element) {
-    var rinda = element.parentNode.parentNode.rowIndex-1; 
-    console.log(rinda);
-    console.log(pulcDati[rinda]);
-    var pulcinaInfoLapa = window.open("fake_pulcina_info.html"); // lapu atver, bet neko neielasa
-    pulcinaInfoLapa.onload = function () { // vairs nekas nenotiek
-        pulcinaInfoLapa.forma.joma.value = pulcDati[rinda].joma;        
-        pulcinaInfoLapa.forma.nosaukums.value = pulcDati[rinda].nosaukums;
-        pulcinaInfoLapa.skolotajs.value = pulcDati[rinda].skolotajs;
+    var nedela = {1: "pirmdiena", 2: "otrdiena", 3: "tresdiena", 4: "ceturtdiena", 5: "piektdiena", 6: "sestdiena", 7: "svetdiena"};
+    var rinda = element.parentNode.parentNode.rowIndex-1;
+    var pulcinaInfoLapa = window.open("fake_pulcina_info.html");
+    pulcinaInfoLapa.onload = function () { 
+        this.joma.value = pulcDati[rinda].joma;        
+        this.nosaukums.value = pulcDati[rinda].nosaukums;        
+        this.stunduSkaits.value = pulcDati[rinda].stunduSkaits;
+        this.vecumsNo.value = pulcDati[rinda].no;
+        this.vecumsLidz.value = pulcDati[rinda].lidz;
         this.skolotajs.value = pulcDati[rinda].skolotajs;
+        this.epasts.value = pulcDati[rinda].epasts;
+        this.talrunis.value = pulcDati[rinda].talrunis;
+        this.adrese.value = pulcDati[rinda].adrese;
+        this.maxAudzekni.value = pulcDati[rinda].maxAudzekni;
+        for (let j = 0; j < pulcDati[rinda].laiks.length; j++) {
+            console.log(pulcDati[rinda].laiks[j].diena);
+            var diena = nedela.pulcDati[rinda].laiks[j].diena;
+            console.log(diena);
+            var no = pulcDati[rinda].laiks[j].no;
+            var lidz = pulcDati[rinda].laiks[j].lidz;             
+        }
     };
 }
 
