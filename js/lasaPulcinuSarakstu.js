@@ -5,8 +5,8 @@ function labotPulcinu(element) {
     var rinda = element.parentNode.parentNode.rowIndex-1;
     var pulcinaInfoLapa = window.open("fake_pulcina_info.html");
     pulcinaInfoLapa.onload = function () { 
-        this.joma.value = pulcDati[rinda].joma;        
-        this.joma.text = pulcDati[rinda].joma;
+        this.getElementById("joma").value = pulcDati[rinda].joma;        
+        //this.joma.text = pulcDati[rinda].joma;
         this.nosaukums.value = pulcDati[rinda].nosaukums;        
         this.stunduSkaits.value = pulcDati[rinda].stunduSkaits;
         this.vecumsNo.value = pulcDati[rinda].vecums.no;
@@ -18,11 +18,11 @@ function labotPulcinu(element) {
         this.maxAudzekni.value = pulcDati[rinda].maxAudzekni;
         for (let j = 0; j < pulcDati[rinda].laiks.length; j++) {
             console.log(pulcDati[rinda].laiks[j]);           
-            var diena = nedela.pulcDati[rinda].laiks[j].diena;
-            console.log(diena);
+            //var diena = nedela.pulcDati[rinda].laiks[j].diena;
+            //console.log(diena);
             var no = pulcDati[rinda].laiks[j].no;
             var lidz = pulcDati[rinda].laiks[j].lidz;
-            console.log(no, lidz)
+            console.log(no, lidz);
 
         }
     };
