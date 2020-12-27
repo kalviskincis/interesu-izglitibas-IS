@@ -1,10 +1,10 @@
 // funkcija pulciņa lauku nolasīšanai un atvēršanai labošanas skatā.
 // lauku nolasīšana strādā, atvēršana strādā, bet dati tur nenonāk.
-function labotPulcinu(element) {
-    var nedela = {"pirmdiena": "pirmdiena", "otrdiena": "otrdiena", "trešdiena": "tresdiena", "ceturtdiena": "ceturtdiena", "piektdiena": "piektdiena", "sestdiena": "sestdiena", "svētdiena": "svetdiena"};
+function labotPulcinu(element) {    
     var rinda = element.parentNode.parentNode.rowIndex-1;
     var pulcinaInfoLapa = window.open("fake_pulcina_info.html");
     pulcinaInfoLapa.onload = function () {
+        var nedela = {"pirmdiena": "pirmdiena", "otrdiena": "otrdiena", "trešdiena": "tresdiena", "ceturtdiena": "ceturtdiena", "piektdiena": "piektdiena", "sestdiena": "sestdiena", "svētdiena": "svetdiena"};
         this.jomas.value = pulcDati[rinda].joma;        
         this.jomas.text = pulcDati[rinda].joma;
         this.nosaukums.value = pulcDati[rinda].nosaukums;        
