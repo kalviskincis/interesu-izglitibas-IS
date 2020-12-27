@@ -1,23 +1,27 @@
 // strādā
-function myFunction(x) {
-    rinda = x.rowIndex - 1;
-}
-
-// strādā
-function labotPulcinu() {
+function labotPulcinu(element) {
+    var rinda = element.parentNode.parentNode.rowIndex-1; 
     console.log(rinda);
-    atvertPulcinu(pulcDati[rinda]);
+    var pulcinaInfoLapa = window.open("pulcina_info.html"); // lapu atver, bet neko neielasa
+    pulcinaInfoLapa.onload = function () { // vairs nekas nenotiek
+        window.alert("boo"); // pat šis nenotiek
+        pulcinaInfoLapa.forma.joma.value = pulcDati[rinda].joma;        
+        pulcinaInfoLapa.forma.nosaukums.value = pulcDati[rinda].nosaukums;
+        pulcinaInfoLapa.skolotajs.value = "Aaaa";
+        this.forma.skolotajs.value = "Bbbb";
+        this.skolotajs.value = "Cc";
+    };
+    // atvertPulcinu(pulcDati[rinda]);
 }
 
 // sk. pie katras rindas
 function atvertPulcinu(pulcins) {
-    console.log(pulcins.joma, pulcins.nosaukums); // parāda
-    pulcinaInfoLapa = window.open("pulcina_info.html"); // atver
-    pNosaukums = pulcins.nosaukums;
+    console.log(pulcins.joma, pulcins.nosaukums); // strādā, parāda
+    var pulcinaInfoLapa = window.open("pulcina_info.html"); // lapu atver, bet neko neielasa
+    var pNosaukums = pulcins.nosaukums;
     pulcinaInfoLapa.onload = function () { // vairs nekas nenotiek
         window.alert("boo"); // pat šis nenotiek
-        pulcinaInfoLapa.forma.joma.value = pulcins.joma;
-        window.alert(pNosaukums);
+        pulcinaInfoLapa.forma.joma.value = pulcins.joma;        
         pulcinaInfoLapa.forma.nosaukums.value = pNosaukums;
         pulcinaInfoLapa.skolotajs.value = "Aaaa";
         this.forma.skolotajs.value = "Bbbb";
@@ -25,7 +29,6 @@ function atvertPulcinu(pulcins) {
     };
     // funkcija nolasīs padotā pulciņa laukus un atvērs pulcina_info.html skatu ar datiem
 }
-
 
 
 function dzestPulcinu(pulcins) {
@@ -40,9 +43,8 @@ function ieliktTabula(visiPulcini) {
     let laiks = "";
     for (let i = 0; i < visiPulcini.length; i++) {
         iDati = i;
-        rinda = "<tr onclick=\"myFunction(this)\"><td id=\"" + i + "\">" + (i + 1);
-        rinda += "</td><td><input type=\"button\" class=\"btn btn-primary\" onclick=\"labotPulcinu()\" value=\"✎\" data-toggle=\"tooltip\" title=\"Labot\">&nbsp; <input type=\"button\" class=\"btn btn-primary\" value=\"✘\" onclick=\"dzestPulcinu(visiPulcini[i])\" data-toggle=\"tooltip\" title=\"Dzēst\"></td><td name=\"joma\" id=\"joma\">";
-        // rinda = "<tr><td><big><a href=\"javascript:\" onclick=\"labotPulcinu(visiPulcini[i])\" data-toggle=\"tooltip\" title=\"Labot\" >✎</a> &nbsp; <a href=\"javascript:\" onclick=\"dzestPulcinu(visiPulcini[i])\" data-toggle=\"tooltip\" title=\"Dzēst\">✘</a> </big></td><td name=\"joma\" id=\"joma\">";
+        rinda = "<tr><td id=\"" + i + "\">" + (i + 1);        
+        rinda += "</td><td><input type=\"button\" class=\"btn btn-primary\" onclick=\"labotPulcinu(this)\" value=\"✎\" data-toggle=\"tooltip\" title=\"Labot\">&nbsp; <input type=\"button\" class=\"btn btn-primary\" value=\"✘\" onclick=\"dzestPulcinu(visiPulcini[i])\" data-toggle=\"tooltip\" title=\"Dzēst\"></td><td name=\"joma\" id=\"joma\">";
         rinda += visiPulcini[i].joma + "</td><td name=\"nosaukums\" id=\"nosaukums\">" +
             visiPulcini[i].nosaukums + "</td><td>" +
             visiPulcini[i].stunduSkaits + "</td><td>" +
