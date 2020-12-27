@@ -5,13 +5,6 @@ function labotPulcinu(element) {
     var rinda = element.parentNode.parentNode.rowIndex-1;
     var pulcinaInfoLapa = window.open("fake_pulcina_info.html");
     pulcinaInfoLapa.onload = function () {
-        jomas = ["---", "💃 Dejas", "🎼 Mūzika", "🎬 Teātra māksla", "⚽️ Sports", "🎨 Vizuālā māksla", "🔧 Tehniskā jaunrade", "🌿 Vides izglītība", "💻 Informācijas tehnoloģijas", "📚 Akadēmiskā izglītība", " ❗ Citas programmas"]
-        for (var i = 0; i < joma.length; i++) {
-            var option = document.createElement("option");
-            option.value = jomas[i];
-            option.textContent = jomas[i];
-            document.getElementById("jomas").appendChild(option);
-        }
         this.jomas.value = pulcDati[rinda].joma;        
         this.jomas.text = pulcDati[rinda].joma;
         this.nosaukums.value = pulcDati[rinda].nosaukums;        
@@ -28,9 +21,10 @@ function labotPulcinu(element) {
             //var diena = nedela.pulcDati[rinda].laiks[j].diena;
             //console.log(diena);
             var diena = pulcDati[rinda].laiks[j].diena;
+            ddiena = nedela.diena;
             var no = pulcDati[rinda].laiks[j].no;
             var lidz = pulcDati[rinda].laiks[j].lidz;
-            console.log(diena, no, lidz);
+            console.log(ddiena, no, lidz);
 
         }
     };
