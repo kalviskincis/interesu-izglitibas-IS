@@ -12,8 +12,8 @@ function labotPulcinu() {
 // sk. pie katras rindas
 function atvertPulcinu(pulcins) {
     console.log(pulcins.joma, pulcins.nosaukums); // parāda
-    var pulcinaInfoLapa = window.open("pulcina_info.html"); // atver
-    var pNosaukums = pulcins.nosaukums;
+    pulcinaInfoLapa = window.open("pulcina_info.html"); // atver
+    pNosaukums = pulcins.nosaukums;
     pulcinaInfoLapa.onload = function () { // vairs nekas nenotiek
         window.alert("boo"); // pat šis nenotiek
         pulcinaInfoLapa.forma.joma.value = pulcins.joma;
