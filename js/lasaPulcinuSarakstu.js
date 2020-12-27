@@ -6,6 +6,7 @@ function labotPulcinu(element) {
     var pulcinaInfoLapa = window.open("fake_pulcina_info.html");
     pulcinaInfoLapa.onload = function () { 
         this.joma.value = pulcDati[rinda].joma;        
+        this.joma.text = pulcDati[rinda].joma;
         this.nosaukums.value = pulcDati[rinda].nosaukums;        
         this.stunduSkaits.value = pulcDati[rinda].stunduSkaits;
         this.vecumsNo.value = pulcDati[rinda].no;
