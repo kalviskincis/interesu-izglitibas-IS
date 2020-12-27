@@ -1,7 +1,9 @@
-// strādā
+// funkcija pulciņa lauku nolasīšanai un atvēršanai labošanas skatā
+// lauku nolasīšana strādā, atvēršana strādā, bet dati tur nenonāk.
 function labotPulcinu(element) {
     var rinda = element.parentNode.parentNode.rowIndex-1; 
     console.log(rinda);
+    console.log(pulcDati[rinda]);
     var pulcinaInfoLapa = window.open("pulcina_info.html"); // lapu atver, bet neko neielasa
     pulcinaInfoLapa.onload = function () { // vairs nekas nenotiek
         window.alert("boo"); // pat šis nenotiek
@@ -13,23 +15,6 @@ function labotPulcinu(element) {
     };
     // atvertPulcinu(pulcDati[rinda]);
 }
-
-// sk. pie katras rindas
-function atvertPulcinu(pulcins) {
-    console.log(pulcins.joma, pulcins.nosaukums); // strādā, parāda
-    var pulcinaInfoLapa = window.open("pulcina_info.html"); // lapu atver, bet neko neielasa
-    var pNosaukums = pulcins.nosaukums;
-    pulcinaInfoLapa.onload = function () { // vairs nekas nenotiek
-        window.alert("boo"); // pat šis nenotiek
-        pulcinaInfoLapa.forma.joma.value = pulcins.joma;        
-        pulcinaInfoLapa.forma.nosaukums.value = pNosaukums;
-        pulcinaInfoLapa.skolotajs.value = "Aaaa";
-        this.forma.skolotajs.value = "Bbbb";
-        this.skolotajs.value = "Cc";
-    };
-    // funkcija nolasīs padotā pulciņa laukus un atvērs pulcina_info.html skatu ar datiem
-}
-
 
 function dzestPulcinu(pulcins) {
     // funkcija izdzēsīs ierakstu un vēlreiz nolasīs datus tabulā
