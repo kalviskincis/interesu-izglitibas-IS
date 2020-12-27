@@ -27,7 +27,7 @@ function labotPulcinu(element) {
             console.log(pulcDati[rinda].laiks[j]);           
             //var diena = nedela.pulcDati[rinda].laiks[j].diena;
             //console.log(diena);
-            var diena = nedela.pulcDati[rinda].laiks[j].diena;
+            var diena = pulcDati[rinda].laiks[j].diena;
             var no = pulcDati[rinda].laiks[j].no;
             var lidz = pulcDati[rinda].laiks[j].lidz;
             console.log(diena, no, lidz);
