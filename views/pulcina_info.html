@@ -7,7 +7,6 @@
     <title>IIIIS - pulciņa info</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/main.css'>
-    <!-- <script src='../js/main.js'></script> -->
     <script src='../js/sendPulcinaInfo.js'></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -27,7 +26,7 @@
                     <select id="joma" name="joma" class="form-control">
 
                     </select><br>
-                    
+
                     <label for="nosaukums">Pulciņa nosaukums</label>
                     <input type="text" id="nosaukums" name="nosaukums" class="form-control"><br>
                     <label for="stunduSkaits">Stundu skaits nedēļā</label>
@@ -36,7 +35,8 @@
                     <label for="vecumsNo">no</label>
                     <input type="number" min="4" max="18" id="vecumsNo" name="vecumsNo" size="2" class="form-control">
                     <label for="vecumsLidz">līdz</label>
-                    <input type="number" min="4" max="18" id="vecumsLidz" name="vecumsLidz" size="2" class="form-control"><br>
+                    <input type="number" min="4" max="18" id="vecumsLidz" name="vecumsLidz" size="2"
+                        class="form-control"><br>
                     <label for="skolotajs">Skolotāja vārds, uzvārds</label>
                     <input type="text" id="skolotajs" name="skolotajs" class="form-control"><br>
                     <label for="epasts">E-pasts</label>
@@ -48,12 +48,12 @@
                     <label for="maxAudzekni">Maksimālais audzēkņu skaits grupā</label>
                     <input type="number" id="maxAudzekni" name="maxAudzekni" max="100" size="3"
                         class="form-control"><br>
-                    
+
 
             </div>
 
             <div class="col-sm-5 ml-auto">
-                
+
                 <label for="nodarbibuLaiki">Nodarbību laiki</label>
 
                 <table class="table">
@@ -139,7 +139,7 @@
                     <tr>
                         <td>Trešdiena</td>
                         <td>
-                            <select id="tresdienaNo" name="tresdienaNo" class="form-control"> 
+                            <select id="tresdienaNo" name="tresdienaNo" class="form-control">
                                 <option value="none">-</option>
                                 <option value="8.00">8.00</option>
                                 <option value="9.00">9.00</option>
@@ -323,7 +323,8 @@
                     </tr>
                 </table>
                 <a href="#">Pulciņa programma lejupielādei</a><br><br>
-                <button type="button" value="Saglabāt" class="btn btn-primary" onclick="nosutitPulcinaInfo()">Saglabāt</button>
+                <button type="button" value="Saglabāt" class="btn btn-primary"
+                    onclick="nosutitPulcinaInfo()">Saglabāt</button>
                 <p id="saglabats"></p>
                 </form>
             </div>
@@ -331,22 +332,7 @@
 
         </div>
     </div>
-
-    
-    <script>
-        window.onload=function(){
-              joma=["---", "💃 Dejas", "🎼 Mūzika", "🎬 Teātra māksla", "⚽️ Sports", "🎨 Vizuālā māksla", "🔧 Tehniskā jaunrade", "🌿 Vides izglītība","💻 Informācijas tehnoloģijas", "📚 Akadēmiskā izglītība"," ❗ Citas programmas"]
-              for(var i=0;i<joma.length;i++){
-                  var option = document.createElement("option"); 
-                  option.value=joma[i];
-                  option.textContent=joma[i];
-                  document.getElementById("joma").appendChild(option);
-                  
-              }
-        }    
-          </script>
-
-
+    <script src='../js/ieladetKategorijas.js'></script>
 </body>
 
 </html>

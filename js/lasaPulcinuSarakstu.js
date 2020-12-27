@@ -1,7 +1,7 @@
 // funkcija pulciņa lauku nolasīšanai un atvēršanai labošanas skatā.
 function labotPulcinu(element) {    
     var rinda = element.parentNode.parentNode.rowIndex-1;
-    var pulcinaInfoLapa = window.open("fake_pulcina_info.html");
+    var pulcinaInfoLapa = window.open("pulcina_info.html");
     pulcinaInfoLapa.onload = function () {
         var nedela = {"pirmdiena": "pirmdiena", "otrdiena": "otrdiena", "trešdiena": "tresdiena", "ceturtdiena": "ceturtdiena", "piektdiena": "piektdiena", "sestdiena": "sestdiena", "svētdiena": "svetdiena"};
         this.joma.value = pulcDati[rinda].joma;        
