@@ -28,26 +28,26 @@ function nosutitPulcinaInfo() {
     var laiks = [];
 
     if (pirmdienaNo != "none") {
-        laiks.push({ diena: 1, no: pirmdienaNo, lidz: pirmdienaLidz })
+        laiks.push({ diena: "pirmdiena", no: pirmdienaNo, lidz: pirmdienaLidz })
     }
     if (otrdienaNo != "none") {
-        laiks.push({ diena: 2, no: otrdienaNo, lidz: otrdienaLidz })
+        laiks.push({ diena: "otrdiena", no: otrdienaNo, lidz: otrdienaLidz })
     }
 
     if (tresdienaNo != "none") {
-        laiks.push({ diena: 3, no: tresdienaNo, lidz: tresdienaLidz })
+        laiks.push({ diena: "trešdiena", no: tresdienaNo, lidz: tresdienaLidz })
     }
     if (ceturtdienaNo != "none") {
-        laiks.push({ diena: 4, no: ceturtdienaNo, lidz: ceturtdienaLidz })
+        laiks.push({ diena: "ceturtdiena", no: ceturtdienaNo, lidz: ceturtdienaLidz })
     }
     if (piektdienaNo != "none") {
-        laiks.push({ diena: 5, no: piektdienaNo, lidz: piektdienaLidz })
+        laiks.push({ diena: "piektdiena", no: piektdienaNo, lidz: piektdienaLidz })
     }
     if (sestdienaNo != "none") {
-        laiks.push({ diena: 6, no: sestdienaNo, lidz: sestdienaLidz })
+        laiks.push({ diena: "sestdiena", no: sestdienaNo, lidz: sestdienaLidz })
     }
     if (svetdienaNo != "none") {
-        laiks.push({ diena: 7, no: svetdienaNo, lidz: svetdienaLidz })
+        laiks.push({ diena: "svētdiena", no: svetdienaNo, lidz: svetdienaLidz })
     }
 
     var dict = {
