@@ -16,12 +16,13 @@ function labotPulcinu(element) {
         this.adrese.value = pulcDati[rinda].adrese;
         this.maxAudzekni.value = pulcDati[rinda].maxAudzekni;
         for (let j = 0; j < pulcDati[rinda].laiks.length; j++) {
+            console.log(pulcDati[rinda].laiks);
             var dienasNr = pulcDati[rinda].laiks[j].diena;
             var diena = nedela.dienasNr;
-            console.log(diena);
+            // console.log(diena);
             var no = pulcDati[rinda].laiks[j].no;
             var lidz = pulcDati[rinda].laiks[j].lidz;
-                         
+
         }
     };
 }
@@ -34,10 +35,9 @@ function dzestPulcinu(pulcins) {
 function ieliktTabula(visiPulcini) {
     pulcDati = visiPulcini;
     let tabulasBody = document.getElementById("tbody");
-    let rinda;
-    let laiks = "";
-    for (let i = 0; i < visiPulcini.length; i++) {
-        iDati = i;
+    let rinda;    
+    for (let i = 0; i < visiPulcini.length; i++) {        
+        let laiks = "";
         rinda = "<tr><td id=\"" + i + "\">" + (i + 1);        
         rinda += "</td><td><input type=\"button\" class=\"btn btn-primary\" onclick=\"labotPulcinu(this)\" value=\"✎\" data-toggle=\"tooltip\" title=\"Labot\">&nbsp; <input type=\"button\" class=\"btn btn-primary\" value=\"✘\" onclick=\"dzestPulcinu(visiPulcini[i])\" data-toggle=\"tooltip\" title=\"Dzēst\"></td><td name=\"joma\" id=\"joma\">";
         rinda += visiPulcini[i].joma + "</td><td name=\"nosaukums\" id=\"nosaukums\">" +
