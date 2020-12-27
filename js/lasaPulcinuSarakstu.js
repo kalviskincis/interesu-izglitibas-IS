@@ -1,8 +1,17 @@
-function labotPulcinu() {    
+function labotPulcinu(x) {
+    window.alert("Row index is: " + x.rowIndex);
+    var i = document.getElementById(0).id;
+    console.log(i);
+    console.log(pulcDati[i]);
+}
+
+function atvertPulcinu() {
+
     var pulcinaInfoLapa = window.open("pulcina_info.html");
     pulcinaInfoLapa.onload = function() {
-        pulcinaInfoLapa.joma.value=document.getElementById("joma").value;
-        pulcinaInfoLapa.nosaukums.value=document.getElementById("nosaukums").value;
+        pulcinaInfoLapa.joma.value=document.getElementsByName("joma").value;
+        pulcinaInfoLapa.nosaukums.value=document.getElementsByName("nosaukums").value;
+        window.alert(document.getElementById("joma").value);
     };
 // funkcija nolasīs padotā pulciņa laukus un atvērs pulcina_info.html skatu ar datiem
 }
@@ -13,11 +22,15 @@ function dzestPulcinu(pulcins) {
 }
 
 function ieliktTabula(visiPulcini) {
+    pulcDati = visiPulcini;
     let tabulasBody = document.getElementById("tbody");
     let rinda;
     let laiks="";
-    for (let i = 0; i < visiPulcini.length; i++) {        
-        rinda = "<tr><td><input type=\"button\" class=\"btn btn-primary\" value=\"✎\" onclick=\"labotPulcinu()\" data-toggle=\"tooltip\" title=\"Labot\">&nbsp; <input type=\"button\" class=\"btn btn-primary\" value=\"✘\" onclick=\"dzestPulcinu(visiPulcini[i])\" data-toggle=\"tooltip\" title=\"Dzēst\"></td><td name=\"joma\" id=\"joma\">";
+    for (let i = 0; i < visiPulcini.length; i++) {  
+        iDati = i;      
+        rinda = "<tr><td id=\""+i+"\">" + (i+1);        
+        rinda += "</td><td><input type=\"button\" class=\"btn btn-primary\" value=\"✎\" onclick=\"labotPulcinu(this)\" data-toggle=\"tooltip\" title=\"Labot\">&nbsp; <input type=\"button\" class=\"btn btn-primary\" value=\"✘\" onclick=\"dzestPulcinu(visiPulcini[i])\" data-toggle=\"tooltip\" title=\"Dzēst\"></td><td name=\"joma\" id=\"joma\">";        
+        console.log(rinda);
         // rinda = "<tr><td><big><a href=\"javascript:\" onclick=\"labotPulcinu(visiPulcini[i])\" data-toggle=\"tooltip\" title=\"Labot\" >✎</a> &nbsp; <a href=\"javascript:\" onclick=\"dzestPulcinu(visiPulcini[i])\" data-toggle=\"tooltip\" title=\"Dzēst\">✘</a> </big></td><td name=\"joma\" id=\"joma\">";
         rinda += visiPulcini[i].joma + "</td><td name=\"nosaukums\" id=\"nosaukums\">" +
             visiPulcini[i].nosaukums + "</td><td>" +
