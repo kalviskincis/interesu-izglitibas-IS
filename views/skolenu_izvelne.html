@@ -58,7 +58,7 @@
   </div>
     <div class="container">
       <label for="sel5">Izvēlies vēlamo laiku:</label>
-      <select class="form-control" id="sel5">
+      <select class="form-control" id="laiks">
         <option value="none">---</option>
         <option value="7.00">7.00</option>
         <option value="8.00">8.00</option>
@@ -73,14 +73,14 @@
         <option value="17.00">17.00</option>
         <option value="18.00">18.00</option>
         <option value="19.00">19.00</option>
-        <option value="19.00">20.00</option>
+        <option value="20.00">20.00</option>
         
       </select>
     </div>
     <div class="container">
       
       <br>
-      <button type="button" class="btn btn-info">Meklēt pulciņu!</button>
+      <button onclick="sutitDatus()" type="button" class="btn btn-info">Meklēt pulciņu!</button>
     </div>
     <script>
       window.onload=function(){
@@ -90,7 +90,7 @@
                 option.value=joma[i];
                 option.textContent=joma[i];
                 document.getElementById("joma").appendChild(option);
-              }
+             }
               for(var i=2;i<20;i++){
                 var option2 = document.createElement("option");
                 option2.value=i;
@@ -104,11 +104,36 @@
                         for (var x in data[0]) {        // cikls caur viena JSON objekta visiem laukiem
                           var option3 = document.createElement("option");
                           option3.textContent= data[0][x];
-                          document.getElementById("pilsetas").appendChild(option3);
-              // }
-           }
-      })
-      }    
+                          document.getElementById("pilsetas").appendChild(option3);}
+                        })
+      } //beidzas windows.onload 
+
+      
+  function sutitDatus() {
+    let joma = document.getElementById("joma").value;
+    let pilsetas = document.getElementById("pilsetas").value;
+    let vecums = document.getElementById("vecums").value;
+    let diena = document.getElementById("diena").value;
+    let laiks = document.getElementById("laiks").value;
+    if(confirm(`Apstiprini savu izvēli: 
+              Pulciņa veids: ${joma}
+              Pilsēta: ${pilsetas}
+              Vecums: ${vecums}
+              Diena: ${diena}
+              Laiks: ${laiks}
+              `)){
+                var vardnica={joma:joma, pilsetas:pilsetas, vecums:vecums, diena:diena,
+        laiks:laiks};
+        jsonData = JSON.stringify(vardnica);
+        console.log(jsonData);
+        
+        alert("Paldies!")
+        
+              } 
+}
+
+      
+     
         </script>
     
     
