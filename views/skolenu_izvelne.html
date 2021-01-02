@@ -108,7 +108,7 @@
                         })
       } //beidzas windows.onload 
 
-      
+   //Funkcija nolasa datus un nosutis talak  
   function sutitDatus() {
     let joma = document.getElementById("joma").value;
     let pilsetas = document.getElementById("pilsetas").value;
@@ -125,11 +125,11 @@
                 var vardnica={joma:joma, pilsetas:pilsetas, vecums:vecums, diena:diena,
         laiks:laiks};
         jsonData = JSON.stringify(vardnica);
-        console.log(jsonData);
-        
-        alert("Paldies!")
-        
-              } 
+        console.log(jsonData);        
+        alert("Dati saglabāti un nosūtīti!")
+              } else {
+                alert("Izvēlies vēlreiz!")
+              }
 }
 
       
