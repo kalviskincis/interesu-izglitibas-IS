@@ -11,7 +11,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <!--<script src='./main.js'></script>-->
-    <script src='../registracija.js'></script>
+    <script src='../static/js/registracija.js'></script>
 </head>
         
 <body>
@@ -78,31 +78,9 @@
                      </div>
                    </div>
                 </form>   
-                
-                <body>
-                  <button onclick="pievienotRindu()">Papilddatnes lejupielādei</button>
-                  <form id="forma"></form>
-                  <script> 
-                  function pievienotRindu(){
-                      let i=document.getElementsByClassName("rinda").length;
-                      let divs = document.createElement("DIV"); divs.setAttribute("class","rinda");
-                      divs.innerHTML=" ";
-                      let ievads1 = document.createElement("INPUT"); ievads1.style="text-align: left";
-                      let ievads2 = document.createElement("INPUT"); ievads2.style="text-align: left";
-                      let poga = document.createElement("INPUT"); poga.value="novākt"; poga.type="button";
-                      poga.onclick=()=>{
-                          poga.parentNode.remove();
-                      }
-                      divs.appendChild(ievads1); divs.appendChild(ievads2); divs.appendChild(poga);
-                      document.getElementById("forma").appendChild(divs);
-                  }
-                 </script>
-             </body>
-                
-                 <br><br>
-                
+                              
                 <!--<button class="poga1" onclick="location.href='registracija()'">Iesūtīt datni</button>-->
-                <button class="poga2" onclick="location.href='https://kalviskincis.github.io/interesu-izglitibas-IS/views/pulcina_info.html'"> Reģistrēt jaunu pulciņu</button>
+                <button class="poga2" onclick="registracija();"> Reģistrēt jaunu pulciņu</button>
 
             </div>                       
         </div>       
