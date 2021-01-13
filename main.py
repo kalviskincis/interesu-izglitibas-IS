@@ -22,7 +22,7 @@ def vPieteikums():
 
 @app.route('/registret_IIC')
 def regIIC():
-  return 1
+  return 10
 
 if __name__ == "__main__":
    app.run("0.0.0.0", debug=True)
