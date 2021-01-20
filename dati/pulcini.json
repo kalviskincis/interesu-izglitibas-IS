@@ -1,8 +1,174 @@
 [
-{"joma":"💻 Informācijas tehnoloģijas","nosaukums":"Robotika - pieredzējušie","stunduSkaits":4,"vecums":{"no":10,"lidz":14},"skolotajs":"Rūdis Čūska","epasts":"python@jamacas.lv","talrunis":"98765432","adrese":"Binārais bulvāris 101","maxAudzekni":11,"laiks":[{"diena":"ceturtdiena","no":"18.00","lidz":"20.00"},{"diena":"piektdiena","no":"18.00","lidz":"20.00"}]},
-{"joma":"💻 Informācijas tehnoloģijas","nosaukums":"Robotika - iesācēji","stunduSkaits":4,"vecums":{"no":6,"lidz":10},"skolotajs":"Rūdis Čūska","epasts":"python@jamacas.lv","talrunis":"98765432","adrese":"Binārais bulvāris 101","maxAudzekni":11,"laiks":[{"diena":"sestdiena","no":"10.00","lidz":"12.00"},{"diena":"svētdiena","no":"10.00","lidz":"12.00"}]},
-{"joma":"🎨 Vizuālā māksla","nosaukums":"Varavīksne","stunduSkaits":6,"vecums":{"no":6,"lidz":18},"skolotajs":"Pans Klekis","epasts":"traips@outlook.com","talrunis":"23452345","adrese":"Vašingtona laukums 234","maxAudzekni":20,"laiks":[{"diena":"pirmdiena","no":"16.00","lidz":"18.00"},{"diena":"trešdiena","no":"16.00","lidz":"18.00"},{"diena":"sestdiena","no":"10.00","lidz":"12.00"}]},
-{"joma":"🎼 Mūzika","nosaukums":"ukuleļu ansamblis","stunduSkaits":2,"vecums":{"no":6,"lidz":12},"skolotajs":"Līga Stīga","epasts":"chetrasstiigas@inbox.lv","talrunis":"55443322","adrese":"Meža bulvāris 7, Mārupe","maxAudzekni":20,"laiks":[{"diena":"sestdiena","no":"10.00","lidz":"12.00"}]},
-{"joma":"🎼 Mūzika","nosaukums":"Rokgrupa \"BoBo\"","stunduSkaits":4,"vecums":{"no":8,"lidz":18},"skolotajs":"Bārtiņš Mauns","epasts":"bm@inbox.lv","talrunis":"22334455","adrese":"Bērzu gatve 2, Rīga","maxAudzekni":6,"laiks":[{"diena":"otrdiena","no":"18.00","lidz":"20.00"},{"diena":"piektdiena","no":"17.00","lidz":"19.00"}]},
-{"joma":"🎬 Teātra māksla","nosaukums":"Garais deguns","stunduSkaits":3,"vecums":{"no":10,"lidz":16},"skolotajs":"Karabass Barabass","epasts":"gogo@underground.com","talrunis":"29891989","adrese":"Kaktusu aleja 14, Rīga","maxAudzekni":12,"laiks":[{"diena":"piektdiena","no":"16.00","lidz":"19.00"}]}
+    {
+        "adrese": "Binārais bulvāris 101",
+        "epasts": "python@jamacas.lv",
+        "joma": "💻 Informācijas tehnoloģijas",
+        "laiks": [
+            {
+                "diena": "ceturtdiena",
+                "lidz": "20.00",
+                "no": "18.00"
+            },
+            {
+                "diena": "piektdiena",
+                "lidz": "20.00",
+                "no": "18.00"
+            }
+        ],
+        "maxAudzekni": 11,
+        "nosaukums": "Robotika - pieredzējušie",
+        "skolotajs": "Rūdis Čūska",
+        "stunduSkaits": 4,
+        "talrunis": "98765432",
+        "vecums": {
+            "lidz": 14,
+            "no": 10
+        }
+    },
+    {
+        "adrese": "Binārais bulvāris 101",
+        "epasts": "python@jamacas.lv",
+        "joma": "💻 Informācijas tehnoloģijas",
+        "laiks": [
+            {
+                "diena": "sestdiena",
+                "lidz": "12.00",
+                "no": "10.00"
+            },
+            {
+                "diena": "svētdiena",
+                "lidz": "12.00",
+                "no": "10.00"
+            }
+        ],
+        "maxAudzekni": 11,
+        "nosaukums": "Robotika - iesācēji",
+        "skolotajs": "Rūdis Čūska",
+        "stunduSkaits": 4,
+        "talrunis": "98765432",
+        "vecums": {
+            "lidz": 10,
+            "no": 6
+        }
+    },
+    {
+        "adrese": "Vašingtona laukums 234",
+        "epasts": "traips@outlook.com",
+        "joma": "🎨 Vizuālā māksla",
+        "laiks": [
+            {
+                "diena": "pirmdiena",
+                "lidz": "18.00",
+                "no": "16.00"
+            },
+            {
+                "diena": "trešdiena",
+                "lidz": "18.00",
+                "no": "16.00"
+            },
+            {
+                "diena": "sestdiena",
+                "lidz": "12.00",
+                "no": "10.00"
+            }
+        ],
+        "maxAudzekni": 20,
+        "nosaukums": "Varavīksne",
+        "skolotajs": "Pans Klekis",
+        "stunduSkaits": 6,
+        "talrunis": "23452345",
+        "vecums": {
+            "lidz": 18,
+            "no": 6
+        }
+    },
+    {
+        "adrese": "Meža bulvāris 7, Mārupe",
+        "epasts": "chetrasstiigas@inbox.lv",
+        "joma": "🎼 Mūzika",
+        "laiks": [
+            {
+                "diena": "sestdiena",
+                "lidz": "12.00",
+                "no": "10.00"
+            }
+        ],
+        "maxAudzekni": 20,
+        "nosaukums": "ukuleļu ansamblis",
+        "skolotajs": "Līga Stīga",
+        "stunduSkaits": 2,
+        "talrunis": "55443322",
+        "vecums": {
+            "lidz": 12,
+            "no": 6
+        }
+    },
+    {
+        "adrese": "Bērzu gatve 2, Rīga",
+        "epasts": "bm@inbox.lv",
+        "joma": "🎼 Mūzika",
+        "laiks": [
+            {
+                "diena": "otrdiena",
+                "lidz": "20.00",
+                "no": "18.00"
+            },
+            {
+                "diena": "piektdiena",
+                "lidz": "19.00",
+                "no": "17.00"
+            }
+        ],
+        "maxAudzekni": 6,
+        "nosaukums": "Rokgrupa \"BoBo\"",
+        "skolotajs": "Bārtiņš Mauns",
+        "stunduSkaits": 4,
+        "talrunis": "22334455",
+        "vecums": {
+            "lidz": 18,
+            "no": 8
+        }
+    },
+    {
+        "adrese": "Kaktusu aleja 14, Rīga",
+        "epasts": "gogo@underground.com",
+        "joma": "🎬 Teātra māksla",
+        "laiks": [
+            {
+                "diena": "piektdiena",
+                "lidz": "19.00",
+                "no": "16.00"
+            }
+        ],
+        "maxAudzekni": 12,
+        "nosaukums": "Garais deguns",
+        "skolotajs": "Karabass Barabass",
+        "stunduSkaits": 3,
+        "talrunis": "29891989",
+        "vecums": {
+            "lidz": 16,
+            "no": 10
+        }
+    },
+    {
+        "adrese": "BJC Šāds",
+        "epasts": "sleep@long.lv",
+        "joma": "⚽️ Sports",
+        "laiks": [
+            {
+                "diena": "pirmdiena",
+                "lidz": "9.00",
+                "no": "8.00"
+            }
+        ],
+        "maxAudzekni": 1,
+        "nosaukums": "Gliemezīts",
+        "skolotajs": "Guļvaldis Mieriņš",
+        "stunduSkaits": 1,
+        "talrunis": "8810",
+        "vecums": {
+            "lidz": 14,
+            "no": 4
+        }
+    }
 ]

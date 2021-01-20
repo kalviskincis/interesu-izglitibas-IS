@@ -1,4 +1,4 @@
-function nosutitPulcinaInfo() {
+async function nosutitPulcinaInfo() {
     var joma = document.forma.joma.value;
     var nosaukums = document.forma.nosaukums.value;
     var stunduSkaits = Number(document.forma.stunduSkaits.value);
@@ -59,35 +59,27 @@ function nosutitPulcinaInfo() {
     dict["laiks"] = laiks;
 
 
-    jsonData = JSON.stringify(dict)
-    console.log(jsonData);
-
-    download(jsonData, 'json.txt', 'text/plain');
-
-    // nākamās divas rindas šajā vietā ir tikai pagaidām, jo vispār tās dzīvo tur zemāk ar .then utt., 
-    // be tā kā dati uz serveri nesūtas, tad nākamie .then nekad laikam neizpildās, tātad f-jas nestrādā.
-    // Tāpēc iemānīts šeit.
-    window.alert("Dati saglabāti");
-    location.href="pulcinu_saraksts.html"
-    // Mānīšanās beigas
-
+    var jsonData = JSON.stringify(dict)
     
-    fetch('https://kalviskincis.github.io/interesu-izglitibas-IS/views/', {
+    // console.log(jsonData);
+    
+    var request = await fetch('/api/jaunsPulcins', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(dict)
-    })
-        .then(res => res.json())
-        .then(data => document.getElementById("saglabats").innerHTML = "Dati saglabāti")
-        .then(data => location.href="pulcinu_saraksts.html")
+        body: jsonData 
+    });
+    
+        
+    var atbilde = await request.json();
+    console.log(atbilde);
 
+    document.getElementById("saglabats").innerHTML = "Dati saglabāti";
+    window.setTimeout(atverSarakstu, 1000);
+
+    
+
+} // beigas
+
+function atverSarakstu() {
+    location.href="/pulcinu_saraksts";
 }
-
-function download(content, fileName, contentType) {
-    var a = document.createElement("a");
-    var file = new Blob([content], { type: contentType });
-    a.href = URL.createObjectURL(file);
-    a.download = fileName;
-    a.click();
-}
-

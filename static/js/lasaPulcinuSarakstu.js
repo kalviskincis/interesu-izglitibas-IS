@@ -60,6 +60,6 @@ function ieliktTabula(visiPulcini) {
 }
 
 
-fetch(' https://kalviskincis.github.io/interesu-izglitibas-IS/pulcini.json')
+fetch('/api/visipulcini')
     .then(res => res.json())
     .then(data => { ieliktTabula(data); })
