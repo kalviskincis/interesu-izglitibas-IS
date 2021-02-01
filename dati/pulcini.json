@@ -1,8 +1,8 @@
 [
     {
-        "id": 1,
         "adrese": "Binārais bulvāris 101",
         "epasts": "python@jamacas.lv",
+        "id": 1,
         "joma": "💻 Informācijas tehnoloģijas",
         "laiks": [
             {
@@ -27,9 +27,9 @@
         }
     },
     {
-        "id": 2,
         "adrese": "Binārais bulvāris 101",
         "epasts": "python@jamacas.lv",
+        "id": 2,
         "joma": "💻 Informācijas tehnoloģijas",
         "laiks": [
             {
@@ -54,9 +54,9 @@
         }
     },
     {
-        "id": 3,
         "adrese": "Vašingtona laukums 234",
         "epasts": "traips@outlook.com",
+        "id": 3,
         "joma": "🎨 Vizuālā māksla",
         "laiks": [
             {
@@ -86,9 +86,9 @@
         }
     },
     {
-        "id": 4,
         "adrese": "Meža bulvāris 7, Mārupe",
         "epasts": "chetrasstiigas@inbox.lv",
+        "id": 4,
         "joma": "🎼 Mūzika",
         "laiks": [
             {
@@ -108,9 +108,9 @@
         }
     },
     {
-        "id": 5,
         "adrese": "Bērzu gatve 2, Rīga",
         "epasts": "bm@inbox.lv",
+        "id": 5,
         "joma": "🎼 Mūzika",
         "laiks": [
             {
@@ -135,9 +135,9 @@
         }
     },
     {
-        "id": 6,
         "adrese": "Kaktusu aleja 14, Rīga",
         "epasts": "gogo@underground.com",
+        "id": 6,
         "joma": "🎬 Teātra māksla",
         "laiks": [
             {
@@ -157,9 +157,9 @@
         }
     },
     {
-        "id": 7,
         "adrese": "BJC Šāds",
         "epasts": "sleep@long.lv",
+        "id": 7,
         "joma": "⚽️ Sports",
         "laiks": [
             {

@@ -4,6 +4,7 @@ function labotPulcinu(element) {
     var pulcinaInfoLapa = window.open("pulcina_info.html");
     pulcinaInfoLapa.onload = function () {
         var nedela = {"pirmdiena": "pirmdiena", "otrdiena": "otrdiena", "trešdiena": "tresdiena", "ceturtdiena": "ceturtdiena", "piektdiena": "piektdiena", "sestdiena": "sestdiena", "svētdiena": "svetdiena"};
+        this.id.value = pulcDati[rinda].id;
         this.joma.value = pulcDati[rinda].joma;        
         this.joma.text = pulcDati[rinda].joma;
         this.nosaukums.value = pulcDati[rinda].nosaukums;        
@@ -40,7 +41,8 @@ function ieliktTabula(visiPulcini) {
     let rinda;    
     for (let i = 0; i < visiPulcini.length; i++) {        
         let laiks = "";
-        rinda = "<tr><td id=\"" + i + "\">" + (i + 1);        
+        rinda = "<tr><td id=\"" + visiPulcini[i].id + "\">";        
+        rinda += visiPulcini[i].id;
         rinda += "</td><td><input type=\"button\" class=\"btn btn-primary\" onclick=\"labotPulcinu(this)\" value=\"✎\" data-toggle=\"tooltip\" title=\"Labot\">&nbsp; <input type=\"button\" class=\"btn btn-primary\" value=\"✘\" onclick=\"dzestPulcinu(visiPulcini[i])\" data-toggle=\"tooltip\" title=\"Dzēst\"></td><td name=\"joma\" id=\"joma\">";
         rinda += visiPulcini[i].joma + "</td><td name=\"nosaukums\" id=\"nosaukums\">" +
             visiPulcini[i].nosaukums + "</td><td>" +

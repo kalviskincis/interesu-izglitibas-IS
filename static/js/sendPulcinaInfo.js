@@ -1,4 +1,5 @@
 async function nosutitPulcinaInfo() {
+    var id = -1;
     var joma = document.forma.joma.value;
     var nosaukums = document.forma.nosaukums.value;
     var stunduSkaits = Number(document.forma.stunduSkaits.value);
@@ -51,7 +52,7 @@ async function nosutitPulcinaInfo() {
     }
 
     var dict = {
-        joma: joma, nosaukums: nosaukums, stunduSkaits: stunduSkaits,
+        id: id, joma: joma, nosaukums: nosaukums, stunduSkaits: stunduSkaits,
         vecums: { no: vecumsNo, lidz: vecumsLidz },
         skolotajs: skolotajs, epasts: epasts, talrunis: talrunis, adrese: adrese, maxAudzekni: maxAudzekni
     };

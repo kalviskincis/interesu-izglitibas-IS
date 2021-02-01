@@ -44,7 +44,11 @@ def pievienot():
   with open('dati/pulcini.json', 'r', encoding='utf-8') as f:
     dati = json.loads(f.read())
 
+  pedejaisID = dati[-1]['id']
+  jaunsID = pedejaisID+1
+  
   jauns = json.loads(request.data)
+  jauns['id'] = jaunsID
   dati.append(jauns)
 
   with open('dati/pulcini.json', 'w', encoding='utf-8') as f:
