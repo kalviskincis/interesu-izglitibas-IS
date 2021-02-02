@@ -30,9 +30,20 @@ function labotPulcinu(element) {
     };
 }
 
-function dzestPulcinu(pulcins) {
-    // funkcija izdzēsīs ierakstu un vēlreiz nolasīs datus tabulā
-    // varbūt tad fetch jāliek kā funkcija.
+async function dzestPulcinu(pulcins) {
+    if (confirm('Dzēst?'))
+    {
+        let request = await fetch('/api/dzestPulcinu/'+pulcins ,
+        {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+        });
+    
+        let atbilde = await request.json();
+        alert('Ieraksts izdzēsts');
+
+        // kaut ko, kas pārlādē lapu? Vai paslēpj kā ķīmijas piemēra?
+    }
 }
 
 function ieliktTabula(visiPulcini) {
@@ -43,7 +54,7 @@ function ieliktTabula(visiPulcini) {
         let laiks = "";
         rinda = "<tr><td id=\"" + visiPulcini[i].id + "\">";        
         rinda += visiPulcini[i].id;
-        rinda += "</td><td><input type=\"button\" class=\"btn btn-primary\" onclick=\"labotPulcinu(this)\" value=\"✎\" data-toggle=\"tooltip\" title=\"Labot\">&nbsp; <input type=\"button\" class=\"btn btn-primary\" value=\"✘\" onclick=\"dzestPulcinu(visiPulcini[i])\" data-toggle=\"tooltip\" title=\"Dzēst\"></td><td name=\"joma\" id=\"joma\">";
+        rinda += "</td><td><input type=\"button\" class=\"btn btn-primary\" onclick=\"labotPulcinu(this)\" value=\"✎\" data-toggle=\"tooltip\" title=\"Labot\">&nbsp; <input type=\"button\" class=\"btn btn-primary\" value=\"✘\" onclick=\"dzestPulcinu(" + visiPulcini[i].id + ")\" data-toggle=\"tooltip\" title=\"Dzēst\"></td><td name=\"joma\" id=\"joma\">";
         rinda += visiPulcini[i].joma + "</td><td name=\"nosaukums\" id=\"nosaukums\">" +
             visiPulcini[i].nosaukums + "</td><td>" +
             visiPulcini[i].stunduSkaits + "</td><td>" +

@@ -54,7 +54,22 @@ def pievienot():
   with open('dati/pulcini.json', 'w', encoding='utf-8') as f:
     f.write(json.dumps(dati))
   
-  return jsonify(1)
+
+@app.route('/api/dzestPulcinu/<id>', methods=['POST'])
+def dzest(id):
+  with open('dati/pulcini.json', 'r', encoding='utf-8') as f:
+    dati = json.loads(f.read())
+  
+  jauniDati = []
+  for katrs in dati:
+    if str(katrs['id']) != id:
+      jauniDati.append(katrs)
+  
+  with open('dati/pulcini.json', 'w', encoding='utf-8') as f:
+    f.write(json.dumps(jauniDati))
+  
+  
+
 
 if __name__ == "__main__":
    app.run("0.0.0.0", debug=True)
