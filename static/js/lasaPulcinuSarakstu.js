@@ -42,7 +42,7 @@ async function dzestPulcinu(pulcins) {
         let atbilde = await request.json();
         alert('Ieraksts izdzēsts');
 
-        // kaut ko, kas pārlādē lapu? Vai paslēpj kā ķīmijas piemēra?
+        location.reload(); 
     }
 }
 
@@ -76,3 +76,4 @@ function ieliktTabula(visiPulcini) {
 fetch('/api/visipulcini')
     .then(res => res.json())
     .then(data => { ieliktTabula(data); })
+

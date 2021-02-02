@@ -61,8 +61,7 @@ async function nosutitPulcinaInfo() {
 
 
     var jsonData = JSON.stringify(dict)
-    
-    console.log(jsonData);
+        
     
     var request = await fetch('/api/jaunsPulcins', {
         method: 'POST',
@@ -72,10 +71,10 @@ async function nosutitPulcinaInfo() {
     
         
     var atbilde = await request.json();
-    console.log(atbilde);
+    
 
-    //document.getElementById("saglabats").innerHTML = "Dati saglabāti";
-    //window.setTimeout(atverSarakstu, 1000);
+    alert('Ieraksts saglabāts');
+    window.setTimeout(atverSarakstu, 1000);
 
     
 

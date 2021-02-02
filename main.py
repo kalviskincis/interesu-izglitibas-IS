@@ -54,6 +54,8 @@ def pievienot():
   with open('dati/pulcini.json', 'w', encoding='utf-8') as f:
     f.write(json.dumps(dati))
   
+  return '1'
+  
 
 @app.route('/api/dzestPulcinu/<id>', methods=['POST'])
 def dzest(id):
@@ -67,6 +69,8 @@ def dzest(id):
   
   with open('dati/pulcini.json', 'w', encoding='utf-8') as f:
     f.write(json.dumps(jauniDati))
+
+  return '1'
   
   
 
