@@ -24,6 +24,10 @@ def vPieteikums():
 def jaunsPulcins():
   return render_template('pulcina_info.html')
 
+@app.route('/labot_pulcinu/<id>')
+def labotPulcinu(id):
+  return render_template('pulcina_info.html')
+
 @app.route('/pulcinu_saraksts')
 def pulcinuSaraksts():
   return render_template('pulcinu_saraksts.html')
@@ -34,10 +38,22 @@ def regIIC():
 
 @app.route('/api/visipulcini', methods=['GET'])
 def visi():
-  with open('dati/pulcini.json', 'r') as f:
+  with open('dati/pulcini.json', 'r', encoding='utf-8') as f:
     dati = json.loads(f.read())
   
   return jsonify(dati)
+
+@app.route('/api/atvertlabosanai/<id>', methods=['POST'])
+def atverVienu(id):
+  with open('dati/pulcini.json', 'r', encoding='utf-8') as f:
+    dati = json.loads(f.read())
+  
+  labojamais = ''
+  for katrs in dati:
+    if str(katrs['id']) == id:
+      labojamais = katrs
+  
+  return labojamais
 
 @app.route('/api/jaunsPulcins', methods=['POST'])
 def pievienot():
@@ -72,8 +88,5 @@ def dzest(id):
 
   return '1'
   
-  
-
-
 if __name__ == "__main__":
    app.run("0.0.0.0", debug=True)

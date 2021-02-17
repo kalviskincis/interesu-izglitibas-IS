@@ -1,33 +1,64 @@
+async function labotPulcinuA(pulcins) {
+    fetch('/api/visipulcini')
+    .then(res => res.json())
+    .then(data => { ieliktTabula(data); })
+}
+
+
 // funkcija pulciņa lauku nolasīšanai un atvēršanai labošanas skatā.
-function labotPulcinu(element) {    
-    var rinda = element.parentNode.parentNode.rowIndex-1;
-    var pulcinaInfoLapa = window.open("pulcina_info.html");
-    pulcinaInfoLapa.onload = function () {
-        var nedela = {"pirmdiena": "pirmdiena", "otrdiena": "otrdiena", "trešdiena": "tresdiena", "ceturtdiena": "ceturtdiena", "piektdiena": "piektdiena", "sestdiena": "sestdiena", "svētdiena": "svetdiena"};
-        this.id.value = pulcDati[rinda].id;
-        this.joma.value = pulcDati[rinda].joma;        
-        this.joma.text = pulcDati[rinda].joma;
-        this.nosaukums.value = pulcDati[rinda].nosaukums;        
-        this.stunduSkaits.value = pulcDati[rinda].stunduSkaits;
-        this.vecumsNo.value = pulcDati[rinda].vecums.no;
-        this.vecumsLidz.value = pulcDati[rinda].vecums.lidz;
-        this.skolotajs.value = pulcDati[rinda].skolotajs;
-        this.epasts.value = pulcDati[rinda].epasts;
-        this.talrunis.value = pulcDati[rinda].talrunis;
-        this.adrese.value = pulcDati[rinda].adrese;
-        this.maxAudzekni.value = pulcDati[rinda].maxAudzekni;
-        for (let j = 0; j < pulcDati[rinda].laiks.length; j++) {
-            console.log(pulcDati[rinda].laiks[j]);           
-            //var diena = nedela.pulcDati[rinda].laiks[j].diena;
+async function labotPulcinu(pulcins) {    
+    // var pulcins = element.parentNode.parentNode.rowIndex-1;
+    let request = await fetch('/api/atvertlabosanai/'+pulcins ,
+    {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' }
+    });
+    let pulcDati = await request.json();
+    // ielasitDatus(pulcDati);
+    
+    // console.log(pulcDati);
+    
+
+    
+    var pulcinaInfoLapa = window.open("/labot_pulcinu/"+pulcins);
+
+    
+    pulcinaInfoLapa.onload = function () {                   
+        
+        var nedela = {"pirmdiena": "pirmdiena", "otrdiena": "otrdiena", "trešdiena": "tresdiena", "ceturtdiena": "ceturtdiena", "piektdiena": "piektdiena", "sestdiena": "sestdiena", "svētdiena": "svetdiena"};        
+        //this.id.value = pulcDati.id;
+        this.joma.value = pulcDati.joma;        
+        this.joma.text = pulcDati.joma;
+        this.nosaukums.value = pulcDati.nosaukums;
+        this.stunduSkaits.value = pulcDati.stunduSkaits;
+        this.vecumsNo.value = pulcDati.vecums.no;
+        this.vecumsLidz.value = pulcDati.vecums.lidz;
+        this.skolotajs.value = pulcDati.skolotajs;
+        this.epasts.value = pulcDati.epasts;
+        this.talrunis.value = pulcDati.talrunis;
+        this.adrese.value = pulcDati.adrese;
+        this.maxAudzekni.value = pulcDati.maxAudzekni;
+        for (let j = 0; j < pulcDati.laiks.length; j++) {
+            console.log(pulcDati.laiks[j]);           
+            //var diena = nedela.pulcDati.laiks[j].diena;
             //console.log(diena);
-            var diena = pulcDati[rinda].laiks[j].diena;
+
+            var diena = pulcDati.laiks[j].diena;
             ddiena = nedela.diena;
-            var no = pulcDati[rinda].laiks[j].no;
-            var lidz = pulcDati[rinda].laiks[j].lidz;
-            console.log(ddiena, no, lidz);
+            var no = pulcDati.laiks[j].no;
+            var lidz = pulcDati.laiks[j].lidz;
+            //console.log(ddiena, no, lidz);
 
         }
     };
+}
+
+function ielasitDatus(pulcins) {
+    var pulcinaInfoLapa = window.open("/labot_pulcinu/"+pulcins.id);
+    pulcinaInfoLapa.dati = pulcins;
+    let pulcinaForma = pulcinaInfoLapa.getElementById("forma");
+    pulcinaForma.nosaukums.value = pulcins.nosaukums;
+
 }
 
 async function dzestPulcinu(pulcins) {
@@ -49,13 +80,13 @@ async function dzestPulcinu(pulcins) {
 function ieliktTabula(visiPulcini) {
     pulcDati = visiPulcini;
     let tabulasBody = document.getElementById("tbody");
-    let rinda;    
+    let pulcins;    
     for (let i = 0; i < visiPulcini.length; i++) {        
         let laiks = "";
-        rinda = "<tr><td id=\"" + visiPulcini[i].id + "\">";        
-        rinda += visiPulcini[i].id;
-        rinda += "</td><td><input type=\"button\" class=\"btn btn-primary\" onclick=\"labotPulcinu(this)\" value=\"✎\" data-toggle=\"tooltip\" title=\"Labot\">&nbsp; <input type=\"button\" class=\"btn btn-primary\" value=\"✘\" onclick=\"dzestPulcinu(" + visiPulcini[i].id + ")\" data-toggle=\"tooltip\" title=\"Dzēst\"></td><td name=\"joma\" id=\"joma\">";
-        rinda += visiPulcini[i].joma + "</td><td name=\"nosaukums\" id=\"nosaukums\">" +
+        pulcins = "<tr><td id=\"" + visiPulcini[i].id + "\">";        
+        pulcins += visiPulcini[i].id;
+        pulcins += "</td><td><input type=\"button\" class=\"btn btn-primary\" onclick=\"labotPulcinu(" + visiPulcini[i].id + ")\" value=\"✎\" data-toggle=\"tooltip\" title=\"Labot\">&nbsp; <input type=\"button\" class=\"btn btn-primary\" value=\"✘\" onclick=\"dzestPulcinu(" + visiPulcini[i].id + ")\" data-toggle=\"tooltip\" title=\"Dzēst\"></td><td name=\"joma\" id=\"joma\">";
+        pulcins += visiPulcini[i].joma + "</td><td name=\"nosaukums\" id=\"nosaukums\">" +
             visiPulcini[i].nosaukums + "</td><td>" +
             visiPulcini[i].stunduSkaits + "</td><td>" +
             visiPulcini[i].vecums.no + "—" + visiPulcini[i].vecums.lidz + "</td><td>" +
@@ -67,8 +98,8 @@ function ieliktTabula(visiPulcini) {
         for (let j = 0; j < visiPulcini[i].laiks.length; j++) {
             laiks += visiPulcini[i].laiks[j].diena + ": " + visiPulcini[i].laiks[j].no + "—" + visiPulcini[i].laiks[j].lidz + "<br>";
         }
-        rinda += laiks + "</td></tr>";
-        tabulasBody.innerHTML += rinda;
+        pulcins += laiks + "</td></tr>";
+        tabulasBody.innerHTML += pulcins;
     }
 }
 
