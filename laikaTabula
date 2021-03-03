@@ -1,0 +1,15 @@
+[{pulcID: 1,
+skolotID: 1,
+vieta: addr,
+diena: "otrdiena",
+"no": "18.00"
+lidz": "20.00",
+},
+{pulcID: 1,
+skolotID: 1,
+vieta: addr,
+diena: "piektdiena",
+"no": "19.00"
+lidz": "21.00",
+}
+]
