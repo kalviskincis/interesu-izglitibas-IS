@@ -1,90 +1,89 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.min.css'>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <!--<script src='./main.js'></script>-->
-    <script src='../static/js/main.js'></script>
+  <meta charset='utf-8'>
+  <title>IIC ievade</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src='../static/js/main.js'></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
-        
+
 <body>
-    <div class="container p-1 my-1 bg-success text-white">
-        <h1><center>Interešu izglītības centra nosaukums</center></h1>
-        <div class="top-section">
-        <div class="button-back-container">
-                <a href="https://kalviskincis.github.io/interesu-izglitibas-IS/index.html" class="button-back">
-                <span class="button-back__icon"></span>
-                <span class="button-back__text" onclick="location.href='index.html'">Uz sākumlapu</span>
-
-            </a>
-        </div> 
-        <div class="container p-3 my-3 bg-warning text-white">
-                  <h2>Izdari savu izvēli</h2>
-                  <h5>Centra nosaukums</h5>
-            <title> comboBox </title>
-            <form>
-              
-                <select id="iicnosauk" name="iicnosauk">
+  <div class="container p-1 my-1 bg-success text-white">
     
-              </select>
-             </form>
-            
-          <script>
-          window.onload=function(){
-             iicnosauk=["---","Bērnu un jauniešu centrs IK Auseklis","Tehniskās jaunrades nams Annas","Valkas novada Bērnu un jauniešu centrs Mice","Ventspils Jaunrades nams","Jelgavas pilsētas pašvaldības Jaunrades nams Junda","Valmieras Jaunatnes centrs Vinda","Tehniskās izglītības un jaunrades skola",
-            "Pirmā programmēšanas skola","Bērnu un jauniešu Eiropas programmēšanas skola"] 
-            for(var i=0;i<iicnosauk.length;i++){
-                    var option = document.createElement("option"); 
-                    option.value=iicnosauk[i];
-                    option.textContent=iicnosauk[i];
-                    document.getElementById("iicnosauk").appendChild(option);
-                    
-                }
-          }    
-            </script>   
-                
-            <div class="conteiner">
-                <form class="form-horizontal">
-                  <div class="form-group">
-                   <label class="col-sm-2 control-label">Adrese<span style="color: red;"> *</span></label>
-                   <!--<label for="adrese">Adrese<span style="color: red;"> *</span></label>-->
-                    <div class="col-sm-4">
-                      <input class="form-control" id="Adrese" type="text" name="adrese">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">E-pasts<span style="color: red;"> *</span></label>
-                     <div class="col-sm-4">
-                       <input class="form-control" id="Epasts" type="text" name="epasts">
-                     </div>
-                   </div>
-                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Tālrunis<span style="color: red;"> *</span></label>
-                     <div class="col-sm-4">
-                       <input class="form-control" id="Talrunis" type="text" name="talrunis">
-                     </div>
-                   </div>
-                   <div class="form-group">
-                    <label class="col-sm-0 control-label">IIC izglītības speciālista vārds, uzvārds<span style="color: red;"> *</span></label>
-                     <div class="col-sm-4">
-                       <input class="form-control" id="Specialists" type="text" name="specialists">
-                     </div>
-                   </div>
-                </form>   
-                              
-                <!--<button class="poga1" onclick="location.href='registracija()'">Iesūtīt datni</button>-->
-                <button class="poga2" onclick="registracija();"> Reģistrēt jaunu pulciņu</button>
+    <div class="top-section"  id="iicsaturs">
+      <h1>IIC reģistrācija</h1>
+      <div class="button-back-container">
+        <a href="https://kalviskincis.github.io/interesu-izglitibas-IS/index.html" class="button-back">
+          <span class="button-back__icon"></span>
+          <span class="button-back__text" onclick="location.href='index.html'">Uz sākumlapu</span>
 
-            </div>                       
-        </div>       
+        </a>
+      </div>
+      <div class="container p-3 my-3 bg-warning text-white">
+        <h2>Reģistrēt jaunu Interešu Izglītības centru</h2>
+
+       <script>
+          window.onload = iicNosaukumiRead();
+        </script>
+
+        <div class="conteiner">
+          <form class="form-horizontal">
+            <div class="form-group">
+
+              <label class="col-sm-6 control-label">IIC nosaukums – izvēlies esošu vai reģistrē jaunu<span
+                  style="color: red;"> *</span></label>
+              <div class="col-sm-4">
+                <select id="iicnosauk" name="iicnosauk"></select>
+              </div>
+              <label class="col-sm-2 control-label">Nosaukums<span style="color: red;"> *</span></label>
+              <div class="col-sm-4">
+                <input class="form-control" id="Nosaukums" type="text" name="adrese">
+              </div>
+
+              <label class="col-sm-2 control-label">Adrese<span style="color: red;"> *</span></label>
+              <!--<label for="adrese">Adrese<span style="color: red;"> *</span></label>-->
+              <div class="col-sm-4">
+                <input class="form-control" id="Adrese" type="text" name="adrese">
+              </div>
+
+
+              <label class="col-sm-2 control-label">E-pasts<span style="color: red;"> *</span></label>
+              <div class="col-sm-4">
+                <input class="form-control" id="Epasts" type="text" name="epasts">
+              </div>
+
+
+              <label class="col-sm-2 control-label">Tālrunis<span style="color: red;"> *</span></label>
+              <div class="col-sm-4">
+                <input class="form-control" id="Talrunis" type="text" name="talrunis">
+              </div>
+
+
+              <label class="col-sm-6 control-label">IIC izglītības speciālista vārds, uzvārds<span style="color: red;">
+                  *</span></label>
+              <div class="col-sm-4">
+                <input class="form-control" id="Specialists" type="text" name="specialists">
+              </div>
+              <br>
+              <div class="col-sm-4">
+                <button type="button" class="btn btn-primary" onclick="registracija();">Reģistrēt jaunu IIC un pulciņu</button>
+
+
+              </div>
+              
+            </div>
+          </form>         
+
+        </div>
+      </div>
     </div>
-      
- </body>
+    <div id="statuss"></div>
+    <div id="pulcins"></div>
+</body>
+
 </html>

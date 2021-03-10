@@ -4,6 +4,8 @@ app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
 
 # routes uz failiem
+
+
 @app.route('/dati/<path>')
 def lasaFailu(path):
     return send_from_directory('dati', path)
@@ -29,9 +31,13 @@ def vPieteikums():
     return render_template('vecaku_pieteikums.html')
 
 
-@app.route('/jauns_pulcins')
+@app.route('/jauns_pulcins', methods=['POST'])
 def jaunsPulcins():
-    return render_template('pulcina_info.html')
+    nosaukums = json.loads(request.data)
+    atbilde = {}    
+    atbilde['iic'] = nosaukums['iicnosaukums']    
+    atbilde["pulcins"] = render_template('pulcina_info.html')    
+    return jsonify(atbilde)
 
 
 @app.route('/labot_pulcinu/<id>')
@@ -44,9 +50,41 @@ def pulcinuSaraksts():
     return render_template('pulcinu_saraksts.html')
 
 
-@app.route('/registret_IIC')
+@app.route('/registret_IIC', methods=['POST'])
 def regIIC():
-    return 10
+    with open("dati/iic.json", "r", encoding='utf-8') as f:
+        dati = json.loads(f.read())
+    jaunsIIC = json.loads(request.data)    
+    for d in dati:
+        print(d)
+        if d["iicnosaukums"] == jaunsIIC["iicnosaukums"]:            
+            atbilde = {"statuss": "Šī IIC jau ir reģistrēta"}
+            atbilde["pulcins"] = render_template('pulcina_info.html')
+            return jsonify(atbilde)
+
+    
+    pedejaisID = dati[-1]['id']
+    jaunsID = pedejaisID+1
+    
+    jaunsIIC['id'] = jaunsID
+    
+    dati.append(jaunsIIC)
+
+    with open("dati/iic.json", "w", encoding='utf-8') as f:
+        f.write(json.dumps(dati))
+
+    atbilde = {"statuss": "IIC veiksmīgi piereģistrēta"}
+    atbilde["iic"] = jaunsIIC["iicnosaukums"]
+    atbilde["pulcins"] = render_template('pulcina_info.html')    
+    return jsonify(atbilde)
+
+
+@app.route('/api/iicnosaukumi', methods=['GET'])
+def nosaukumi():
+    with open('dati/pulcini.json', 'r', encoding='utf-8') as f:
+        dati = json.loads(f.read())
+
+    return jsonify(dati)
 
 
 @app.route('/api/visipulcini', methods=['GET'])
@@ -67,7 +105,8 @@ def atverVienu(id):
         if str(katrs['id']) == id:
             labojamais = katrs
 
-    return labojamais
+    labojamais['lapa'] = render_template('pulcina_info.html')
+    return jsonify(labojamais)    
 
 
 @app.route('/api/jaunsPulcins', methods=['POST'])
@@ -79,13 +118,25 @@ def pievienot():
     jaunsID = pedejaisID+1
 
     jauns = json.loads(request.data)
-    jauns['id'] = jaunsID
-    dati.append(jauns)
 
+    with open('dati/iic.json', 'r', encoding='utf-8') as f:
+        pulcini = json.loads(f.read())
+    for d in pulcini:
+        if d['iicnosaukums'] == jauns['iicnosaukums']:
+            jauns['iicID'] = d['id']
+
+    if jauns['id'] == -1:
+        jauns['id'] = jaunsID
+        dati.append(jauns)
+    else:
+        id = jauns['id']-1
+        dati[id].update(jauns)
+
+    
     with open('dati/pulcini.json', 'w', encoding='utf-8') as f:
         f.write(json.dumps(dati))
 
-    return '1'
+    return '1881'
 
 
 @app.route('/api/dzestPulcinu/<id>', methods=['POST'])
