@@ -1,1 +1,15 @@
-
+  [{"pID": 1,
+"skID": 1,
+"adrese": "Binārais bulvāris 101",
+"diena": "ceturtdiena",
+"lidz": "20.00",
+"no": "18.00"
+},
+{"pID": 1,
+"skID": 1,
+"adrese": "Binārais bulvāris 101",
+"diena": "piektdiena",
+"lidz": "20.00",
+"no": "18.00"
+}
+]
