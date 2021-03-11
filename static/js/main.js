@@ -21,7 +21,7 @@ async function labotPulcinu(pulcins) {
 
     let pulcDati = await request.json();
     document.getElementById("pulcinuTabula").style = "display:none";
-    
+
     document.getElementById("labosanasSkats").innerHTML = pulcDati.lapa;
 
     document.getElementById("iCentrs").value = pulcDati.iicnosaukums;
@@ -48,13 +48,13 @@ async function labotPulcinu(pulcins) {
         var cell3 = row.insertCell(2);
         var cell4 = row.insertCell(3);
         var dNos = visiLaiki[i].diena;
-        cell1.innerHTML = dNos;        
+        cell1.innerHTML = dNos;
         cell1.id = dNos;
         cell2.innerHTML = visiLaiki[i].no;
         cell2.id = dNos + 'No';
         cell3.innerHTML = visiLaiki[i].lidz;
         cell3.id = dNos + 'Lidz';
-        cell4.innerHTML = '<button type=\'button\' class=\"btn btn-primary\" onclick=\'dzestLaiku(this)\'>x</button>';
+        cell4.innerHTML = '<button type=\'button\' class=\"btn btn-primary\" onclick=\'dzestLaiku(this)\'>✘</button>';
     }
 
 
@@ -80,37 +80,37 @@ async function dzestPulcinu(pulcins) {
     }
 }
 
-function ieliktTabula(visiPulcini) {
-    pulcDati = visiPulcini;
-    let tabulasBody = document.getElementById("tbody");
-    let pulcins;
-    for (let i = 0; i < visiPulcini.length; i++) {
-        let laiks = "";
-        pulcins = "<tr><td id=\"" + visiPulcini[i].id + "\">";
-        pulcins += visiPulcini[i].id;
-        pulcins += "</td><td><input type=\"button\" class=\"btn btn-primary\" onclick=\"labotPulcinu(" + visiPulcini[i].id + ")\" value=\"✎\" data-toggle=\"tooltip\" title=\"Labot\">&nbsp; <input type=\"button\" class=\"btn btn-primary\" value=\"✘\" onclick=\"dzestPulcinu(" + visiPulcini[i].id + ")\" data-toggle=\"tooltip\" title=\"Dzēst\"></td><td name=\"iic\" id=\"iic\">";
-        pulcins += visiPulcini[i].iicnosaukums + "</td><td>";
-        pulcins += visiPulcini[i].joma + "</td><td>" +
-            visiPulcini[i].nosaukums + "</td><td>" +
-            visiPulcini[i].stunduSkaits + "</td><td>" +
-            visiPulcini[i].vecums.no + "—" + visiPulcini[i].vecums.lidz + "</td><td>" +
-            visiPulcini[i].skolotajs + "</td><td>" +
-            visiPulcini[i].epasts + "</td><td>" +
-            visiPulcini[i].talrunis + "</td><td>" +
-            visiPulcini[i].adrese + "</td><td>" +
-            visiPulcini[i].maxAudzekni + "</td><td>";
-        for (let j = 0; j < visiPulcini[i].laiks.length; j++) {
-            laiks += visiPulcini[i].laiks[j].diena + ": " + visiPulcini[i].laiks[j].no + "—" + visiPulcini[i].laiks[j].lidz + "<br>";
-        }
-        pulcins += laiks + "</td></tr>";
-        tabulasBody.innerHTML += pulcins;
-    }
+function raditPulcinus() {
+    fetch('/api/visipulcini')
+        .then(res => res.json())
+        .then(data => {
+            var visiPulcini = data;
+            pulcDati = visiPulcini;
+            let tabulasBody = document.getElementById("tbody");
+            let pulcins;
+            for (let i = 0; i < visiPulcini.length; i++) {
+                let laiks = "";
+                pulcins = "<tr><td id=\"" + visiPulcini[i].id + "\">";
+                pulcins += visiPulcini[i].id;
+                pulcins += "</td><td><input type=\"button\" class=\"btn btn-primary\" onclick=\"labotPulcinu(" + visiPulcini[i].id + ")\" value=\"✎\" data-toggle=\"tooltip\" title=\"Labot\">&nbsp; <input type=\"button\" class=\"btn btn-primary\" value=\"✘\" onclick=\"dzestPulcinu(" + visiPulcini[i].id + ")\" data-toggle=\"tooltip\" title=\"Dzēst\"></td><td name=\"iic\" id=\"iic\">";
+                pulcins += visiPulcini[i].iicnosaukums + "</td><td>";
+                pulcins += visiPulcini[i].joma + "</td><td>" +
+                    visiPulcini[i].nosaukums + "</td><td>" +
+                    visiPulcini[i].stunduSkaits + "</td><td>" +
+                    visiPulcini[i].vecums.no + "—" + visiPulcini[i].vecums.lidz + "</td><td>" +
+                    visiPulcini[i].skolotajs + "</td><td>" +
+                    visiPulcini[i].epasts + "</td><td>" +
+                    visiPulcini[i].talrunis + "</td><td>" +
+                    visiPulcini[i].adrese + "</td><td>" +
+                    visiPulcini[i].maxAudzekni + "</td><td>";
+                for (let j = 0; j < visiPulcini[i].laiks.length; j++) {
+                    laiks += visiPulcini[i].laiks[j].diena + ": " + visiPulcini[i].laiks[j].no + "—" + visiPulcini[i].laiks[j].lidz + "<br>";
+                }
+                pulcins += laiks + "</td></tr>";
+                tabulasBody.innerHTML += pulcins;
+            }
+        })
 }
-
-
-fetch('/api/visipulcini')
-    .then(res => res.json())
-    .then(data => { ieliktTabula(data); })
 
 // no faila registracija.js
 
@@ -329,7 +329,7 @@ function pievienotLaiku() {
     cell2.id = document.getElementById('diena').value + document.getElementById('No').id;
     cell3.innerHTML = document.getElementById('Lidz').value;
     cell3.id = document.getElementById('diena').value + document.getElementById('Lidz').id;
-    cell4.innerHTML = '<button type=\'button\' class=\"btn btn-primary\" onclick=\'dzestLaiku(this)\'>x</button>';
+    cell4.innerHTML = '<button type=\'button\' class=\"btn btn-primary\" onclick=\'dzestLaiku(this)\'>✘</button>';
 }
 
 
@@ -425,4 +425,66 @@ function ieladetJomas() {
             document.getElementById("joma").appendChild(option);
         }
     }
+}
+
+// Pulciņa meklētājs no skolēna izvēles
+async function meklePulcinu() {
+    var joma = document.getElementById('joma').value;
+    var vecums = document.getElementById('vecums').value;
+    var diena = document.getElementById('diena').value;
+    
+    filtrs = { joma: joma, vecums: vecums, diena: diena }
+    console.log(filtrs);
+    filtraDati = JSON.stringify(filtrs);
+    //fetch('/api/visipulcini' + filtrs)
+    //    .then(res => res.json())
+    //    .then(data => {
+    //        var izvelesDati = data;
+    //        console.log(izvelesDati);
+    //    })
+
+
+    let request = await fetch('/api/izveletiPulcini/',
+        {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: filtraDati
+        });
+
+    let izvelesDati = await request.json();
+    document.getElementById('filtrs').style = "display:none";
+    
+    var table = document.getElementById("atlasitie");
+
+    for (let i = 0; i < izvelesDati.length; i++) {
+        var laiks = '';
+
+        for (let j = 0; j < izvelesDati[i].laiks.length; j++) {
+            laiks += izvelesDati[i].laiks[j].diena + ": " + izvelesDati[i].laiks[j].no + "—" + izvelesDati[i].laiks[j].lidz + "<br>";
+        }
+        
+        var row = table.insertRow(-1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
+        var cell6 = row.insertCell(5);
+        var cell7 = row.insertCell(6);
+        var cell8 = row.insertCell(7);
+
+        
+        cell1.innerHTML = izvelesDati[i].iicnosaukums;        
+        cell2.innerHTML = izvelesDati[i].nosaukums;
+        cell3.innerHTML = laiks;
+        cell4.innerHTML = izvelesDati[i].skolotajs;
+        cell5.innerHTML = izvelesDati[i].adrese;
+        cell6.innerHTML = izvelesDati[i].epasts;
+        cell7.innerHTML = izvelesDati[i].talrunis;
+        cell8.innerHTML = '<button type=\'button\' class=\"btn btn-primary\" onclick=\"sagatavotPieteikumu(' + i + ')\">Pieteikties</button>';
+    }
+}
+
+function sagatavotPieteikumu(pu) {
+    console.log(pu);
 }

@@ -1,5 +1,10 @@
 # Izmaiņu apraksts
 
+## 11. marts 2021
+* Skolēnu izvēles skats strādā datu laukiem "joma" un "vecums". Pieteikšanās poga "zina" atlasītā pulciņa datus, tie būtu padodami vecāku pieteikuma formai
+* Vizuālas izmaiņas — "logo" atkal redzams visās lapās.
+
+
 ## 10. marts 2021
 * IIC lapa māk atvērt pulciņa reģistrēšanas lapu gan ar jaunu iestādi, gan kādu no esošajām
 * No cita zara pārnesta iestādes reģistrēšanas funkcionalitāte

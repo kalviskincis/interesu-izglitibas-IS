@@ -4,15 +4,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src='../static/js/main.js'></script>
+  <!-- <link rel='stylesheet' type='text/css' media='screen' href='../css/main.css'> -->
+
+  <!-- <script src='../js/main.js'></script>  -->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
   <title>Skolēnu izvēlne</title>
 </head>
 
 <body>
-  <div class="container p-1 my-1 bg-success text-white">
-    <img src="../images/logo.png" alt="logo">
+  <div class="container">
+    <img src="static/images/logo.png">
+  </div>
+  <div class="container p-1 my-1 bg-success text-white" id='filtrs'>
+
 
     <div class="container p-3 my-3 bg-warning text-white">
 
@@ -80,7 +88,7 @@
       <div class="container">
 
         <br>
-        <button type="button" class="btn btn-info">Meklēt pulciņu!</button>
+        <button type="button" class="btn btn-info" onclick="meklePulcinu()">Meklēt pulciņu!</button>
       </div>
       <script>
         window.onload = function () {
@@ -110,7 +118,28 @@
             })
         }
       </script>
+    </div>
+  </div>
+  <div id='rezultats' class="container p-1 my-1 bg-success text-white">
+    <table class='table' id='atlasitie'>
+      <thead>
+        <th>IIC</th>
+        <th>Nosaukums</th>
+        <th>Laiks</th>
+        <th>Skolotājs</th>
+        <th>Adrese</th>
+        <th>e-pasts</th>
+        <th>Tālrunis</th>
+        <th>Pieteikties</th>
+      </thead>
+      <tbody>
 
+
+      </tbody>
+    </table>
+
+
+  </div>
 
 </body>
 

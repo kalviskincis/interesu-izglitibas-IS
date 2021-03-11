@@ -94,6 +94,23 @@ def visi():
 
     return jsonify(dati)
 
+@app.route('/api/izveletiPulcini/', methods=['POST'])
+def atlasiti():
+    filtrs = json.loads(request.data)    
+    with open('dati/pulcini.json', 'r', encoding='utf-8') as f:
+        visiPu = json.loads(f.read())
+
+    atlasitie = list(visiPu)
+    for katrs in visiPu:
+        if filtrs['joma'] != '---' and katrs['joma'] != filtrs['joma']:
+            atlasitie.remove(katrs)
+        elif filtrs['vecums'] != '---' and int(filtrs['vecums']) not in range(int(katrs['vecums']['no']),int(katrs['vecums']['lidz'])+1):
+            atlasitie.remove(katrs)
+
+        print(atlasitie)
+    
+    return jsonify(atlasitie)
+
 
 @app.route('/api/atvertlabosanai/<id>', methods=['POST'])
 def atverVienu(id):
@@ -116,7 +133,6 @@ def pievienot():
 
     pedejaisID = dati[-1]['id']
     jaunsID = pedejaisID+1
-
     jauns = json.loads(request.data)
 
     with open('dati/iic.json', 'r', encoding='utf-8') as f:
