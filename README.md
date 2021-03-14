@@ -1,5 +1,10 @@
 # Izmaiņu apraksts
 
+## Darāmais. Iekļaut sadalītos failus, pirms (vai līdz ar) pāriešanas uz DB
+
+## 14. marts 2021
+* Vecāku pieteikuma forma saņem datus no skolēnu izvēles, vecPietGatavs.json pieraksta arī izvēlētā pulciņa ID
+
 ## 11. marts 2021
 * Skolēnu izvēles skats strādā datu laukiem "joma" un "vecums". Pieteikšanās poga "zina" atlasītā pulciņa datus, tie būtu padodami vecāku pieteikuma formai
 * Vizuālas izmaiņas — "logo" atkal redzams visās lapās.

@@ -5,10 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <script src='../static/js/main.js'></script>
-  <!-- <link rel='stylesheet' type='text/css' media='screen' href='../css/main.css'> -->
 
-  <!-- <script src='../js/main.js'></script>  -->
-  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
@@ -19,10 +16,11 @@
   <div class="container">
     <img src="static/images/logo.png">
   </div>
-  <div class="container p-1 my-1 bg-success text-white" id='filtrs'>
+
+  <div class="container p-1 my-1 bg-success text-black" id='filtrs'>
 
 
-    <div class="container p-3 my-3 bg-warning text-white">
+    <div class="container p-3 my-3 bg-warning">
 
 
       <br>
@@ -140,6 +138,89 @@
 
 
   </div>
+
+  <div class="container p-1 my-1 bg-success text-black" id='vecakuPietForma'>   
+
+    <div class="container p-3 my-3 bg-warning text-black">
+      <h1>Pieteikuma forma</h1>
+      <div class="form-row">
+        <div class="col-sm-7 mr-auto">
+          <form class="form-horizontal">
+            <div class="col-sm-7 mr-auto"></div>
+            <label for="vec_vards">Skolēna vecāka/aizbildņa vārds<span style="color: red;"> *</span></label>
+            <input type="text" id="vec_vards" name="vec_vards" class="form-control">
+            <label for="vec_uzvards">Skolēna vecāka/aizbildņa uzvārds<span style="color: red;"> *</span></label>
+            <input type="text" id="vec_uzvards" name="vec_uzvards" class="form-control">
+            <label for="vec_epasts">Vecāka/aizbildņa e-pasts<span style="color: red;"> *</span></label>
+            <input type="text" id="vec_epasts" name="vec_epasts" class="form-control">
+            <label for="vec_telefons">Vecāka/aizbildņa telefona numurs<span style="color: red;"> *</span></label>
+            <input type="text" id="vec_telefons" name="vec_telefons" class="form-control"><br>
+
+            <p class="font-weight-bold text-xl-left" id="iestade"></p>      
+            
+            <br>
+          </form>
+        </div>
+      </div>
+      <div class="form-row">
+        <h2>Iesniegums</h2>
+        <form class="form-horizontal">
+          <p> Lūdzu uzņemt manu
+            <select id="berns" name="berns">
+              <option value="meita">meitu</option>
+              <option value="dels">dēlu</option>
+            </select>
+          </p>
+          <div class="col-sm-7 mr-auto">
+            <label for="sk_vards">Skolēna vārds<span style="color: red;"> *</span></label>
+            <input type="text" id="sk_vards" name="sk_vards" class="form-control">
+            <label for="sk_uzvards">Skolēna uzvārds<span style="color: red;"> *</span></label>
+            <input type="text" id="sk_uzvards" name="sk_uzvards" class="form-control">
+            <label for="sk_skola"> Skola<span style="color: red;"> *</span></label>
+            <input type="text" id="sk_skola" name="sk_skola" class="form-control">
+            <label for="sk_klase">Klase<span style="color: red;"> *</span></label>
+            <input type="text" id="sk_klase" name="sk_klase" class="form-control">
+            <label for="sk_perskods">Skolēna personas kods<span style="color: red;"> *</span></label>
+            <input type="text" id="sk_perskods" name="sk_perskods" class="form-control">
+            <label for="sk_adrese">Skolēna mājas adrese<span style="color: red;"> *</span></label>
+            <input type="text" id="sk_adrese" name="sk_adrese" class="form-control">
+            <label for="sk_epasts">Skolēna e-pasts<span style="color: red;"> *</span></label>
+            <input type="text" id="sk_epasts" name="sk_epasts" class="form-control">
+            <label for="sk_telefons">Skolēna telefona numurs<span style="color: red;"> *</span></label>
+            <input type="text" id="sk_telefons" name="sk_telefons" class="form-control"><br>
+          </div>
+
+          <p class="font-weight-bold text-xl-left" id="pulcins"></p>	
+
+          
+          <br>
+          <p>Dati, saskaņā ar 17.08.2010. MK noteikumiem Nr.788 un Personas datu aizsardzības regulas 6. panta 1. punkta
+            c apakšpunktu, tiks izmantoti
+            IIC datu bāzes vajadzībām un reģistrēti apstrādei Valsts izglītības informācijas sistēmā (VIIS), lai
+            nodrošinātu valsts, pašvaldību un
+            izglītības iestāžu funkciju īstenošanu izglītības jomā. Šī informācija netiks izpausta trešajām personām.
+            Informējam, ka Jūsu bērns, IIC reklāmas nolūkos, var tikt fotografēts un filmēts nodarbībās un pasākumos.
+            Ar IIC iekšējās kārtības noteikumiem (publicēti IIC mājaslapā) esam iepazinušies.</p><br>
+
+          <label for="noteikumi">Ar noteikumiem iepazinos<span style="color: red;"> *</span></label><br>
+          <div id="noteik">
+            <input type="radio" id="r1" name="rate" value="1"> Jā<br>
+            <input type="radio" id="r2" name="rate" value="2"> Nē<br>
+          </div>
+          <br>
+          <button type="button" value="Iesniegt" class="btn btn-primary" onclick="vecPietRegistree1();">Iesniegt
+          </button>
+          <button type="button" value="Izveidot pdf datni" class="btn btn-primary">Izveidot </button>
+          <p id="zinojumi"> </p>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <script>
+    document.getElementById('atlasitie').style = "display:none";
+    document.getElementById('vecakuPietForma').style = "display:none";
+  </script>
 
 </body>
 

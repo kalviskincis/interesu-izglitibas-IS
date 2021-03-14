@@ -30,6 +30,26 @@ def iic():
 def vPieteikums():
     return render_template('vecaku_pieteikums.html')
 
+@app.route('/vecaku_pieteikums', methods=['POST'])
+# jāparsauc rūte
+def jaunsPieteikums():
+    with open("dati/vecPietGatavs.json", "r", encoding='utf-8') as f:
+        dati = json.loads(f.read())
+
+    # ielasām ienākošos datus un pārvēršam par json
+    jaunsPieteikums = json.loads(request.data)
+    # šeit vajadzētu veikt pārbaudi vai ir visi nepieciešamie dati
+    if len(jaunsPieteikums) < 13:
+        return jsonify("Aizpildiet visus laukus!")
+    # pievienojam jauno pieteikumu pie datiem
+    dati.append(jaunsPieteikums)
+    # ierakstam atjaunotos datus atpakaļ datnē
+    with open("dati/vecPietGatavs.json", "w", encoding='utf-8') as f:
+        # šeit nevar izmantot jsonify, jo rakstām datnē nevis atgriežam no Flask
+        f.write(json.dumps(dati))
+    # atgriežam jauno ID
+    return jsonify(jaunsPieteikums)
+
 
 @app.route('/jauns_pulcins', methods=['POST'])
 def jaunsPulcins():
@@ -107,7 +127,7 @@ def atlasiti():
         elif filtrs['vecums'] != '---' and int(filtrs['vecums']) not in range(int(katrs['vecums']['no']),int(katrs['vecums']['lidz'])+1):
             atlasitie.remove(katrs)
 
-        print(atlasitie)
+        # print(atlasitie)
     
     return jsonify(atlasitie)
 

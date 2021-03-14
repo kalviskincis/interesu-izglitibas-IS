@@ -344,59 +344,49 @@ function atverSarakstu() {
 }
 
 // no faila vecPietRegistree.js
-function vecPietRegistree1() {
-    var vecVards = document.getElementById("vec_vards").value;
-    var vecUzvards = document.getElementById("vec_uzvards").value;
-    var vecEpasts = document.getElementById("vec_epasts").value;
-    var vecTelefons = document.getElementById("vec_telefons").value;
-    var dzimums = document.getElementById("berns").value;
-    var skVards = document.getElementById("sk_vards").value;
-    var skUzvards = document.getElementById("sk_uzvards").value;
-    var skSkola = document.getElementById("sk_skola").value;
-    var skKlase = document.getElementById("sk_klase").value;
-    var skPerskods = document.getElementById("sk_perskods").value;
-    var skAdrese = document.getElementById("sk_adrese").value;
-    var skEpasts = document.getElementById("sk_epasts").value;
-    var skTelefons = document.getElementById("sk_telefons").value;
-
-    if (vecVards == "" || vecUzvards == "" || vecTelefons == "" || vecEpasts == "" || skVards == "" || skUzvards == "" || skSkola == "" || skKlase == "" || skPerskods == "" || skAdrese == "" || skEpasts == "" || skTelefons == "")
+function vecPietRegistree1(){
+    var vecVards=document.getElementById("vec_vards").value;
+    var vecUzvards=document.getElementById("vec_uzvards").value;
+    var vecEpasts=document.getElementById("vec_epasts").value;
+    var vecTelefons=document.getElementById("vec_telefons").value;
+    var dzimums=document.getElementById("berns").value;
+    var skVards=document.getElementById("sk_vards").value;
+    var skUzvards=document.getElementById("sk_uzvards").value;
+    var skSkola=document.getElementById("sk_skola").value;
+    var skKlase=document.getElementById("sk_klase").value;
+    var skPerskods=document.getElementById("sk_perskods").value;
+    var skAdrese=document.getElementById("sk_adrese").value;
+    var skEpasts=document.getElementById("sk_epasts").value;
+    var skTelefons=document.getElementById("sk_telefons").value;
+    var pulcID = pieteikumsIIC.id;
+ 
+    if(vecVards==""||vecUzvards==""||vecTelefons==""||vecEpasts==""||skVards==""||skUzvards==""||skSkola==""||skKlase==""||skPerskods==""||skAdrese==""||skEpasts==""||skTelefons=="") 
         alert("Visiem laukiem jābūt aizpildītājiem")
-    else
-        if (document.getElementById('r1').checked == false) alert("Izlasi noteikumus!")
-        else {
-            var dict = {
-                vecVards: vecVards, vecUzvards: vecUzvards, vecEpasts: vecEpasts, vecTelefons: vecTelefons,
-                dzimums: dzimums, skVards: skVards, skUzvards: skUzvards, skSkola: skSkola, skKlase: skKlase,
-                skPerskods: skPerskods, skAdrese: skAdrese, skEpasts: skEpasts, skTelefons: skTelefons
-            };
-
-            jsonData = JSON.stringify(dict);
-            console.log(jsonData);
-            if (document.getElementById('r1').checked)
-                download(jsonData, 'vecakuPieteikumsSuutiit.txt', 'text/plain');
-            alert("Visi dati veiksmīgi saglabāti")
-        }
-    fetch('https://kalviskincis.github.io/interesu-izglitibas-IS/views/vecakuPieteikumsSuutiit.txt', {
+    else 
+        if(document.getElementById('r1').checked==false) alert("Izlasi noteikumus!")
+    else{
+        var dict={vecVards:vecVards, vecUzvards:vecUzvards, vecEpasts:vecEpasts, vecTelefons:vecTelefons,
+            dzimums:dzimums, skVards:skVards, skUzvards:skUzvards, skSkola:skSkola, skKlase:skKlase,
+            skPerskods:skPerskods, skAdrese:skAdrese, skEpasts:skEpasts, skTelefons:skTelefons, pulcID: pulcID };
+        
+        jsonData = JSON.stringify(dict);
+        console.log(jsonData);
+        //download(jsonData, 'vecakuPieteikumsSuutiit.txt', 'text/plain');
+    }
+    fetch('/vecaku_pieteikums', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(dict)
-    })
-        .then(res => res.json())
-        .then(data => document.getElementById("zinojumi").innerHTML = "Dati saglabāti")
-
-}
-
-
-function download(content, fileName, contentType) {
-    var a = document.createElement("a");
-    var file = new Blob([content], { type: contentType });
-    a.href = URL.createObjectURL(file);
-    a.download = fileName;
-    a.click();
+        headers: {'Content-Type': 'application/json'},
+        body:JSON.stringify(dict)
+    })    
+    .then(res => res.json())
+    .then(data => document.getElementById("zinojumi").innerHTML = "Dati saglabāti")
+       
 }
 
 
 // no faila vecPietLasa.js
+
+// Jāpārveido, lai saņem lokālo pieteikumu!
 async function lasitTekstu() {
     fetch('../dati/vecaku_pieteikums.txt')
         .then(res => res.json())
@@ -429,20 +419,16 @@ function ieladetJomas() {
 
 // Pulciņa meklētājs no skolēna izvēles
 async function meklePulcinu() {
+
+    document.getElementById('atlasitie').style = "display:block";    
+  
     var joma = document.getElementById('joma').value;
     var vecums = document.getElementById('vecums').value;
     var diena = document.getElementById('diena').value;
-    
-    filtrs = { joma: joma, vecums: vecums, diena: diena }
-    console.log(filtrs);
-    filtraDati = JSON.stringify(filtrs);
-    //fetch('/api/visipulcini' + filtrs)
-    //    .then(res => res.json())
-    //    .then(data => {
-    //        var izvelesDati = data;
-    //        console.log(izvelesDati);
-    //    })
 
+    filtrs = { joma: joma, vecums: vecums, diena: diena }
+    // console.log(filtrs);
+    filtraDati = JSON.stringify(filtrs);
 
     let request = await fetch('/api/izveletiPulcini/',
         {
@@ -451,14 +437,14 @@ async function meklePulcinu() {
             body: filtraDati
         });
 
-    let izvelesDati = await request.json();
+    izvelesDati = await request.json();
+
     document.getElementById('filtrs').style = "display:none";
-    
     var table = document.getElementById("atlasitie");
 
     for (let i = 0; i < izvelesDati.length; i++) {
-        var laiks = '';
 
+        var laiks = '';
         for (let j = 0; j < izvelesDati[i].laiks.length; j++) {
             laiks += izvelesDati[i].laiks[j].diena + ": " + izvelesDati[i].laiks[j].no + "—" + izvelesDati[i].laiks[j].lidz + "<br>";
         }
@@ -473,8 +459,7 @@ async function meklePulcinu() {
         var cell7 = row.insertCell(6);
         var cell8 = row.insertCell(7);
 
-        
-        cell1.innerHTML = izvelesDati[i].iicnosaukums;        
+        cell1.innerHTML = izvelesDati[i].iicnosaukums;
         cell2.innerHTML = izvelesDati[i].nosaukums;
         cell3.innerHTML = laiks;
         cell4.innerHTML = izvelesDati[i].skolotajs;
@@ -486,5 +471,12 @@ async function meklePulcinu() {
 }
 
 function sagatavotPieteikumu(pu) {
-    console.log(pu);
+    document.getElementById('atlasitie').style = "display:none";
+    document.getElementById('vecakuPietForma').style = "display:block";
+    pieteikumsIIC = izvelesDati[pu];
+    var iestade = pieteikumsIIC.iicnosaukums + '<br>' + pieteikumsIIC.talrunis + '<br>' + pieteikumsIIC.epasts;
+    var pulcins = 'jomas ' + pieteikumsIIC.joma + ' pulciņā ' + pieteikumsIIC.nosaukums + '<br>' + 'pie piedagoga ' + pieteikumsIIC.skolotajs;
+    document.getElementById('iestade').innerHTML = iestade;
+    document.getElementById('pulcins').innerHTML = pulcins;
+
 }
