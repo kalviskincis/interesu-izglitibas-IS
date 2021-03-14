@@ -1,15 +1,90 @@
-  [{"pID": 1,
+[{"pID": 1,
 "skID": 1,
 "adrese": "Binārais bulvāris 101",
-"diena": "ceturtdiena",
+"laiks": 
+[{"diena": "ceturtdiena", 
 "lidz": "20.00",
-"no": "18.00"
-},
-{"pID": 1,
+"no": "18.00"}, 
+{"diena": "piektdiena",
+"lidz": "20.00", 
+"no": "18.00"}]
+}]
+
+[{"pID": 2,
 "skID": 1,
 "adrese": "Binārais bulvāris 101",
-"diena": "piektdiena",
-"lidz": "20.00",
-"no": "18.00"
-}
-]
+"laiks": 
+[{"diena": "sestdiena", 
+"lidz": "12.00", 
+"no": "10.00"}, 
+{"diena": "svētdiena", 
+"lidz": "12.00", 
+"no": "10.00"}]
+}]
+
+[{"pID": 3,
+"skID": 2,
+"adrese": "Vašingtona laukums 234",
+"laiks": 
+[{"diena": "sestdiena", 
+"lidz": "13.00", 
+"no": "10.00"}, 
+{"diena": "svētdiena", 
+"lidz": "13.00", 
+"no": "10.00"}]
+}]
+
+[{"pID": 4,
+"skID": 3,
+"adrese": "Meža bulvāris 7, Mārupe",
+"laiks": 
+[{"diena": "sestdiena", 
+"lidz": "12.00", 
+"no": "10.00"}]
+}]
+
+[{"pID": 5,
+"skID": 4,
+"adrese": "Bērzu gatve 2, Rīga",
+"laiks": 
+[{"diena": "otrdiena", 
+"lidz": "20.00", 
+"no": "18.00"}, 
+{"diena": "piektdiena", 
+"lidz": "19.00", 
+"no": "17.00"}]
+}]
+
+[{"pID": 6,
+"skID": 5,
+"adrese": "Kaktusu aleja 14, Rīga",
+"laiks": 
+[{"diena": "piektdiena", 
+"lidz": "19.00", 
+"no": "16.00"}]
+}]
+
+[{"pID": 7,
+"skID": 6,
+"adrese": "BJC Šāds", 
+"laiks": 
+[{"diena": "otrdiena", 
+"lidz": "13.00", 
+"no": "12.00"}, 
+{"diena": "svetdiena", 
+"lidz": "12.00", 
+"no": "10.00"}]
+}]
+
+[{"pID": 8,
+"skID": 7,
+"adrese": "izbraukuma nodarbības",
+"laiks": 
+[{"diena": "tresdiena", 
+"lidz": "17.00", 
+"no": "15.00"}, 
+{"diena": "svetdiena", 
+"lidz": "20.00", 
+"no": "19.00"}]
+}]
+
