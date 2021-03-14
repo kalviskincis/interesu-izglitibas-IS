@@ -1,9 +1,90 @@
-[{"id": 1,
+[{"skID": 1,
 "pID": 1,
 "joma":"💻 Informācijas tehnoloģijas",
+"iicnosaukums": "Pirmā programmēšanas skola",
+"nosaukums": "Robotika - pieredzējušie",
 "maxAudzekni": 11,
 "stunduSkaits": 4,
-"vecumslidz": 14,
-"vecumsno": 10
+"vecums": {"lidz": 14,
+"no": 10}
+}]
+
+[{"skID": 1,
+"pID": 2,
+"joma":"💻 Informācijas tehnoloģijas",
+"iicnosaukums": "Pirmā programmēšanas skola",
+"nosaukums": "Robotika - pieredzējušie",
+"maxAudzekni": 11,
+"stunduSkaits": 4,
+"vecums": {"lidz": 10,
+"no": 6}
+}]
+
+[{"skID": 2,
+"pID": 3,
+"joma":"🎨 Vizuālā māksla",
+"iicnosaukums": "Pirmā programmēšanas skola",
+"nosaukums": "Varavīksne",
+"maxAudzekni": 20,
+"stunduSkaits": 6,
+"vecums": {"lidz": 18,
+"no": 6}
+}]
+
+[{"skID": 3,
+"pID": 4,
+"joma":"🎼 Mūzika",
+"iicnosaukums": "Ukuleļu ansamblis",
+"nosaukums": "Varavīksne",
+"maxAudzekni": 20,
+"stunduSkaits": 2,
+"vecums": {"lidz": 12,
+"no": 6}
+}]
+
+
+[{"skID": 4,
+"pID": 5,
+"joma":"🎼 Mūzika",
+"iicnosaukums": "Pirmā programmēšanas skola",
+"nosaukums": "Rokgrupa \"BoBo\"",
+"maxAudzekni": 6,
+"stunduSkaits": 4,
+"vecums": {"lidz": 18,
+"no": 8}
+}]
+
+
+[{"skID": 5,
+"pID": 6,
+"joma":"🎬 Teātra māksla",
+"iicnosaukums": "Pirmā programmēšanas skola",
+"nosaukums": "Garais deguns",
+"maxAudzekni": 12,
+"stunduSkaits": 3,
+"vecums": {"lidz": 16,
+"no": 10}
+}]
+
+[{"skID": 6,
+"pID": 7,
+"joma":"⚽️ Sports",
+"iicnosaukums": "Otrā un trešā programmēšanas skola",
+"nosaukums": "Gliemezīts", 
+"maxAudzekni": 1,
+"stunduSkaits": 1,
+"vecums": {"lidz": 14,
+"no": 4}
+}]
+
+[{"skID": 7,
+"pID": 8,
+"joma":"🎼 Mūzika", 
+"iicnosaukums": "Rīgas Skolēnu pils",
+"nosaukums": "Senais iezis",
+"maxAudzekni": 12,
+"stunduSkaits": 2,
+"vecums": {"lidz": 14,
+"no": 12}
 }]
 
