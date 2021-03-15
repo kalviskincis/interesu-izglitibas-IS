@@ -1,1 +1,58 @@
-[{"adrese": "Dagdas iela 4", "epasts": "info@pps.lv", "id": 1, "iicnosaukums": "Pirmā programmēšanas skola", "specialists": "Raivis ieviņš", "talrunis": "29888052"}, {"adrese": "Annas 2", "epasts": "anna@annas.lv", "id": 2, "iicnosaukums": "Tehniskās jaunrades nams Annas", "specialists": "Anna Ose", "talrunis": "29111156"}, {"adrese": "Barona iela 101", "epasts": "info@ika.lv", "id": 3, "iicnosaukums": "Bērnu un jauniešu centrs IK Auseklis", "specialists": "Ivo Tone", "talrunis": "28888045"}, {"adrese": "Vēju 14", "epasts": "info@vjn.lv", "id": 4, "iicnosaukums": "Ventspils Jaunrades nams", "specialists": "Vija Vētra", "talrunis": "29121212"}, {"adrese": "Talsu iela 47", "epasts": "info@talsi.lv", "id": 5, "iicnosaukums": "Bērnu un jauniešu Eiropas programmēšanas skola", "specialists": "Uga Osis", "talrunis": "29123123"}, {"adrese": "Auzu 56", "epasts": "info@tija.lv", "id": 6, "iicnosaukums": "Tehniskās izglītības un jaunrades skola", "specialists": "Tija Mence", "talrunis": "29123321"}, {"adrese": "Krišjāņa Barona iela 99", "epasts": "bjcrsp@riga.lv", "id": 7, "iicnosaukums": "Rīgas Skolēnu pils", "specialists": "Māra Vilciņa", "talrunis": "67848826"}, {"adrese": "1", "epasts": "1", "id": 8, "iicnosaukums": "1", "specialists": "1", "talrunis": "1"}, {"adrese": "2", "epasts": "2", "id": 9, "iicnosaukums": "2", "specialists": "2", "talrunis": "2"}]
+[
+    {
+        "adrese": "Dagdas iela 4",
+        "epasts": "info@pps.lv",
+        "id": 1,
+        "iicnosaukums": "Pirmā programmēšanas skola",
+        "specialists": "Raivis ieviņš",
+        "talrunis": "29888052"
+    },
+    {
+        "adrese": "Annas 2",
+        "epasts": "anna@annas.lv",
+        "id": 2,
+        "iicnosaukums": "Tehniskās jaunrades nams Annas",
+        "specialists": "Anna Ose",
+        "talrunis": "29111156"
+    },
+    {
+        "adrese": "Barona iela 101",
+        "epasts": "info@ika.lv",
+        "id": 3,
+        "iicnosaukums": "Bērnu un jauniešu centrs IK Auseklis",
+        "specialists": "Ivo Tone",
+        "talrunis": "28888045"
+    },
+    {
+        "adrese": "Vēju 14",
+        "epasts": "info@vjn.lv",
+        "id": 4,
+        "iicnosaukums": "Ventspils Jaunrades nams",
+        "specialists": "Vija Vētra",
+        "talrunis": "29121212"
+    },
+    {
+        "adrese": "Talsu iela 47",
+        "epasts": "info@talsi.lv",
+        "id": 5,
+        "iicnosaukums": "Bērnu un jauniešu Eiropas programmēšanas skola",
+        "specialists": "Uga Osis",
+        "talrunis": "29123123"
+    },
+    {
+        "adrese": "Auzu 56",
+        "epasts": "info@tija.lv",
+        "id": 6,
+        "iicnosaukums": "Tehniskās izglītības un jaunrades skola",
+        "specialists": "Tija Mence",
+        "talrunis": "29123321"
+    },
+    {
+        "adrese": "Krišjāņa Barona iela 99",
+        "epasts": "bjcrsp@riga.lv",
+        "id": 7,
+        "iicnosaukums": "Rīgas Skolēnu pils",
+        "specialists": "Māra Vilciņa",
+        "talrunis": "67848826"
+    }
+]
