@@ -13,12 +13,13 @@
 </head>
 
 <body>
-  <div class="container p-1 my-1 bg-success text-white">
-    <div class="container">
-      <img src="static/images/logo.png">
+  <div class="container">
+    <img src="static/images/logo.png">
   </div>
-    
-    <div class="top-section"  id="iicsaturs">
+  <div class="container p-1 my-1 bg-success text-white">
+
+
+    <div class="top-section" id="iicsaturs">
       <h1>Interešu izglītības centra un pulciņa reģistrācija</h1>
       <div class="button-back-container">
         <a href="https://kalviskincis.github.io/interesu-izglitibas-IS/index.html" class="button-back">
@@ -30,7 +31,7 @@
       <div class="container p-3 my-3 bg-warning text-white">
         <h2>Reģistrēt jaunu Interešu Izglītības centru</h2>
 
-       <script>
+        <script>
           window.onload = iicNosaukumiRead();
         </script>
 
@@ -74,19 +75,21 @@
               </div>
               <br>
               <div class="col-sm-4">
-                <button type="button" class="btn btn-primary" onclick="registracija();">Reģistrēt jaunu IIC un pulciņu</button>
+                <button type="button" class="btn btn-info btn-block" onclick="registracija();">Reģistrēt jaunu IIC un
+                  pulciņu</button>
 
 
               </div>
-              
+
             </div>
-          </form>         
+          </form>
 
         </div>
       </div>
     </div>
-    <div id="statuss"></div>
-    <div id="pulcins"></div>
+  </div>
+  <div id="statuss"></div>
+  <div id="pulcins"></div>
 </body>
 
 </html>

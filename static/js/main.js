@@ -54,7 +54,7 @@ async function labotPulcinu(pulcins) {
         cell2.id = dNos + 'No';
         cell3.innerHTML = visiLaiki[i].lidz;
         cell3.id = dNos + 'Lidz';
-        cell4.innerHTML = '<button type=\'button\' class=\"btn btn-primary\" onclick=\'dzestLaiku(this)\'>✘</button>';
+        cell4.innerHTML = '<button type=\'button\' class=\"btn btn-danger\" onclick=\'dzestLaiku(this)\'>✘</button>';
     }
 
 
@@ -92,7 +92,7 @@ function raditPulcinus() {
                 let laiks = "";
                 pulcins = "<tr><td id=\"" + visiPulcini[i].id + "\">";
                 pulcins += visiPulcini[i].id;
-                pulcins += "</td><td><input type=\"button\" class=\"btn btn-primary\" onclick=\"labotPulcinu(" + visiPulcini[i].id + ")\" value=\"✎\" data-toggle=\"tooltip\" title=\"Labot\">&nbsp; <input type=\"button\" class=\"btn btn-primary\" value=\"✘\" onclick=\"dzestPulcinu(" + visiPulcini[i].id + ")\" data-toggle=\"tooltip\" title=\"Dzēst\"></td><td name=\"iic\" id=\"iic\">";
+                pulcins += "</td><td><input type=\"button\" class=\"btn btn-warning\" onclick=\"labotPulcinu(" + visiPulcini[i].id + ")\" value=\"✎\" data-toggle=\"tooltip\" title=\"Labot\">&nbsp; <input type=\"button\" class=\"btn btn-danger\" value=\"✘\" onclick=\"dzestPulcinu(" + visiPulcini[i].id + ")\" data-toggle=\"tooltip\" title=\"Dzēst\"></td><td name=\"iic\" id=\"iic\">";
                 pulcins += visiPulcini[i].iicnosaukums + "</td><td>";
                 pulcins += visiPulcini[i].joma + "</td><td>" +
                     visiPulcini[i].nosaukums + "</td><td>" +
@@ -329,7 +329,7 @@ function pievienotLaiku() {
     cell2.id = document.getElementById('diena').value + document.getElementById('No').id;
     cell3.innerHTML = document.getElementById('Lidz').value;
     cell3.id = document.getElementById('diena').value + document.getElementById('Lidz').id;
-    cell4.innerHTML = '<button type=\'button\' class=\"btn btn-primary\" onclick=\'dzestLaiku(this)\'>✘</button>';
+    cell4.innerHTML = '<button type=\'button\' class=\"btn btn-danger\" onclick=\'dzestLaiku(this)\'>✘</button>';
 }
 
 
@@ -466,7 +466,7 @@ async function meklePulcinu() {
         cell5.innerHTML = izvelesDati[i].adrese;
         cell6.innerHTML = izvelesDati[i].epasts;
         cell7.innerHTML = izvelesDati[i].talrunis;
-        cell8.innerHTML = '<button type=\'button\' class=\"btn btn-primary\" onclick=\"sagatavotPieteikumu(' + i + ')\">Pieteikties</button>';
+        cell8.innerHTML = '<button type=\'button\' class=\"btn btn-info\" onclick=\"sagatavotPieteikumu(' + i + ')\">Pieteikties</button>';
     }
 }
 

@@ -1,10 +1,10 @@
 <!-- lapa tiek izsaukta ar kodu. pati pas sevi nestrādā. -->
 <div class="container col-sm-6" id='pulcinaForma'>
     <h1>Pulciņa info</h1>
-    <div class="form-horizontal">
+    <div class="form-horizontal" >
 
 
-        <form name="forma" id="forma" class="form-horizontal">
+        <form name="forma" id="forma" class="form-horizontal text-black">
             <label for='iCentrs'>Interešu izglītības centrs</label>
             <input type="text" id="iCentrs" name="iCentrs" class="form-control"><br>
             <label for="joma" class="control-label">Interešu izglītības joma</label>
@@ -75,7 +75,7 @@
                     <option value="19.00">19.00</option>
                     <option value="20.00">20.00</option>
                 </select>
-                <button type="button" onclick="pievienotLaiku()" class="btn btn-primary">+</button>
+                <button type="button" onclick="pievienotLaiku()" class="btn btn-success">+</button>
 
                 <table class='table' id='laiki'>
                     <tr>
@@ -90,7 +90,7 @@
             </div>
 
 
-            <button type="button" value="Saglabāt" class="btn btn-primary"
+            <button type="button" value="Saglabāt" class="btn btn-primary btn-info "
                 onclick="nosutitPulcinaInfo()">Saglabāt</button>
             <p id="saglabats"></p>
         </form>
