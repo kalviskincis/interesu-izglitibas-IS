@@ -1,0 +1,38 @@
+[
+    {
+        "id":1,
+        "adrese": "Binārais bulvāris 101",
+        "diena": "ceturtdiena",
+        "lidz": "20.00",
+        "no": "18.00",
+        "pulcID": 1,
+        "skolotID": 1
+    },
+    {
+        "id":2,
+        "adrese": "Binārais bulvāris 101",
+        "diena": "piektdiena",
+        "lidz": "20.00",
+        "no": "18.00",
+        "pulcID": 1,
+        "skolotID": 1
+    },
+    {
+        "id":3,
+        "adrese": "Pils parks 15",
+        "diena": "pirmdiena",
+        "lidz": "18.00",
+        "no": "14.00",
+        "pulcID": 8,
+        "skolotID": 8
+    },
+    {
+        "id":4,
+        "adrese": "Pils parks 15",
+        "diena": "ceturtdiena",
+        "lidz": "13.00",
+        "no": "10.00",
+        "pulcID": 8,
+        "skolotID": 8
+    }
+]

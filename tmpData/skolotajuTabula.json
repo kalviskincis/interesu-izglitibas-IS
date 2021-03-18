@@ -1,0 +1,50 @@
+[
+    {
+        "epasts": "python@jamacas.lv",
+        "skolotID": 1,
+        "skolotajs": "Rūdis Čūska",
+        "talrunis": "98765432"
+    },
+    {
+        "epasts": "python@jamacas.lv",
+        "skolotID": 2,
+        "skolotajs": "Rūdis Čūska",
+        "talrunis": "98765432"
+    },
+    {
+        "epasts": "traips@outlook.com",
+        "skolotID": 3,
+        "skolotajs": "Pans Klekis",
+        "talrunis": "23452345"
+    },
+    {
+        "epasts": "chetrasstiigas@inbox.lv",
+        "skolotID": 4,
+        "skolotajs": "Līga Stīga",
+        "talrunis": "55443322"
+    },
+    {
+        "epasts": "bm@inbox.lv",
+        "skolotID": 5,
+        "skolotajs": "Bārtiņš Mauns",
+        "talrunis": "22334455"
+    },
+    {
+        "epasts": "gogo@underground.com",
+        "skolotID": 6,
+        "skolotajs": "Karabass Barabass",
+        "talrunis": "29891989"
+    },
+    {
+        "epasts": "sleep@long.lv",
+        "skolotID": 7,
+        "skolotajs": "Guļvaldis Mieriņš",
+        "talrunis": "8810"
+    },
+    {
+        "epasts": "gatins@inbox.lv",
+        "skolotID": 8,
+        "skolotajs": "Gatis Krūklis",
+        "talrunis": "11223344"
+    }
+]

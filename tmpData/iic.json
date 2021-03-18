@@ -1,0 +1,74 @@
+[
+    {
+        "adrese": "Dagdas iela 4",
+        "epasts": "info@pps.lv",
+        "iicID": 1,
+        "klubs": "Pirmā programmēšanas skola",
+        "specialists": "Raivis Ieviņš",
+        "talrunis": "29888052"
+    },
+    {
+        "adrese": "Annas 2",
+        "epasts": "anna@annas.lv",
+        "iicID": 2,
+        "klubs": "Tehniskās jaunrades nams Annas",
+        "specialists": "Anna Ose",
+        "talrunis": "29111156"
+    },
+    {
+        "adrese": "Barona iela 101",
+        "epasts": "info@ika.lv",
+        "iicID": 3,
+        "klubs": "Bērnu un jauniešu centrs IK Auseklis",
+        "specialists": "Ivo Tone",
+        "talrunis": "28888045"
+    },
+    {
+        "adrese": "Vēju 14",
+        "epasts": "info@vjn.lv",
+        "iicID": 4,
+        "klubs": "Ventspils Jaunrades nams",
+        "specialists": "Vija Vētra",
+        "talrunis": "29121212"
+    },
+    {
+        "adrese": "Talsu iela 47",
+        "epasts": "info@talsi.lv",
+        "iicID": 5,
+        "klubs": "Bērnu un jauniešu Eiropas programmēšanas skola",
+        "specialists": "Uga Osis",
+        "talrunis": "29123123"
+    },
+    {
+        "adrese": "Auzu 56",
+        "epasts": "info@tija.lv",
+        "iicID": 6,
+        "klubs": "Tehniskās izglītības un jaunrades skola",
+        "specialists": "Tija Mence",
+        "talrunis": "29123321"
+    },
+    {
+        "adrese": "Saules 5",
+        "epasts": "gatins@inbox.lv",
+        "iicID": 7,
+        "klubs": "Skolas dome",
+        "specialists": "Linda liepiņa",
+        "talrunis": "11223344"
+    },
+    {
+        "adrese": "Valkā, Semināra 20",
+        "epasts": "mice@inbox.lv",
+        "iicID": 8,
+        "klubs": "Mice",
+        "specialists": "Kristīne Ganiņa",
+        "talrunis": "21436587"
+    },
+    {
+        "adrese": "Krišjāņa Barona 79",
+        "epasts": "rsp@riga.lv",
+        "iicID": 9,
+        "klubs": "Rīgas Skolēnu pils",
+        "specialists": "Māra Vilciņa",
+        "talrunis": "28765433"
+    }
+]

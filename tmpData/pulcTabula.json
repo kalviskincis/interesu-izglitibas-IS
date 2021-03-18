@@ -1,0 +1,90 @@
+[
+    {
+        "joma": "💻 Informācijas tehnoloģijas",
+        "maxAudzekni": 11,
+        "nosaukums": "Robotika - pieredzējušie",
+        "pulcID": 1,
+        "skolotID": 1,
+        "iicID": 7,
+        "stunduSkaits": 4,
+        "vecumslidz": 14,
+        "vecumsno": 10
+    },
+    {
+        "joma": "💻 Informācijas tehnoloģijas",
+        "maxAudzekni": 11,
+        "nosaukums": "Robotika - iesācēji",
+        "pulcID": 2,
+        "skolotID": 2,
+        "iicID": 7,
+        "stunduSkaits": 4,
+        "vecumslidz": 10,
+        "vecumsno": 6
+    },
+    {
+        "joma": "🎨 Vizuālā māksla",
+        "maxAudzekni": 20,
+        "nosaukums": "Varavīksne",
+        "pulcID": 3,
+        "skolotID": 3,
+        "iicID": 7,
+        "stunduSkaits": 6,
+        "vecumslidz": 18,
+        "vecumsno": 6
+    },
+    {
+        "joma": "🎼 Mūzika",
+        "maxAudzekni": 20,
+        "nosaukums": "ukuleļu ansamblis",
+        "pulcID": 4,
+        "skolotID": 4,
+        "iicID": 7,
+        "stunduSkaits": 2,
+        "vecumslidz": 12,
+        "vecumsno": 6
+    },
+    {
+        "joma": "🎼 Mūzika",
+        "maxAudzekni": 6,
+        "nosaukums": "Rokgrupa \"BoBo\"",
+        "pulcID": 5,
+        "skolotID": 5,
+        "iicID": 7,
+        "stunduSkaits": 4,
+        "vecumslidz": 18,
+        "vecumsno": 8
+    },
+    {
+        "joma": "🎬 Teātra māksla",
+        "maxAudzekni": 12,
+        "nosaukums": "Garais deguns",
+        "pulcID": 6,
+        "skolotID": 6,
+        "iicID": 7,
+        "stunduSkaits": 3,
+        "vecumslidz": 16,
+        "vecumsno": 10
+    },
+    {
+        "joma": "⚽️ Sports",
+        "maxAudzekni": 1,
+        "nosaukums": "Gliemezīts",
+        "pulcID": 7,
+        "skolotID": 7,
+        "iicID": 7,
+        "stunduSkaits": 1,
+        "vecumslidz": 14,
+        "vecumsno": 4
+    },
+    {
+        "joma": "🎼 Mūzika",
+        "maxAudzekni": 8,
+        "nosaukums": "Džezs",
+        "pulcID": 8,
+        "skolotID": 8,
+        "iicID": 7,
+        "stunduSkaits": 7,
+        "vecumslidz": 15,
+        "vecumsno": 7
+    }
+]
