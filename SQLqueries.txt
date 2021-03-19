@@ -1,0 +1,8 @@
+SELECT pulcini.joma, pulcini.nosaukums, pulcini.vecumslidz, pulcini.vecumsno, iic.adrese, iic.klubs, skolotaji.skolotajs, skolotaji.epasts, skolotaji.talrunis,laiks.diena, laiks.no, laiks.lidz 
+FROM 'laiks' , 'pulcini', 'skolotaji', 'iic'
+WHERE laiks.skolotID=skolotaji.skolotID AND pulcini.pulcID=laiks.pulcID AND pulcini.iicID=iic.iicID;
+
+SELECT pulcini.joma, pulcini.nosaukums, pulcini.vecumslidz, pulcini.vecumsno, iic.adrese, iic.klubs, skolotaji.skolotajs, skolotaji.epasts, skolotaji.talrunis,laiks.diena, laiks.no, laiks.lidz FROM 'laiks' 
+INNER JOIN 'skolotaji' ON laiks.skolotID=skolotaji.skolotID
+INNER JOIN 'pulcini' ON pulcini.pulcID=laiks.pulcID
+LEFT JOIN 'iic' ON pulcini.iicID=iic.iicID;
