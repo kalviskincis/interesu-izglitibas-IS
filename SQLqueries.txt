@@ -6,3 +6,6 @@ SELECT pulcini.joma, pulcini.nosaukums, pulcini.vecumslidz, pulcini.vecumsno, ii
 INNER JOIN 'skolotaji' ON laiks.skolotID=skolotaji.skolotID
 INNER JOIN 'pulcini' ON pulcini.pulcID=laiks.pulcID
 LEFT JOIN 'iic' ON pulcini.iicID=iic.iicID;
+
+
+    c.execute('SELECT pulcini.pulcID, iic.klubs, pulcini.joma, pulcini.nosaukums, pulcini.stunduSkaits, pulcini.vecumsno, pulcini.vecumslidz, skolotaji.skolotajs, skolotaji.epasts, skolotaji.talrunis, iic.adrese,  pulcini.maxAudzekni,  laiks.diena, laiks.no, laiks.lidz FROM laiks INNER JOIN skolotaji ON laiks.skolotID=skolotaji.skolotID INNER JOIN pulcini ON pulcini.pulcID=laiks.pulcID LEFT JOIN iic ON pulcini.iicID=iic.iicID;')
