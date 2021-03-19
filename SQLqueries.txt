@@ -9,3 +9,20 @@ LEFT JOIN 'iic' ON pulcini.iicID=iic.iicID;
 
 
     c.execute('SELECT pulcini.pulcID, iic.klubs, pulcini.joma, pulcini.nosaukums, pulcini.stunduSkaits, pulcini.vecumsno, pulcini.vecumslidz, skolotaji.skolotajs, skolotaji.epasts, skolotaji.talrunis, iic.adrese,  pulcini.maxAudzekni,  laiks.diena, laiks.no, laiks.lidz FROM laiks INNER JOIN skolotaji ON laiks.skolotID=skolotaji.skolotID INNER JOIN pulcini ON pulcini.pulcID=laiks.pulcID LEFT JOIN iic ON pulcini.iicID=iic.iicID;')
+    
+    UPDATE pulcini
+SET nosaukums="testa nosaukums", stunduSkaits=2, vecumsno=10, vecumslidz=18, maxAudzekni = 40
+WHERE pulcID=1
+
+UPDATE iic
+SET klubs="testa klubs", adrese="Jaunā iela 11"
+WHERE klubs="Mice"
+
+UPDATE laiks
+SET lidz="19.30" 
+WHERE (SELECT lidz FROM skolotaji, laiks WHERE skolotaji.skolotajs LIKE "R%"
+
+UPDATE skolotaji
+SET skolotajs="Tests Testovičs"
+WHERE skolotajs IN (SELECT skolotaji.skolotajs FROM skolotaji, pulcini, laiks
+WHERE skolotaji.skolotID = laiks.skolotID AND laiks.pulcID = pulcini.pulcID and pulcini.nosaukums like "D%");
