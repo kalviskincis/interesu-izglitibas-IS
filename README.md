@@ -1,6 +1,19 @@
 # Izmaiņu apraksts
 
-## Darāmais. Iekļaut sadalītos failus, pirms (vai līdz ar) pāriešanas uz DB
+## 15.—19. marts 2021
+* Esošie json pārrakstīti uz DB (mkdb.py faili)
+* Lielais vairums esošās funkcionalitātes pārnests, lai strādatu ar DB:
+  * Jauna IIC ierakstīšana
+  * Visu pulciņu parādīšana un dzēšana pa vienam
+  * Skolēnu izvēle + vecāku pieteikuma skats.
+  * Vecāku pieteikums
+* Darāmais, lai iedzītu līdz šim padarīto:
+  * Pieslēgt UPDATE pieprasījumu, lai strādātu pulciņu pievienošana un labošana
+* Darāmais vispār, lai tiektos uz pilnību:
+  * Lietotāji, viņu lomas
+  * Vecāku pieteikumu apstrāde + brīvo vietu menedžments
+  * Lielāka pulciņu DB
+
 
 ## 14. marts 2021
 * Vecāku pieteikuma forma saņem datus no skolēnu izvēles, vecPietGatavs.json pieraksta arī izvēlētā pulciņa ID

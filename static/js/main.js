@@ -1,11 +1,11 @@
 notiekLabosana = false;
 // no faila lasaPulcinuSarakstu.js
 
-async function labotPulcinuA(pulcins) {
-    fetch('/api/visipulcini')
-        .then(res => res.json())
-        .then(data => { ieliktTabula(data); })
-}
+// async function labotPulcinuA(pulcins) {
+//     fetch('/api/visipulcini')
+//         .then(res => res.json())
+//         .then(data => { ieliktTabula(data); })
+// }
 
 
 // funkcija pulciņa lauku nolasīšanai un atvēršanai labošanas skatā.
@@ -29,38 +29,33 @@ async function labotPulcinu(pulcins) {
     document.getElementById("joma").value = pulcDati.joma;
     document.getElementById("adrese").value = pulcDati.adrese;
     document.getElementById("stunduSkaits").value = pulcDati.stunduSkaits;
-    document.getElementById("vecumsNo").value = pulcDati.vecums.no;
-    document.getElementById("vecumsLidz").value = pulcDati.vecums.lidz;
+    document.getElementById("vecumsNo").value = pulcDati.vecumsno;
+    document.getElementById("vecumsLidz").value = pulcDati.vecumslidz;
     document.getElementById("maxAudzekni").value = pulcDati.maxAudzekni;
     document.getElementById("skolotajs").value = pulcDati.skolotajs;
     document.getElementById("epasts").value = pulcDati.epasts;
     document.getElementById("talrunis").value = pulcDati.talrunis;
 
-    var visiLaiki = pulcDati.laiks;
-    console.log(visiLaiki);
+    // var visiLaiki = pulcDati.laiks;
+    // console.log(visiLaiki);
 
     var table = document.getElementById("laiki");
 
-    for (let i = 0; i < visiLaiki.length; i++) {
-        var row = table.insertRow(-1);
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
-        var cell3 = row.insertCell(2);
-        var cell4 = row.insertCell(3);
-        var dNos = visiLaiki[i].diena;
-        cell1.innerHTML = dNos;
-        cell1.id = dNos;
-        cell2.innerHTML = visiLaiki[i].no;
-        cell2.id = dNos + 'No';
-        cell3.innerHTML = visiLaiki[i].lidz;
-        cell3.id = dNos + 'Lidz';
-        cell4.innerHTML = '<button type=\'button\' class=\"btn btn-danger\" onclick=\'dzestLaiku(this)\'>✘</button>';
-    }
-
-
-
-
-
+    //for (let i = 0; i < visiLaiki.length; i++) {
+    var row = table.insertRow(-1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3);
+    var dNos = pulcDati.diena;
+    cell1.innerHTML = dNos;
+    cell1.id = dNos;
+    cell2.innerHTML = pulcDati.no;
+    cell2.id = dNos + 'No';
+    cell3.innerHTML = pulcDati.lidz;
+    cell3.id = dNos + 'Lidz';
+    cell4.innerHTML = '<button type=\'button\' class=\"btn btn-danger\" onclick=\'dzestLaiku(this)\'>✘</button>';
+    //}
     pulcID = pulcDati.id;
 
 }
@@ -91,22 +86,23 @@ function raditPulcinus() {
             for (let i = 0; i < visiPulcini.length; i++) {
                 let laiks = "";
                 pulcins = "<tr><td id=\"" + visiPulcini[i].id + "\">";
-                pulcins += visiPulcini[i].id;
-                pulcins += "</td><td><input type=\"button\" class=\"btn btn-warning\" onclick=\"labotPulcinu(" + visiPulcini[i].id + ")\" value=\"✎\" data-toggle=\"tooltip\" title=\"Labot\">&nbsp; <input type=\"button\" class=\"btn btn-danger\" value=\"✘\" onclick=\"dzestPulcinu(" + visiPulcini[i].id + ")\" data-toggle=\"tooltip\" title=\"Dzēst\"></td><td name=\"iic\" id=\"iic\">";
+                // pulcins += visiPulcini[i].id;
+                pulcins += "<input type=\"button\" class=\"btn btn-warning\" onclick=\"labotPulcinu(" + visiPulcini[i].id + ")\" value=\"✎\" data-toggle=\"tooltip\" title=\"Labot\">&nbsp; <input type=\"button\" class=\"btn btn-danger\" value=\"✘\" onclick=\"dzestPulcinu(" + visiPulcini[i].id + ")\" data-toggle=\"tooltip\" title=\"Dzēst\"></td><td name=\"iic\" id=\"iic\">";
                 pulcins += visiPulcini[i].iicnosaukums + "</td><td>";
                 pulcins += visiPulcini[i].joma + "</td><td>" +
                     visiPulcini[i].nosaukums + "</td><td>" +
                     visiPulcini[i].stunduSkaits + "</td><td>" +
-                    visiPulcini[i].vecums.no + "—" + visiPulcini[i].vecums.lidz + "</td><td>" +
+                    visiPulcini[i].vecumsno + "—" + visiPulcini[i].vecumslidz + "</td><td>" +
                     visiPulcini[i].skolotajs + "</td><td>" +
                     visiPulcini[i].epasts + "</td><td>" +
                     visiPulcini[i].talrunis + "</td><td>" +
                     visiPulcini[i].adrese + "</td><td>" +
-                    visiPulcini[i].maxAudzekni + "</td><td>";
-                for (let j = 0; j < visiPulcini[i].laiks.length; j++) {
-                    laiks += visiPulcini[i].laiks[j].diena + ": " + visiPulcini[i].laiks[j].no + "—" + visiPulcini[i].laiks[j].lidz + "<br>";
-                }
-                pulcins += laiks + "</td></tr>";
+                    visiPulcini[i].maxAudzekni + "</td><td>" +
+                    visiPulcini[i].diena + "<br>" + visiPulcini[i].no  + "—" + visiPulcini[i].lidz + "</td></tr>";            
+                //for (let j = 0; j < visiPulcini[i].laiks.length; j++) {
+                //    laiks += visiPulcini[i].laiks[j].diena + ": " + visiPulcini[i].laiks[j].no + "—" + visiPulcini[i].laiks[j].lidz + "<br>";
+                // }
+                //pulcins += laiks + "</td></tr>";
                 tabulasBody.innerHTML += pulcins;
             }
         })
@@ -163,23 +159,27 @@ function registracija() {
     }
 }
 
-async function iicNosaukumiRead() {
-    fetch('/dati/iic.json', { cache: "no-store" })
-        .then(res => res.json())
-        .then(json => {
-            var visi = json;
-            var option = document.createElement("option");
-            option.value = 'jauns';
-            option.textContent = '--pievienot jaunu--';
-            document.getElementById("iicnosauk").appendChild(option);
 
-            for (var i = 0; i < visi.length; i++) {
-                var option = document.createElement("option");
-                option.value = visi[i].iicnosaukums;
-                option.textContent = visi[i].iicnosaukums;
-                document.getElementById("iicnosauk").appendChild(option);
-            }
-        })
+
+async function iicNosaukumiRead() {
+
+    fetch('/api/iicnosaukumi')
+    .then(res => res.json())
+    .then(data => { 
+        var visi = data;
+        var option = document.createElement("option");
+        option.value = 'jauns';
+        option.textContent = '--pievienot jaunu--';
+        document.getElementById("iicnosauk").appendChild(option);
+
+        for (var i = 0; i < visi.length; i++) {
+            var option = document.createElement("option");
+            option.value = visi[i].iicnosaukums;
+            option.textContent = visi[i].iicnosaukums;
+            document.getElementById("iicnosauk").appendChild(option);
+        }
+     })
+
 }
 
 
@@ -365,12 +365,12 @@ function vecPietRegistree1(){
     else 
         if(document.getElementById('r1').checked==false) alert("Izlasi noteikumus!")
     else{
-        var dict={vecVards:vecVards, vecUzvards:vecUzvards, vecEpasts:vecEpasts, vecTelefons:vecTelefons,
+        var dict={pulcID: pulcID, vecVards:vecVards, vecUzvards:vecUzvards, vecEpasts:vecEpasts, vecTelefons:vecTelefons,
             dzimums:dzimums, skVards:skVards, skUzvards:skUzvards, skSkola:skSkola, skKlase:skKlase,
-            skPerskods:skPerskods, skAdrese:skAdrese, skEpasts:skEpasts, skTelefons:skTelefons, pulcID: pulcID };
+            skPerskods:skPerskods, skAdrese:skAdrese, skEpasts:skEpasts, skTelefons:skTelefons};
         
         jsonData = JSON.stringify(dict);
-        console.log(jsonData);
+        // console.log(jsonData);
         //download(jsonData, 'vecakuPieteikumsSuutiit.txt', 'text/plain');
     }
     fetch('/vecaku_pieteikums', {
@@ -444,10 +444,10 @@ async function meklePulcinu() {
 
     for (let i = 0; i < izvelesDati.length; i++) {
 
-        var laiks = '';
-        for (let j = 0; j < izvelesDati[i].laiks.length; j++) {
-            laiks += izvelesDati[i].laiks[j].diena + ": " + izvelesDati[i].laiks[j].no + "—" + izvelesDati[i].laiks[j].lidz + "<br>";
-        }
+        //var laiks = '';
+        //for (let j = 0; j < izvelesDati[i].laiks.length; j++) {
+        var laiks = izvelesDati[i].diena + ": " + izvelesDati[i].no + "—" + izvelesDati[i].lidz + "<br>";
+        //}
         
         var row = table.insertRow(-1);
         var cell1 = row.insertCell(0);

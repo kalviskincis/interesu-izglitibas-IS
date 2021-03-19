@@ -1,0 +1,3 @@
+SELECT nosaukums, joma, stunduSkaits, vecumsno, vecumslidz, maxAudzekni, klubs FROM pulcini
+INNER JOIN iic
+ON IIC.iicID = pulcini.iicID
