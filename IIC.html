@@ -1,112 +1,123 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.min.css'>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <!--<script src='./main.js'></script>-->
-    <script src='../registracija.js'></script>
+  <!-- boo -->
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.min.css'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <!--<script src='./main.js'></script>-->
+  <script src='../registracija.js'></script>
 </head>
-        
+
 <body>
-    <div class="container p-1 my-1 bg-success text-white">
-        <h1><center>Interešu izglītības centra nosaukums</center></h1>
-        <div class="top-section">
-        <div class="button-back-container">
-                <a href="https://kalviskincis.github.io/interesu-izglitibas-IS/index.html" class="button-back">
-                <span class="button-back__icon"></span>
-                <span class="button-back__text" onclick="location.href='index.html'">Uz sākumlapu</span>
+  <div class="container p-1 my-1 bg-success text-white">
+    <h1>
+      <center>Interešu izglītības centra nosaukums</center>
+    </h1>
+    <div class="top-section">
+      <div class="button-back-container">
+        <a href="https://kalviskincis.github.io/interesu-izglitibas-IS/index.html" class="button-back">
+          <span class="button-back__icon"></span>
+          <span class="button-back__text" onclick="location.href='index.html'">Uz sākumlapu</span>
 
-            </a>
-        </div> 
-        <div class="container p-3 my-3 bg-warning text-white">
-                  <h2>Izdari savu izvēli</h2>
-                  <h5>Centra nosaukums</h5>
-            <title> comboBox </title>
-            <form>
-              
-                <select id="iicnosauk" name="iicnosauk">
-    
-              </select>
-             </form>
-            
-          <script>
-          window.onload=function(){
-             iicnosauk=["---","Bērnu un jauniešu centrs IK Auseklis","Tehniskās jaunrades nams Annas","Valkas novada Bērnu un jauniešu centrs Mice","Ventspils Jaunrades nams","Jelgavas pilsētas pašvaldības Jaunrades nams Junda","Valmieras Jaunatnes centrs Vinda","Tehniskās izglītības un jaunrades skola",
-            "Pirmā programmēšanas skola","Bērnu un jauniešu Eiropas programmēšanas skola"] 
-            for(var i=0;i<iicnosauk.length;i++){
-                    var option = document.createElement("option"); 
-                    option.value=iicnosauk[i];
-                    option.textContent=iicnosauk[i];
-                    document.getElementById("iicnosauk").appendChild(option);
-                    
-                }
+        </a>
+      </div>
+      <div class="container p-3 my-3 bg-warning text-white">
+        <h2>Izdari savu izvēli</h2>
+        <h5>Centra nosaukums</h5>
+        <title> comboBox </title>
+        <form>
+
+          <select id="iicnosauk" name="iicnosauk">
+
+          </select>
+        </form>
+
+        <script>
+          window.onload = function () {
+            iicnosauk = ["---", "Bērnu un jauniešu centrs IK Auseklis", "Tehniskās jaunrades nams Annas", "Valkas novada Bērnu un jauniešu centrs Mice", "Ventspils Jaunrades nams", "Jelgavas pilsētas pašvaldības Jaunrades nams Junda", "Valmieras Jaunatnes centrs Vinda", "Tehniskās izglītības un jaunrades skola",
+              "Pirmā programmēšanas skola", "Bērnu un jauniešu Eiropas programmēšanas skola"]
+            for (var i = 0; i < iicnosauk.length; i++) {
+              var option = document.createElement("option");
+              option.value = iicnosauk[i];
+              option.textContent = iicnosauk[i];
+              document.getElementById("iicnosauk").appendChild(option);
+
+            }
           }    
-            </script>   
-                
-            <div class="conteiner">
-                <form class="form-horizontal">
-                  <div class="form-group">
-                   <label class="col-sm-2 control-label">Adrese<span style="color: red;"> *</span></label>
-                   <!--<label for="adrese">Adrese<span style="color: red;"> *</span></label>-->
-                    <div class="col-sm-4">
-                      <input class="form-control" id="Adrese" type="text" name="adrese">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">E-pasts<span style="color: red;"> *</span></label>
-                     <div class="col-sm-4">
-                       <input class="form-control" id="Epasts" type="text" name="epasts">
-                     </div>
-                   </div>
-                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Tālrunis<span style="color: red;"> *</span></label>
-                     <div class="col-sm-4">
-                       <input class="form-control" id="Talrunis" type="text" name="talrunis">
-                     </div>
-                   </div>
-                   <div class="form-group">
-                    <label class="col-sm-0 control-label">IIC izglītības speciālista vārds, uzvārds<span style="color: red;"> *</span></label>
-                     <div class="col-sm-4">
-                       <input class="form-control" id="Specialists" type="text" name="specialists">
-                     </div>
-                   </div>
-                </form>   
-                
-                <body>
-                  <button onclick="pievienotRindu()">Papilddatnes lejupielādei</button>
-                  <form id="forma"></form>
-                  <script> 
-                  function pievienotRindu(){
-                      let i=document.getElementsByClassName("rinda").length;
-                      let divs = document.createElement("DIV"); divs.setAttribute("class","rinda");
-                      divs.innerHTML=" ";
-                      let ievads1 = document.createElement("INPUT"); ievads1.style="text-align: left";
-                      let ievads2 = document.createElement("INPUT"); ievads2.style="text-align: left";
-                      let poga = document.createElement("INPUT"); poga.value="novākt"; poga.type="button";
-                      poga.onclick=()=>{
-                          poga.parentNode.remove();
-                      }
-                      divs.appendChild(ievads1); divs.appendChild(ievads2); divs.appendChild(poga);
-                      document.getElementById("forma").appendChild(divs);
-                  }
-                 </script>
-             </body>
-                
-                 <br><br>
-                
-                <!--<button class="poga1" onclick="location.href='registracija()'">Iesūtīt datni</button>-->
-                <button class="poga2" onclick="location.href='https://kalviskincis.github.io/interesu-izglitibas-IS/views/pulcina_info.html'"> Reģistrēt jaunu pulciņu</button>
+        </script>
 
-            </div>                       
-        </div>       
+        <div class="conteiner">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Adrese<span style="color: red;"> *</span></label>
+              <!--<label for="adrese">Adrese<span style="color: red;"> *</span></label>-->
+              <div class="col-sm-4">
+                <input class="form-control" id="Adrese" type="text" name="adrese">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">E-pasts<span style="color: red;"> *</span></label>
+              <div class="col-sm-4">
+                <input class="form-control" id="Epasts" type="text" name="epasts">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Tālrunis<span style="color: red;"> *</span></label>
+              <div class="col-sm-4">
+                <input class="form-control" id="Talrunis" type="text" name="talrunis">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-0 control-label">IIC izglītības speciālista vārds, uzvārds<span style="color: red;">
+                  *</span></label>
+              <div class="col-sm-4">
+                <input class="form-control" id="Specialists" type="text" name="specialists">
+              </div>
+            </div>
+          </form>
+
+          <body>
+            <button onclick="pievienotRindu()">Papilddatnes lejupielādei</button>
+            <form id="forma"></form>
+            <script>
+              function pievienotRindu() {
+                let i = document.getElementsByClassName("rinda").length;
+                let divs = document.createElement("DIV"); divs.setAttribute("class", "rinda");
+                divs.innerHTML = " ";
+                let ievads1 = document.createElement("INPUT"); ievads1.style = "text-align: left";
+                let ievads2 = document.createElement("INPUT"); ievads2.style = "text-align: left";
+                let poga = document.createElement("INPUT"); poga.value = "novākt"; poga.type = "button";
+                poga.onclick = () => {
+                  poga.parentNode.remove();
+                }
+                divs.appendChild(ievads1); divs.appendChild(ievads2); divs.appendChild(poga);
+                document.getElementById("forma").appendChild(divs);
+              }
+            </script>
+          </body>
+
+          <br><br>
+
+          <!--<button class="poga1" onclick="location.href='registracija()'">Iesūtīt datni</button>-->
+          <button class="poga2"
+            onclick="location.href='https://kalviskincis.github.io/interesu-izglitibas-IS/views/pulcina_info.html'">
+            Reģistrēt jaunu pulciņu</button>
+
+        </div>
+      </div>
     </div>
-      
- </body>
+
+</body>
+
 </html>
